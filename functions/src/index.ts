@@ -5,7 +5,7 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyDSROWgmB9vVLzfDygZen2dAzjZHtklzaM',
+  apiKey: '',
   authDomain: 'my-woodburnings.firebaseapp.com',
   projectId: 'my-woodburnings'
 });
