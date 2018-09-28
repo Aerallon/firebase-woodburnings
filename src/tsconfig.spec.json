@@ -1,0 +1,19 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../out-tsc/spec",
+      "baseUrl": "./",
+      "module": "commonjs",
+      "allowJs": true,
+      "target": "es5",
+      "types": [
+        "node",
+        "jasmine"
+      ]
+    },
+    "include": [
+      "**/*.spec.ts",
+      "**/*.d.ts"
+    ]
+  }
+  
