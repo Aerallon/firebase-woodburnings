@@ -17,9 +17,11 @@
       "es2017.object"
     ],
     "types": [
+      "core-js",
       "node",
       "jasmine",
-      "webpack-env"
+      "webpack-env",
+      "jest"
     ]
   },
   "compileOnSave": false,
