@@ -13,9 +13,11 @@ import { EditWoodburningComponent } from './edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings.component';
 import { WoodburningStoreService } from './woodburning-store.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
-         MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
-         MatNativeDateModule, MatTableModule, MatDividerModule } from '@angular/material';
+import {
+  MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
+  MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
+  MatNativeDateModule, MatTableModule, MatDividerModule, MAT_LABEL_GLOBAL_OPTIONS
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
     AppComponent
   ],
   providers: [
-    WoodburningStoreService
+    WoodburningStoreService,
+    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
   ],
   exports: [
     CreateWoodburningComponent,

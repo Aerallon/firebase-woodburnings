@@ -26,7 +26,7 @@ export class WoodburningStoreService {
         //
     }
 
-    private loadWoodburnings(): Observable<WoodburningDetails[]> {
+    public loadWoodburnings(): Observable<WoodburningDetails[]> {
         const woodburnings = [{
             'title': 'Ornate Butterfly',
             'size': "8' x 10'",
@@ -45,11 +45,13 @@ export class WoodburningStoreService {
         return observableOf(woodburnings);
     }
 
-    private createWoodburning(woodburning: WoodburningDetails): void {
-        console.log('Creating Woodburning - service');
+    public createWoodburning(woodburning: WoodburningDetails): void {
+      console.log('Creating Woodburning - service');
+      // The boolean
+      console.log(JSON.stringify(woodburning));
     }
 
-    private editWoodburning(woodburning: WoodburningDetails): void {
+    public editWoodburning(woodburning: WoodburningDetails): void {
         console.log('Editing Woodburning - service');
     }
 }
