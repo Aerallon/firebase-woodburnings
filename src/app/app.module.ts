@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomePageComponent } from './home-page.component';
 // import { CreateWoodburningComponent } from './create-woodburning.component';
+// import { EditWoodburningComponent } from './edit-woodburning.component';
 import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule } from '@angular/material';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule } from 
     AppComponent,
     HomePageComponent,
     // CreateWoodburningComponent
+    // EditWoodburningComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +31,12 @@ import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule } from 
     AppComponent
   ],
   exports: [
-    // CreateWoodburningComponent
+    // CreateWoodburningComponent,
+    // EditWoodburningComponent
   ],
   entryComponents: [
-    // CreateWoodburningComponent
+    // CreateWoodburningComponent,
+    // EditWoodburningComponent
   ]
 })
 export class AppModule { }
