@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { WoodburningDetails } from './woodburning-store.service';
@@ -28,7 +29,8 @@ export class EditWoodburningComponent implements OnInit {
     sold: false
   });
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              public dialogRef: MatDialogRef<EditWoodburningComponent>) {
   }
 
   ngOnInit(): void {
@@ -54,5 +56,10 @@ export class EditWoodburningComponent implements OnInit {
 
   updateWoodburning(): void {
     console.log('Editing Woodburning');
+    this.close();
+  }
+
+  close(): void {
+    this.dialogRef.close();
   }
 }
