@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CreateWoodburningComponent } from './create-woodburning.component';
 import { MatDialog } from '@angular/material';
 import { EditWoodburningComponent } from './edit-woodburning.component';
+import { ListWoodburningsComponent } from './list-woodburnings.component';
 
 @Component({
     templateUrl: './home-page.component.html',
@@ -18,8 +19,8 @@ export class HomePageComponent {
     this.dialog.open(CreateWoodburningComponent, { width: '500px' });
   }
 
-  public openEditWoodburningDialog(): void {
-    console.log('openEditWoodburningDialog');
-    this.dialog.open(EditWoodburningComponent, { width: '500px' });
-  }
+  // public openEditWoodburningDialog(): void {
+  //   console.log('openEditWoodburningDialog');
+  //   this.dialog.open(EditWoodburningComponent, { width: '500px' });
+  // }
 }

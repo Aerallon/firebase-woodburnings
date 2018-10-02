@@ -4,10 +4,10 @@ div {
   font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 14px;
   padding-bottom: 15px;
+  width: 100%;
 }
 
 .actions {
-  width: 350px;
   button {
     font-size: 14px;
     background-color: $blue;
@@ -16,5 +16,9 @@ div {
     font-weight: 500;
   }
 
-  button.mat-button {height: initial; margin: 5px 0;}
+  button.mat-button {
+    height: initial;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
 }
