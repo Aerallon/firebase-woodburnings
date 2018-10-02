@@ -1,0 +1,116 @@
+// Configurable breakpoints
+// Changing these should only be done after careful consideration.
+$media--phone-minimum: 569px !default;
+$media--tablet-minimum: 960px !default;
+$media--desktop-minimum: 992px !default;
+$media--desktop-large-minimum: 1200px !default;
+
+
+// Useful utilities for cases the simple forms don't quite support easily.
+@mixin media-query($width, $target: 'screen') {
+    @media #{$target} and (min-width: #{$width}) {
+        @content;
+    }
+}
+
+
+// Simple use cases for 80% of needs.
+@mixin phone {
+    @include media-query($media--phone-minimum) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include media-query($media--tablet-minimum) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @include media-query($media--desktop-minimum) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @include media-query($media--desktop-large-minimum) {
+        @content;
+    }
+}
+
+@mixin desktop-print {
+    @include media-query($media--desktop-minimum, 'print') {
+        @content;
+    }
+}
+
+$grid-gutter: 20px !default;
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    + .row-gutters {
+        margin-top: 0;
+    }
+}
+
+.row-gutters {
+    margin-top: -$grid-gutter;
+    margin-left: -$grid-gutter;
+
+    > .col {
+        padding-top: $grid-gutter;
+        padding-left: $grid-gutter;
+    }
+}
+
+.col {
+    position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex: 1 1 0%;
+}
+
+@mixin def-columns($size) {
+    .col-#{$size}-1,
+    .col-#{$size}-2,
+    .col-#{$size}-3,
+    .col-#{$size}-4,
+    .col-#{$size}-5,
+    .col-#{$size}-6,
+    .col-#{$size}-7,
+    .col-#{$size}-8,
+    .col-#{$size}-9,
+    .col-#{$size}-10,
+    .col-#{$size}-11,
+    .col-#{$size}-12 { flex: 0 0 auto; }
+
+    .col-#{$size}-1 { width: 8.333333%; }
+    .col-#{$size}-2 { width: 16.666667%; }
+    .col-#{$size}-3 { width: 25%; }
+    .col-#{$size}-4 { width: 33.333333%; }
+    .col-#{$size}-5 { width: 41.666667%; }
+    .col-#{$size}-6 { width: 50%; }
+    .col-#{$size}-7 { width: 58.333333%; }
+    .col-#{$size}-8 { width: 66.666667%; }
+    .col-#{$size}-9 { width: 75%; }
+    .col-#{$size}-10 { width: 83.333333%; }
+    .col-#{$size}-11 { width: 92.666667%; }
+    .col-#{$size}-12 { width: 100%; }
+}
+
+@include def-columns(xs);
+
+@include tablet {
+    @include def-columns(sm)
+}
+
+@include desktop {
+    @include def-columns(md)
+}
+
+@include desktop-large {
+    @include def-columns(lg)
+}
