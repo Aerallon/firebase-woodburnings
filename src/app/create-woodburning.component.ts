@@ -34,4 +34,8 @@ export class CreateWoodburningComponent implements OnInit {
       'sold': ['', Validators.required]
     });
   }
+
+  createWoodburning(): void {
+    console.log('Creating Woodburning');
+  }
 }
