@@ -1,0 +1,66 @@
+<form [formGroup]="form" *ngIf="woodburningInfo | async as w">
+    <mat-card>
+        <mat-card-title>Edit Woodburning</mat-card-title>
+        <mat-card-content>
+            <div class="create-form">
+                <mat-form-field>
+                    <input matInput formControlName="title" placeholder="Title"
+                           required="true" value="{{ w.title }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="size" placeholder="Size"
+                           required="true" value="{{ w.size }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="material" placeholder="Material"
+                           required="true" value="{{ w.material }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput readonly [matDatepicker]="dateFinishedDatePicker" formControlName="dateFinished"
+                           placeholder="Date Finished" required="true" value="{{ w.dateFinished }}">
+                    <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="totalTimeTakenMinutes" placeholder="totalTimeTakenMinutes"
+                           required="true" value="{{ w.totalTimeTakenMinutes }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="totalTimeTakenHours" placeholder="totalTimeTakenHours"
+                           required="true" value="{{ w.totalTimeTakenHours }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="imageUrl" placeholder="imageUrl"
+                           required="true" value="{{ w.imageUrl }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-slide-toggle formControlName="sharedOnline" [checked]="w.sharedOnline">
+                    Shared Online?</mat-slide-toggle>
+                <mat-slide-toggle formControlName="framed" [checked]="w.framed">
+                    Framed?</mat-slide-toggle>
+                <mat-slide-toggle formControlName="forSale" [checked]="w.forSale">
+                    For Sale?</mat-slide-toggle>
+                <mat-form-field>
+                    <input matInput formControlName="sellingPrice" placeholder="sellingPrice"
+                           required="true" value="{{ w.sellingPrice }}">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+                <mat-slide-toggle formControlName="sold" [checked]="w.sold">
+                    Sold?</mat-slide-toggle>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="actions">
+                <button mat-raised-button color="primary" (click)="updateWoodburning()">
+                    Update Woodburning
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
