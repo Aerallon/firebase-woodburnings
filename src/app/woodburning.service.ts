@@ -32,11 +32,14 @@
 //   'imageUrl': "https://google.com" //update
 // };
 
+// collection used for all woodburning endpoints
+// const collection: AngularFirestoreCollection<Item> = aft.collection('woodburnings')
+
 // export const addNewWoodburningToDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   console.log(woodburningData);
 //   // Add a new document with a generated id.
-//   firestoreDatabase.collection("woodburnings").add({
+//   firestoreDatabase.collection("woodburnings").put({
 //       'title': woodburningData.title,
 //       'size': woodburningData.size,
 //       'material': woodburningData.material,
@@ -58,6 +61,8 @@
 //   });
 // });
 
+
+// afs.collection('woodburnings', ref => ref.where('name', '==', 'jeff') )
 // export const editWoodburningFromDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   const ornateButterflyRef = firestoreDatabase.collection("woodburnings").doc("Ornate Butterfly");
@@ -75,6 +80,7 @@
 //   });
 // });
 
+// afs.collection('woodburnings', ref => ref.where('name', '==', 'jeff') )
 // export const deleteWoodburningFromDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   firestoreDatabase.collection("woodburnings").doc("Ornate Butterfly 2").delete().then(function() {
@@ -85,6 +91,8 @@
 //   });
 // });
 
+
+// afs.collection('woodburnings', ref => ref.orderBy('dateFinished') )
 // export const listWoodburningsFromDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   firestoreDatabase.collection("woodburnings").get().then((querySnapshot) => {
@@ -94,6 +102,7 @@
 //   })
 // });
 
+// afs.collection('woodburnings', ref => ref.where('name', '==', 'jeff') )
 // export const getWoodburningFromDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   const ornateButterflyDocumentRef = firestoreDatabase.collection('woodburnings').doc('Ornate Butterfly');
@@ -109,6 +118,8 @@
 //   return query;
 // });
 
+//afs.collection('woodburnings', ref => ref.orderBy('forSale') )
+//afs.collection('woodburnings', ref => ref.orderBy('isSold') )
 // export const listNotSoldWoodburningsFromDB = functions.https.onRequest((request, response) => {
 //   console.log(request);
 //   const forSaleRef = firestoreDatabase.collection("woodburnings");
