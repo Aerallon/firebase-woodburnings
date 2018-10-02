@@ -10,17 +10,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './home-page.component';
 import { CreateWoodburningComponent } from './create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning.component';
+import { ListWoodburningsComponent } from './list-woodburnings.component';
+import { WoodburningStoreService } from './woodburning-store.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
          MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
-         MatNativeDateModule } from '@angular/material';
+         MatNativeDateModule, MatTableModule, MatDividerModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     CreateWoodburningComponent,
-    EditWoodburningComponent
+    EditWoodburningComponent,
+    ListWoodburningsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,18 +39,25 @@ import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
     MatSlideToggleModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule,
+    MatDividerModule
   ],
   bootstrap: [
     AppComponent
   ],
+  providers: [
+    WoodburningStoreService
+  ],
   exports: [
     CreateWoodburningComponent,
-    EditWoodburningComponent
+    EditWoodburningComponent,
+    ListWoodburningsComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
-    EditWoodburningComponent
+    EditWoodburningComponent,
+    ListWoodburningsComponent
   ]
 })
 export class AppModule { }
