@@ -1,3 +1,7 @@
+import { Injectable } from '@angular/core';
+import { Observable, BehaviorSubject, of as observableOf } from 'rxjs';
+import { stringify } from 'querystring';
+
 export interface WoodburningDetails {
     title: string;
     size: string;
@@ -11,6 +15,43 @@ export interface WoodburningDetails {
     forSale: boolean;
     sellingPrice: number;
     sold: boolean;
+}
+
+@Injectable()
+export class WoodburningStoreService {
+    woodburnings$$: BehaviorSubject<WoodburningDetails[]> = new BehaviorSubject([]);
+    woodburning$: Observable<WoodburningDetails[]> = this.woodburnings$$.asObservable();
+
+    constructor() {
+        //
+    }
+
+    private loadWoodburnings(): Observable<WoodburningDetails[]> {
+        const woodburnings = [{
+            'title': 'Ornate Butterfly',
+            'size': "8' x 10'",
+            'material': 'Russian Birch',
+            'dateFinished': stringify(new Date('December 10, 2018')),
+            'totalTimeTakenMinutes': 120,
+            'totalTimeTakenHours': 2,
+            'framed': true,
+            'forSale': true,
+            'sold': false,
+            'sellingPrice': 60,
+            'sharedOnline': true,
+            'imageUrl': 'https://google.com'
+        }];
+
+        return observableOf(woodburnings);
+    }
+
+    private createWoodburning(woodburning: WoodburningDetails): void {
+        console.log('Creating Woodburning - service');
+    }
+
+    private editWoodburning(woodburning: WoodburningDetails): void {
+        console.log('Editing Woodburning - service');
+    }
 }
 
 // import * as functions from 'firebase-functions';
