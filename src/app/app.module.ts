@@ -6,18 +6,33 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HomePageComponent } from './home-page.component';
+// import { CreateWoodburningComponent } from './create-woodburning.component';
+import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
+    // CreateWoodburningComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSliderModule
   ],
   bootstrap: [
     AppComponent
+  ],
+  exports: [
+    // CreateWoodburningComponent
+  ],
+  entryComponents: [
+    // CreateWoodburningComponent
   ]
 })
 export class AppModule { }
