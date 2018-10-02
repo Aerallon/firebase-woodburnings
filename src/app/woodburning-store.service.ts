@@ -1,3 +1,18 @@
+export interface WoodburningDetails {
+    title: string;
+    size: string;
+    material: string;
+    dateFinished: string;
+    totalTimeTakenMinutes: number;
+    totalTimeTakenHours: number;
+    imageUrl: string;
+    sharedOnline: boolean;
+    framed: boolean;
+    forSale: boolean;
+    sellingPrice: number;
+    sold: boolean;
+}
+
 // import * as functions from 'firebase-functions';
 //
 // const firebase = require("firebase");
