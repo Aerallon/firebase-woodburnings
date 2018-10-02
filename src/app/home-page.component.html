@@ -3,12 +3,17 @@
     <div>To get started, click on one of the following actions: </div>
     <div class="actions">
         <button mat-button (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
+
         <!-- Maybe this edit can allow me to use dropdown with search to select one? -->
         <!-- This should likely only be do-able from mat-table -->
         <button mat-button (click)="openEditWoodburningDialog()" >Edit Woodburning</button>
+
         <!-- (click)="goToListAllWoodburningPage()" -->
-        <button mat-button>View All Woodburnings</button>
+        <!-- This should be a table on this page -->
+        <!--<button mat-button>View All Woodburnings</button>-->
+
         <!-- (click)="goToWoodburningsForSalePage()" -->
-        <button mat-button>View All Woodburnings for Sale</button>
+        <!-- This should be a filter on the table on this page instead of button -->
+        <!--<button mat-button>View All Woodburnings for Sale</button>-->
     </div>
 </mat-card>
