@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material';
+import { WoodburningDetails } from './woodburning-store.service';
 
 @Component({
     templateUrl: './create-woodburning.component.html',
@@ -11,7 +13,8 @@ export class CreateWoodburningComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              public dialogRef: MatDialogRef<CreateWoodburningComponent>) {
   }
 
   ngOnInit(): void {
@@ -37,5 +40,10 @@ export class CreateWoodburningComponent implements OnInit {
 
   createWoodburning(): void {
     console.log('Creating Woodburning');
+    this.close();
+  }
+
+  close(): void {
+      this.dialogRef.close();
   }
 }

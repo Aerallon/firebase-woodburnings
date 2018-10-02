@@ -6,37 +6,48 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './home-page.component';
-// import { CreateWoodburningComponent } from './create-woodburning.component';
-// import { EditWoodburningComponent } from './edit-woodburning.component';
-import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule } from '@angular/material';
+import { CreateWoodburningComponent } from './create-woodburning.component';
+import { EditWoodburningComponent } from './edit-woodburning.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
+         MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
+         MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    // CreateWoodburningComponent
-    // EditWoodburningComponent
+    CreateWoodburningComponent,
+    EditWoodburningComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    MatNativeDateModule
   ],
   bootstrap: [
     AppComponent
   ],
   exports: [
-    // CreateWoodburningComponent,
-    // EditWoodburningComponent
+    CreateWoodburningComponent,
+    EditWoodburningComponent
   ],
   entryComponents: [
-    // CreateWoodburningComponent,
-    // EditWoodburningComponent
+    CreateWoodburningComponent,
+    EditWoodburningComponent
   ]
 })
 export class AppModule { }

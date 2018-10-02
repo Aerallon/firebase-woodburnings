@@ -2,11 +2,10 @@
     <div>Hi there! Welcome to my app!</div>
     <div>To get started, click on one of the following actions: </div>
     <div class="actions">
-        <!-- (click)="openCreateWoodburningDialog()" -->
-        <button mat-button>Create Woodburning Entry</button>
+        <button mat-button (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
         <!-- Maybe this edit can allow me to use dropdown with search to select one? -->
-        <!-- (click)="openWoodburningSelectionDialog()" -->
-        <button mat-button>Edit Woodburning</button>
+        <!-- This should likely only be do-able from mat-table -->
+        <button mat-button (click)="openEditWoodburningDialog()" >Edit Woodburning</button>
         <!-- (click)="goToListAllWoodburningPage()" -->
         <button mat-button>View All Woodburnings</button>
         <!-- (click)="goToWoodburningsForSalePage()" -->
