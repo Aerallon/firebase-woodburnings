@@ -4,8 +4,15 @@ mat-form-field {
 }
 
 .create-woodburning-form {
+
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+
   .row {
     width: 260px;
+  }
+
+  .row mat-slide-toggle {
+    padding-bottom: 25px;
   }
 
   .create-market-buttons {
