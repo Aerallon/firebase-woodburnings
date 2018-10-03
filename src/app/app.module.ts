@@ -30,7 +30,7 @@ import {
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule.enablePersistence(),
+    AngularFirestoreModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
