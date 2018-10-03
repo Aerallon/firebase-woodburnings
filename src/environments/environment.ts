@@ -4,8 +4,8 @@ export const environment = {
     apiKey: 'AIzaSyDSROWgmB9vVLzfDygZen2dAzjZHtklzaM',
     authDomain: 'my-woodburnings.firebaseapp.com',
     databaseURL: 'https://my-woodburnings.firebaseio.com',
-    collectionName: 'my-woodburnings',
-    storageBucket: 'my-woodburnings.appspot.com', // TODO double check this
-    projectId: 'my-woodburnings'
+    projectId: 'my-woodburnings',
+    storageBucket: 'my-woodburnings.appspot.com',
+    messagingSenderId: '619821469480'
   }
 };
