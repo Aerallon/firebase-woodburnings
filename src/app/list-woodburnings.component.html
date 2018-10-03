@@ -1,10 +1,15 @@
-<div class="table-info" content>
-    <mat-table #table [dataSource]="woodburningSource">
-        <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
-            <mat-header-cell *matHeaderCellDef>{{ column.header }}</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ column.cell(row) }}</mat-cell>
-        </ng-container>
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>
-    </mat-table>
+<!--<div class="table-info" content>-->
+    <!--<mat-table #table [dataSource]="woodburningSource">-->
+    <!--&lt;!&ndash;<mat-table #table [dataSource]="woodburningSource">&ndash;&gt;-->
+        <!--<ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">-->
+            <!--<mat-header-cell *matHeaderCellDef>{{ column.header }}</mat-header-cell>-->
+            <!--<mat-cell *matCellDef="let row">{{ column.cell(row) }}</mat-cell>-->
+        <!--</ng-container>-->
+        <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
+        <!--<mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>-->
+    <!--</mat-table>-->
+<!--</div>-->
+
+<div *ngFor="let woodburning of woodburnings$ | async">
+    <h3>{{ woodburning | json }}</h3>
 </div>

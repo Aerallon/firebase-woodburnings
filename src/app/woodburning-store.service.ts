@@ -1,6 +1,8 @@
+import { OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, of as observableOf } from 'rxjs';
 import { stringify } from 'querystring';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 export interface WoodburningDetails {
     title: string;
@@ -18,107 +20,91 @@ export interface WoodburningDetails {
 }
 
 @Injectable()
-export class WoodburningStoreService {
+export class WoodburningStoreService implements OnInit {
+
     woodburnings$$: BehaviorSubject<WoodburningDetails[]> = new BehaviorSubject([]);
     woodburning$: Observable<WoodburningDetails[]> = this.woodburnings$$.asObservable();
 
-    constructor() {
+    woodburningCollection: AngularFirestoreCollection<WoodburningDetails>;
+    woodburnings$: Observable<WoodburningDetails[]>;
+
+    forSaleWoodburningsCollection: AngularFirestoreCollection<WoodburningDetails>;
+    forSaleWoodburnings$: Observable<WoodburningDetails[]>;
+
+    specificDocExample: AngularFirestoreDocument<WoodburningDetails>;
+    specificDoc$: Observable<WoodburningDetails>;
+
+    updatedWoodburningContent = {
+        title: 'New Title',
+        size: "8' x 10'",
+        material: 'Russian Birch',
+        dateFinished: '2018-09-15:19:00:00:0000',
+        totalTimeTakenMinutes: 180,
+        totalTimeTakenHours: 3,
+        imageUrl: 'http://google.com/butterfly',
+        sharedOnline: true,
+        framed: true,
+        forSale: false,
+        sellingPrice: 60,
+        sold: true
+    };
+
+    constructor( private angularFirestore: AngularFirestore) {
         //
     }
 
-    public loadWoodburnings(): Observable<WoodburningDetails[]> {
-        const woodburnings = [{
-            'title': 'Ornate Butterfly',
-            'size': "8' x 10'",
-            'material': 'Russian Birch',
-            'dateFinished': stringify(new Date('December 10, 2018')),
-            'totalTimeTakenMinutes': 120,
-            'totalTimeTakenHours': 2,
-            'framed': true,
-            'forSale': true,
-            'sold': false,
-            'sellingPrice': 60,
-            'sharedOnline': true,
-            'imageUrl': 'https://google.com'
-        }];
+    ngOnInit(): void {
+        // grabs all woodburnings in the collection
+        this.woodburningCollection = this.angularFirestore.collection('woodburnings', ref => {
+            return ref.orderBy('title');
+        });
+        this.woodburnings$ = this.woodburningCollection.valueChanges();
 
-        return observableOf(woodburnings);
+        // should only bring back the for sale woodburnings
+        this.forSaleWoodburningsCollection = this.angularFirestore.collection('woodburnings', ref => {
+            return ref.where('forSale', '==', true);
+        });
+        this.forSaleWoodburnings$ = this.forSaleWoodburningsCollection.valueChanges();
+
+        // Grabs the ornate butterfly document
+        this.specificDocExample = this.angularFirestore.doc('woodburnings/BRNhjBiolRvPS3agyx9X');
+        this.specificDoc$ = this.specificDocExample.valueChanges();
     }
+
+    // public loadWoodburnings(): Observable<WoodburningDetails[]> {
+    //     // this might not be needed.
+    // }
 
     public createWoodburning(woodburning: WoodburningDetails): void {
       console.log('Creating Woodburning - service');
-      // The boolean
-      console.log(JSON.stringify(woodburning));
+      // console.log(JSON.stringify(woodburning));
+      this.woodburningCollection.add(woodburning).then(function(): void {
+            console.log('Woodburning successfully written!');
+      }).catch(function(error: string): void {
+        console.error('Error writing woodburning: ', error);
+      });
     }
 
     public editWoodburning(woodburning: WoodburningDetails): void {
         console.log('Editing Woodburning - service');
+        // this updates one at a time, can I pass the entry's doc ID and just update the whole thing?
+        this.specificDocExample.update({title: this.updatedWoodburningContent.title});
+        this.specificDocExample.update({size: this.updatedWoodburningContent.size});
+        this.specificDocExample.update({material: this.updatedWoodburningContent.material});
+        this.specificDocExample.update({dateFinished: this.updatedWoodburningContent.dateFinished});
+        this.specificDocExample.update({totalTimeTakenMinutes: this.updatedWoodburningContent.totalTimeTakenMinutes});
+        this.specificDocExample.update({totalTimeTakenHours: this.updatedWoodburningContent.totalTimeTakenHours});
+        this.specificDocExample.update({imageUrl: this.updatedWoodburningContent.imageUrl});
+        this.specificDocExample.update({sharedOnline: this.updatedWoodburningContent.sharedOnline});
+        this.specificDocExample.update({framed: this.updatedWoodburningContent.framed});
+        this.specificDocExample.update({forSale: this.updatedWoodburningContent.forSale});
+        this.specificDocExample.update({sellingPrice: this.updatedWoodburningContent.sellingPrice});
+        this.specificDocExample.update({sold: this.updatedWoodburningContent.sold});
+        console.log('Finished Editting Woodburning - service');
     }
 }
 
-// import * as functions from 'firebase-functions';
-//
-// const firebase = require("firebase");
-// // Required for side-effects
-// require("firebase/firestore");
-//
-// firebase.initializeApp({
-//   apiKey: 'AIzaSyDSROWgmB9vVLzfDygZen2dAzjZHtklzaM',
-//   authDomain: 'my-woodburnings.firebaseapp.com',
-//   projectId: 'my-woodburnings'
-// });
-//
 // const firestoreDatabase = firebase.firestore();
-//
-// // Disable deprecated features
-// firestoreDatabase.settings({
-//   timestampsInSnapshots: true
-// });
-
-// const woodburningData = {
-//   'title': "Ornate Butterfly",
-//   'size': "8' x 10'",
-//   'material': "Russian Birch",
-//   'dateFinished': new Date("December 10, 1815"), //update
-//   'totalTimeTakenMinutes': 120, //update
-//   'totalTimeTakenHours': 2, //update
-//   'framed': true,
-//   'forSale': true,
-//   'sold': false,
-//   'sellingPrice': 60,
-//   'sharedOnline': true,
-//   'imageUrl': "https://google.com" //update
-// };
-
-// collection used for all woodburning endpoints
-// const collection: AngularFirestoreCollection<Item> = aft.collection('woodburnings')
-
-// export const addNewWoodburningToDB = functions.https.onRequest((request, response) => {
-//   console.log(request);
-//   console.log(woodburningData);
-//   // Add a new document with a generated id.
-//   firestoreDatabase.collection("woodburnings").put({
-//       'title': woodburningData.title,
-//       'size': woodburningData.size,
-//       'material': woodburningData.material,
-//       'date-finished': woodburningData.dateFinished,
-//       'total-time-taken-minutes': woodburningData.totalTimeTakenMinutes,
-//       'total-time-taken-hours': woodburningData.totalTimeTakenHours,
-//       'framed': woodburningData.framed,
-//       'for-sale': woodburningData.forSale,
-//       'sold': woodburningData.sold,
-//       'selling-price': woodburningData.sellingPrice,
-//       'shared-online': woodburningData.sharedOnline,
-//       'image-url': woodburningData.imageUrl,
-//   })
-//   .then(function(docRef) {
-//       console.log("Woodburning written with ID: ", docRef.id);
-//   })
-//   .catch(function(error) {
-//       console.error("Error adding woodburning: ", error);
-//   });
-// });
-
 
 // afs.collection('woodburnings', ref => ref.where('name', '==', 'jeff') )
 // export const editWoodburningFromDB = functions.https.onRequest((request, response) => {

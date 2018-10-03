@@ -30,6 +30,7 @@ export class ListWoodburningsComponent implements OnInit {
     { columnDef: 'sellingPrice', header: 'Price', cell: (woodburning: WoodburningDetails) => `${woodburning.sellingPrice}` },
     { columnDef: 'sold', header: 'Sold?', cell: (woodburning: WoodburningDetails) => `${woodburning.sold}` }
   ];
+  // TODO: Have a column for an actions column to edit and delete and preview
 
   /** Column definitions in order */
   readonly displayedColumns = this.columns.map(x => x.columnDef);
@@ -55,7 +56,7 @@ export class WoodburningDataSource extends DataSource<WoodburningDetails> {
 
     constructor(private woodburningStoreService: WoodburningStoreService) {
         super();
-        this.woodburnings$ = this.woodburningStoreService.woodburning$;
+        this.woodburnings$ = this.woodburningStoreService.woodburnings$;
     }
 
     connect(): Observable<WoodburningDetails[]> {
