@@ -12,6 +12,7 @@ import { CreateWoodburningComponent } from './create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings.component';
 import { WoodburningStoreService } from './woodburning-store.service';
+import { FirestoreService } from './firestore.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
   MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
@@ -50,7 +51,8 @@ import {
   ],
   providers: [
     WoodburningStoreService,
-    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
+    FirestoreService,
+    // {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
   ],
   exports: [
     CreateWoodburningComponent,
