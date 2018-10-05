@@ -1,8 +1,9 @@
 <mat-card>
     <div>Hi there! Welcome to my app!</div>
     <div>To get started, click on one of the following actions: </div>
-    <div class="actions">
-        <button mat-button (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
+    <div class="home-page-buttons">
+        <button mat-raised-button class="submitButton" (click)="openCreateWoodburningDialog()">Create Woodburning
+            Entry</button>
 
         <!-- Maybe this edit can allow me to use dropdown with search to select one? -->
         <!-- This should likely only be do-able from mat-table -->
@@ -15,8 +16,7 @@
         <!-- (click)="goToWoodburningsForSalePage()" -->
         <!-- This should be a filter on the table on this page instead of button -->
         <!--<button mat-button>View All Woodburnings for Sale</button>-->
-
-        <mat-divider></mat-divider>
-        <list-woodburnings></list-woodburnings>
     </div>
+    <mat-divider></mat-divider>
+    <list-woodburnings></list-woodburnings>
 </mat-card>

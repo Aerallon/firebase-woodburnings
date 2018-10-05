@@ -7,22 +7,10 @@ div {
   width: 100%;
 }
 
-.actions {
-
-  padding-bottom: 25px;
-  height: 100px;
-
-  button {
-    font-size: 14px;
-    background-color: $blue;
+.home-page-buttons {
+  .submitButton {
     color: $white;
+    background-color: $blue;
     text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  button.mat-button {
-    height: initial;
-    margin-right: 5px;
-    margin-bottom: 5px;
   }
 }
