@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
-import { WoodburningDetails } from './woodburning-store.service';
+import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
 
 @Component({
     templateUrl: './edit-woodburning.component.html',
@@ -30,7 +30,8 @@ export class EditWoodburningComponent implements OnInit {
   });
 
   constructor(private formBuilder: FormBuilder,
-              public dialogRef: MatDialogRef<EditWoodburningComponent>) {
+              public dialogRef: MatDialogRef<EditWoodburningComponent>,
+              private woodburningStoreService: WoodburningStoreService) {
   }
 
   ngOnInit(): void {
@@ -56,7 +57,24 @@ export class EditWoodburningComponent implements OnInit {
 
   updateWoodburning(): void {
     console.log('Editing Woodburning');
-    this.close();
+
+    const woodburningFormData = {
+      'title': this.form.value.title,
+      'size': this.form.value.size,
+      'material': this.form.value.material,
+      'dateFinished': this.form.value.dateFinished,
+      'totalTimeTakenMinutes': this.form.value.totalTimeTakenMinutes,
+      'totalTimeTakenHours': this.form.value.totalTimeTakenHours,
+      'imageUrl': this.form.value.imageUrl,
+      'sharedOnline': this.form.value.sharedOnline,
+      'framed': this.form.value.framed,
+      'forSale': this.form.value.forSale,
+      'sellingPrice': this.form.value.sellingPrice,
+      'sold': this.form.value.sold
+    };
+
+    this.woodburningStoreService.editWoodburning(woodburningFormData);
+    this.dialogRef.close();
   }
 
   close(): void {

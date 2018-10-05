@@ -18,6 +18,9 @@
             "polyfills": "src/polyfills.ts",
             "styles": [
               "src/styles.scss"
+            ],
+            "assets": [
+              "src/assets"
             ]
           },
           "configurations": {
