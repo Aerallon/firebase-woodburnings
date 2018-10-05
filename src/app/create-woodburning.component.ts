@@ -50,7 +50,7 @@ export class CreateWoodburningComponent implements OnInit {
       'sharedOnline': [false],
       'framed': [false],
       'forSale': [false],
-      'sellingPrice': ['', Validators.required],
+      'sellingPrice': [''], // should only be required if for sale is true
       'sold': [false]
     });
   }
@@ -74,7 +74,7 @@ export class CreateWoodburningComponent implements OnInit {
     };
 
     this.woodburningStoreService.createWoodburning(woodburningFormData);
-    this.close();
+    this.dialogRef.close();
   }
 
   close(): void {

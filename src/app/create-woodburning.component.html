@@ -7,16 +7,19 @@
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="title" placeholder="Title" required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="size" placeholder="Size" required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="material" placeholder="Material" required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
@@ -25,23 +28,27 @@
                                placeholder="Date Finished" required="true">
                         <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
                         <mat-datepicker #dateFinishedDatePicker></mat-datepicker>
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="totalTimeTakenMinutes"
                                placeholder="Total Time Taken (Minutes)" required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="totalTimeTakenHours" placeholder="Total Time Taken (Hours)"
                                required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
                     <mat-form-field>
                         <input matInput formControlName="imageUrl" placeholder="Image Url" required="true">
+                        <mat-error>Required</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row">
@@ -55,7 +62,7 @@
                 </div>
                 <div class="row">
                     <mat-form-field>
-                        <input matInput formControlName="sellingPrice" placeholder="Selling Price" required="true">
+                        <input matInput formControlName="sellingPrice" placeholder="Selling Price">
                     </mat-form-field>
                 </div>
                 <div class="row">
@@ -63,9 +70,12 @@
                 </div>
             </mat-card-content>
             <mat-card-content>
-                <div class="create-market-buttons">
-                    <button mat-raised-button color="primary" (click)="createWoodburning()">
+                <div class="create-woodburning-buttons">
+                    <button mat-raised-button class="submitButton" (click)="createWoodburning()">
                         Create Woodburning
+                    </button>
+                    <button mat-button class="cancelButton" (click)="close()">
+                        Cancel
                     </button>
                 </div>
             </mat-card-content>
