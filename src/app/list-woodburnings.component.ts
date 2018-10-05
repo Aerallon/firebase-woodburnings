@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
 
 export class ListWoodburningsComponent implements OnInit {
 
-  woodburningSource: WoodburningDataSource;
+  // woodburningSource: WoodburningDataSource;
 
   columns = [
     { columnDef: 'title', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.title}` },
@@ -40,7 +40,7 @@ export class ListWoodburningsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.woodburningSource = new WoodburningDataSource(this.woodburningStoreService);
+    // this.woodburningSource = new WoodburningDataSource(this.woodburningStoreService);
   }
 
   // Will become a function that is called in the action kebab of each woodburning
@@ -50,21 +50,21 @@ export class ListWoodburningsComponent implements OnInit {
   }
 }
 
-export class WoodburningDataSource extends DataSource<WoodburningDetails> {
-
-    private woodburnings$: Observable<WoodburningDetails[]>;
-
-    constructor(private woodburningStoreService: WoodburningStoreService) {
-        super();
-        this.woodburnings$ = this.woodburningStoreService.woodburnings$;
-    }
-
-    connect(): Observable<WoodburningDetails[]> {
-        return this.woodburnings$;
-    }
-
-    disconnect(): void {
-        return;
-    }
-}
+// export class WoodburningDataSource extends DataSource<WoodburningDetails> {
+//
+//     private woodburnings$: Observable<WoodburningDetails[]>;
+//
+//     constructor(private woodburningStoreService: WoodburningStoreService) {
+//         super();
+//         this.woodburnings$ = this.woodburningStoreService.woodburnings$;
+//     }
+//
+//     connect(): Observable<WoodburningDetails[]> {
+//         return this.woodburnings$;
+//     }
+//
+//     disconnect(): void {
+//         return;
+//     }
+// }
 
