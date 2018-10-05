@@ -15,6 +15,7 @@ export class EditWoodburningComponent implements OnInit {
   form: FormGroup;
 
   woodburningInfo: BehaviorSubject <WoodburningDetails> = new BehaviorSubject <WoodburningDetails>({
+    id: '',
     title: '',
     size: '',
     material: '',
@@ -57,23 +58,26 @@ export class EditWoodburningComponent implements OnInit {
 
   updateWoodburning(): void {
     console.log('Editing Woodburning');
+    // Will need to do a get for the doc ID and then pass it on below
+    // Hardcoded to the butterfly one in the meantime
 
     const woodburningFormData = {
-      'title': this.form.value.title,
-      'size': this.form.value.size,
-      'material': this.form.value.material,
-      'dateFinished': this.form.value.dateFinished,
-      'totalTimeTakenMinutes': this.form.value.totalTimeTakenMinutes,
-      'totalTimeTakenHours': this.form.value.totalTimeTakenHours,
-      'imageUrl': this.form.value.imageUrl,
-      'sharedOnline': this.form.value.sharedOnline,
-      'framed': this.form.value.framed,
-      'forSale': this.form.value.forSale,
-      'sellingPrice': this.form.value.sellingPrice,
-      'sold': this.form.value.sold
+      id: 'BRNhjBiolRvPS3agyx9X', // TODO: Figure out how to get current woodburning id
+      title: this.form.value.title,
+      size: this.form.value.size,
+      material: this.form.value.material,
+      dateFinished: this.form.value.dateFinished,
+      totalTimeTakenMinutes: this.form.value.totalTimeTakenMinutes,
+      totalTimeTakenHours: this.form.value.totalTimeTakenHours,
+      imageUrl: this.form.value.imageUrl,
+      sharedOnline: this.form.value.sharedOnline,
+      framed: this.form.value.framed,
+      forSale: this.form.value.forSale,
+      sellingPrice: this.form.value.sellingPrice,
+      sold: this.form.value.sold
     };
 
-    this.woodburningStoreService.editWoodburning(woodburningFormData);
+    this.woodburningStoreService.update(woodburningFormData);
     this.dialogRef.close();
   }
 

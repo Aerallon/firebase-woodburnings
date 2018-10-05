@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { DataSource } from '@angular/cdk/table';
-import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
 import { of as observableOf, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -15,6 +15,9 @@ import { map } from 'rxjs/operators';
 export class ListWoodburningsComponent implements OnInit {
 
   // woodburningSource: WoodburningDataSource;
+
+  public allWoodburnings$: Observable<WoodburningDetails[]>;
+  public singleWoodburning$: Observable<WoodburningDetails>;
 
   columns = [
     { columnDef: 'title', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.title}` },
@@ -41,6 +44,9 @@ export class ListWoodburningsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.woodburningSource = new WoodburningDataSource(this.woodburningStoreService);
+    // this.allWoodburnings$ = this.woodburningStoreService.woodburnings$;
+    this.singleWoodburning$ = this.woodburningStoreService.get('BRNhjBiolRvPS3agyx9X');
+    this.allWoodburnings$ = this.woodburningStoreService.list();
   }
 
   // Will become a function that is called in the action kebab of each woodburning

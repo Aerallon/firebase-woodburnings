@@ -9,7 +9,9 @@
         <!--<mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>-->
     <!--</mat-table>-->
 <!--</div>-->
-<div style="color: red">{{ woodburnings$ | async}}</div>
-<div style="color: red" *ngFor="let woodburning of woodburnings$ | async">
+<div>THERE IS SUPPOSED TO BE DATA HERE!</div>
+<div>{{ allWoodburnings$ | async}}</div>
+<div *ngFor="let woodburning of allWoodburnings$ | async">
     <h3>{{ woodburning | json }}</h3>
 </div>
+<div>{{ singleWoodburning$ | async }}</div>
