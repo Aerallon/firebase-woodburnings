@@ -1,6 +1,6 @@
 import { FirestoreService } from './firestore.service';
 import { Observable } from 'rxjs';
-import { firestore } from 'firebase';
+import { Injectable } from '@angular/core';
 
 export interface WoodburningDetails {
     id: string;
@@ -8,7 +8,6 @@ export interface WoodburningDetails {
     size: string;
     material: string;
     dateFinished: string;
-    // dateFinished: firestore.Timestamp;
     totalTimeTakenMinutes: number;
     totalTimeTakenHours: number;
     imageUrl: string;
@@ -19,6 +18,7 @@ export interface WoodburningDetails {
     sold: boolean;
 }
 
+@Injectable({providedIn: 'root'})
 export class WoodburningStoreService {
 
   constructor(private firestoreService: FirestoreService) {

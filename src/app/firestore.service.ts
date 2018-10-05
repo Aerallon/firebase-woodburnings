@@ -7,19 +7,14 @@ import {
 } from 'angularfire2/firestore';
 import { from as fromPromise, Observable } from 'rxjs';
 import { take, map } from 'rxjs/operators';
-import { AngularFireAuth } from 'angularfire2/auth';
 
 type CollectionPredicate<T> = string | AngularFirestoreCollection<T>;
 type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
 @Injectable({providedIn: 'root'})
 export class FirestoreService {
-  // private userId: string;
 
-  constructor(private angularFirestore: AngularFirestore, private angularFireAuth: AngularFireAuth) {
-    // this.angularFireAuth.user.pipe(
-    //   map(u => u ? u.providerData[0].uid : '')
-    // ).subscribe(userId => this.userId = userId);
+  constructor(private angularFirestore: AngularFirestore) {
   }
 
   col<T>(ref: CollectionPredicate<T>, queryFn?: any): AngularFirestoreCollection<T> {
