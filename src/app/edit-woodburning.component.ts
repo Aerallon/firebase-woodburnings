@@ -49,7 +49,7 @@ export class EditWoodburningComponent implements OnInit {
       'sharedOnline': [this.woodburningInfo.getValue().sharedOnline, Validators.required],
       'framed': [this.woodburningInfo.getValue().framed, Validators.required],
       'forSale': [this.woodburningInfo.getValue().forSale, Validators.required],
-      'sellingPrice': [this.woodburningInfo.getValue().sellingPrice, Validators.required],
+      'sellingPrice': [this.woodburningInfo.getValue().sellingPrice], // should only be required if for sale is true
       'sold': [this.woodburningInfo.getValue().sold, Validators.required]
     });
   }
