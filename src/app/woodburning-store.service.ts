@@ -1,5 +1,6 @@
 import { FirestoreService } from './firestore.service';
 import { Observable } from 'rxjs';
+import { firestore } from 'firebase';
 
 export interface WoodburningDetails {
     id: string;
@@ -7,6 +8,7 @@ export interface WoodburningDetails {
     size: string;
     material: string;
     dateFinished: string;
+    // dateFinished: firestore.Timestamp;
     totalTimeTakenMinutes: number;
     totalTimeTakenHours: number;
     imageUrl: string;
@@ -19,15 +21,12 @@ export interface WoodburningDetails {
 
 export class WoodburningStoreService {
 
-  // allWoodburnings$: Observable<WoodburningDetails[]>;
-
   constructor(private firestoreService: FirestoreService) {
-    // this.allWoodburnings$ = this.list();
   }
 
-  public list(): Observable<any[]> {
+  public list(): Observable<any[]> { // might maybe needs to be WoodburningDetails?
     return this.firestoreService.list('woodburnings', ref => {
-      return ref.orderBy('title', 'desc');
+      return ref.orderBy('title');
     });
   }
 

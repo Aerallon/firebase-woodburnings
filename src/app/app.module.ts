@@ -51,7 +51,7 @@ import {
   ],
   providers: [
     WoodburningStoreService,
-    FirestoreService,
+    // FirestoreService,
     // {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
   ],
   exports: [

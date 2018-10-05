@@ -60,6 +60,7 @@ export class EditWoodburningComponent implements OnInit {
     console.log('Editing Woodburning');
     // Will need to do a get for the doc ID and then pass it on below
     // Hardcoded to the butterfly one in the meantime
+    // const id = this.woodburningStoreService.get();
 
     const woodburningFormData = {
       id: 'BRNhjBiolRvPS3agyx9X', // TODO: Figure out how to get current woodburning id
