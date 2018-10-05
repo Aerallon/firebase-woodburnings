@@ -1,16 +1,45 @@
 @import '../common/colors';
 
-div {
-  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+.home {
   font-size: 14px;
-  padding-bottom: 15px;
   width: 100%;
-}
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 
-.home-page-buttons {
-  .submitButton {
-    color: $white;
-    background-color: $blue;
-    text-transform: uppercase;
+  .home-header {
+    .ppd-logo {
+      padding-right: 24px;
+      float: left;
+      padding-bottom: 24px;
+    }
+    .ppd-title {
+      font-size: 24px;
+      line-height: 75px;
+    }
+  }
+
+  .woodburning-table {
+    margin-top: 10px;
+    padding-top: 10px;
+    .woodburning-table-header {
+      font-size: 18px;
+    }
+    height: 300px;
+  }
+
+  .home-page-buttons {
+
+    margin-top: 24px;
+    margin-bottom: 25px;
+
+    .submitButton {
+      color: $white;
+      background-color: $blue;
+      text-transform: uppercase;
+    }
+  }
+
+  .home-footer {
+    font-size: 14px;
+    padding: 24px;
   }
 }
