@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
+import { WoodburningStoreService } from './woodburning-store.service';
+import { WoodburningDetails } from './interfaces';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { Observable } from 'rxjs';
+import { FirestoreService } from './firestore.service';
 
 @Component({
     templateUrl: './list-woodburnings.component.html',
@@ -16,7 +18,7 @@ export class ListWoodburningsComponent implements OnInit {
   public singleWoodburning$: Observable<WoodburningDetails>;
 
   columns = [
-    { columnDef: 'id', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.id}` },
+    { columnDef: 'id', header: 'ID', cell: (woodburning: WoodburningDetails) => `${woodburning.id}` },
     { columnDef: 'title', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.title}` },
     { columnDef: 'size', header: 'Size', cell: (woodburning: WoodburningDetails) => `${woodburning.size}` },
     { columnDef: 'material', header: 'Material', cell: (woodburning: WoodburningDetails) => `${woodburning.material}` },
@@ -27,7 +29,7 @@ export class ListWoodburningsComponent implements OnInit {
     { columnDef: 'sharedOnline', header: 'Online?', cell: (woodburning: WoodburningDetails) => `${woodburning.sharedOnline}` },
     { columnDef: 'framed', header: 'Framed?', cell: (woodburning: WoodburningDetails) => `${woodburning.framed}` },
     { columnDef: 'forSale', header: 'For Sale?', cell: (woodburning: WoodburningDetails) => `${woodburning.forSale}` },
-    { columnDef: 'sellingPrice', header: 'Price', cell: (woodburning: WoodburningDetails) => `${woodburning.sellingPrice}` },
+    { columnDef: 'sellingPrice', header: 'Price', cell: (woodburning: WoodburningDetails) => `$${woodburning.sellingPrice}` },
     { columnDef: 'sold', header: 'Sold?', cell: (woodburning: WoodburningDetails) => `${woodburning.sold}` }
   ];
   // TODO: Have a column for an actions column to edit and delete and preview
@@ -36,7 +38,8 @@ export class ListWoodburningsComponent implements OnInit {
   readonly displayedColumns = this.columns.map(x => x.columnDef);
 
   constructor(private dialog: MatDialog,
-              private woodburningStoreService: WoodburningStoreService) {
+              private woodburningStoreService: WoodburningStoreService,
+              private firestoreService: FirestoreService) {
   }
 
   ngOnInit(): void {

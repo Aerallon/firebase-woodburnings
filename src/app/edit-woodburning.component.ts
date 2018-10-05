@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
-import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
+import { WoodburningStoreService } from './woodburning-store.service';
+import { WoodburningDetails } from './interfaces';
+// import { firestore } from 'firebase';
 
 @Component({
     templateUrl: './edit-woodburning.component.html',
@@ -19,6 +21,7 @@ export class EditWoodburningComponent implements OnInit {
     title: '',
     size: '',
     material: '',
+    // dateFinished: firestore.Timestamp,
     dateFinished: '',
     totalTimeTakenMinutes: 0,
     totalTimeTakenHours: 0,
