@@ -12,7 +12,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 type CollectionPredicate<T> = string | AngularFirestoreCollection<T>;
 type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
-@Injectable({providedIn: 'root'})
+// @Injectable({providedIn: 'root'})
 export class FirestoreService {
   // private userId: string;
 
@@ -30,7 +30,7 @@ export class FirestoreService {
       return typeof ref === 'string' ? this.angularFirestore.doc<T>(ref) : ref;
   }
 
-  get id(): string {
+  get id(): any {
     return this.angularFirestore.createId();
   }
 
