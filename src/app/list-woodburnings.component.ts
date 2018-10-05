@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { WoodburningDetails, WoodburningStoreService } from './woodburning-store.service';
 import { EditWoodburningComponent } from './edit-woodburning.component';
-import { DataSource } from '@angular/cdk/table';
-import { of as observableOf, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
     templateUrl: './list-woodburnings.component.html',
@@ -14,12 +12,11 @@ import { map } from 'rxjs/operators';
 
 export class ListWoodburningsComponent implements OnInit {
 
-  // woodburningSource: WoodburningDataSource;
-
   public allWoodburnings$: Observable<WoodburningDetails[]>;
   public singleWoodburning$: Observable<WoodburningDetails>;
 
   columns = [
+    { columnDef: 'id', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.id}` },
     { columnDef: 'title', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.title}` },
     { columnDef: 'size', header: 'Size', cell: (woodburning: WoodburningDetails) => `${woodburning.size}` },
     { columnDef: 'material', header: 'Material', cell: (woodburning: WoodburningDetails) => `${woodburning.material}` },
@@ -43,8 +40,6 @@ export class ListWoodburningsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.woodburningSource = new WoodburningDataSource(this.woodburningStoreService);
-    // this.allWoodburnings$ = this.woodburningStoreService.woodburnings$;
     this.singleWoodburning$ = this.woodburningStoreService.get('BRNhjBiolRvPS3agyx9X');
     this.allWoodburnings$ = this.woodburningStoreService.list();
   }
@@ -55,22 +50,3 @@ export class ListWoodburningsComponent implements OnInit {
     this.dialog.open(EditWoodburningComponent, { width: '500px' });
   }
 }
-
-// export class WoodburningDataSource extends DataSource<WoodburningDetails> {
-//
-//     private woodburnings$: Observable<WoodburningDetails[]>;
-//
-//     constructor(private woodburningStoreService: WoodburningStoreService) {
-//         super();
-//         this.woodburnings$ = this.woodburningStoreService.woodburnings$;
-//     }
-//
-//     connect(): Observable<WoodburningDetails[]> {
-//         return this.woodburnings$;
-//     }
-//
-//     disconnect(): void {
-//         return;
-//     }
-// }
-
