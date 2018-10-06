@@ -1,4 +1,60 @@
 .mat-table {
   width: 100%;
   max-height: 500px;
+
+  .mat-header-cell {
+    font-size: 14px;
+  }
+
+  .boolean-field {
+    width: 75px;
+  }
+
+  .mat-column-title {
+
+  }
+
+  .mat-column-size {
+    flex: 0 0 84px;
+  }
+
+  .mat-column-material {
+    flex: 0 0 100px;
+  }
+
+  .mat-column-dateFinished {
+
+  }
+
+  .mat-column-totalTimeTakenMinutes {
+    flex: 0 0 48px;
+  }
+
+  .mat-column-totalTimeTakenHours {
+    flex: 0 0 56px;
+  }
+
+  .mat-column-sharedOnline {
+    flex: 0 0 64px;
+  }
+
+  .mat-column-framed {
+    flex: 0 0 64px;
+  }
+
+  .mat-column-forSale {
+    flex: 0 0 64px;
+  }
+
+  .mat-column-sellingPrice {
+    flex: 0 0 40px;
+  }
+
+  .mat-column-sold {
+    flex: 0 0 44px;
+  }
+
+  .mat-column-menu {
+    flex: 0 0 44px;
+  }
 }

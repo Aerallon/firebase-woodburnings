@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatCell, MatMenuItem } from '@angular/material';
 import { WoodburningStoreService } from './woodburning-store.service';
 import { WoodburningDetails } from './interfaces';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { Observable } from 'rxjs';
-import { FirestoreService } from './firestore.service';
 
 @Component({
     templateUrl: './list-woodburnings.component.html',
@@ -17,29 +16,12 @@ export class ListWoodburningsComponent implements OnInit {
   public allWoodburnings$: Observable<WoodburningDetails[]>;
   public singleWoodburning$: Observable<WoodburningDetails>;
 
-  columns = [
-    { columnDef: 'id', header: 'ID', cell: (woodburning: WoodburningDetails) => `${woodburning.id}` },
-    { columnDef: 'title', header: 'Title', cell: (woodburning: WoodburningDetails) => `${woodburning.title}` },
-    { columnDef: 'size', header: 'Size', cell: (woodburning: WoodburningDetails) => `${woodburning.size}` },
-    { columnDef: 'material', header: 'Material', cell: (woodburning: WoodburningDetails) => `${woodburning.material}` },
-    { columnDef: 'dateFinished', header: 'Date Finished', cell: (woodburning: WoodburningDetails) => `${woodburning.dateFinished}` },
-    { columnDef: 'totalTimeTakenMinutes', header: 'Total Time (Mins)', cell: (woodburning: WoodburningDetails) => `${woodburning.totalTimeTakenMinutes}` },
-    { columnDef: 'totalTimeTakenHours', header: 'Total Time (Hours)', cell: (woodburning: WoodburningDetails) => `${woodburning.totalTimeTakenHours}` },
-    { columnDef: 'imageUrl', header: 'Image', cell: (woodburning: WoodburningDetails) => `${woodburning.imageUrl}` },
-    { columnDef: 'sharedOnline', header: 'Online?', cell: (woodburning: WoodburningDetails) => `${woodburning.sharedOnline}` },
-    { columnDef: 'framed', header: 'Framed?', cell: (woodburning: WoodburningDetails) => `${woodburning.framed}` },
-    { columnDef: 'forSale', header: 'For Sale?', cell: (woodburning: WoodburningDetails) => `${woodburning.forSale}` },
-    { columnDef: 'sellingPrice', header: 'Price', cell: (woodburning: WoodburningDetails) => `$${woodburning.sellingPrice}` },
-    { columnDef: 'sold', header: 'Sold?', cell: (woodburning: WoodburningDetails) => `${woodburning.sold}` }
-  ];
-  // TODO: Have a column for an actions column to edit and delete and preview
-
-  /** Column definitions in order */
-  readonly displayedColumns = this.columns.map(x => x.columnDef);
+  displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
+    'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
+    'sold', 'menu'];
 
   constructor(private dialog: MatDialog,
-              private woodburningStoreService: WoodburningStoreService,
-              private firestoreService: FirestoreService) {
+              private woodburningStoreService: WoodburningStoreService) {
   }
 
   ngOnInit(): void {
@@ -47,9 +29,21 @@ export class ListWoodburningsComponent implements OnInit {
     this.allWoodburnings$ = this.woodburningStoreService.list();
   }
 
-  // Will become a function that is called in the action kebab of each woodburning
-  public openEditWoodburningDialog(): void {
+  public openPreviewDialog(woodburning: WoodburningDetails): void {
+    console.log('openPreviewDialog');
+    console.log(woodburning);
+    // this.dialog.open(PreviewWoodburningComponent, { width: '500px' });
+  }
+
+  public openEditWoodburningDialog(woodburning: WoodburningDetails): void {
     console.log('openEditWoodburningDialog');
+    console.log(woodburning);
     this.dialog.open(EditWoodburningComponent, { width: '500px' });
+  }
+
+  public openDeleteDialog(woodburning: WoodburningDetails): void {
+    console.log('openDeleteDialog');
+    console.log(woodburning);
+    // this.dialog.open(DeleteWoodburningComponent, { width: '500px' });
   }
 }

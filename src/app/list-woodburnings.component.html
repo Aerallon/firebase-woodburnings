@@ -1,8 +1,61 @@
 <div class="table-info" content>
     <mat-table #table [dataSource]="allWoodburnings$">
-        <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
-            <mat-header-cell *matHeaderCellDef>{{ column.header }}</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ column.cell(row) }}</mat-cell>
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.title }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="size">
+            <mat-header-cell *matHeaderCellDef>Size</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.size }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="material">
+            <mat-header-cell *matHeaderCellDef>Material</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.material }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="dateFinished">
+            <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.dateFinished }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="totalTimeTakenMinutes">
+            <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.totalTimeTakenMinutes }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="totalTimeTakenHours">
+            <mat-header-cell *matHeaderCellDef>Total Time (Hours)</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.totalTimeTakenHours }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="sharedOnline" class="boolean-field">
+            <mat-header-cell *matHeaderCellDef>Shared Online?</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.sharedOnline }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="framed" class="boolean-field">
+            <mat-header-cell *matHeaderCellDef>Framed?</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.framed }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="forSale" class="boolean-field">
+            <mat-header-cell *matHeaderCellDef>For Sale?</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.forSale }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="sellingPrice">
+            <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">${{ woodburning.sellingPrice }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="sold" class="boolean-field">
+            <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.sold }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="menu">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning" class="woodburning-menu">
+                <button mat-icon-button color="white" [matMenuTriggerFor]="actions">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #actions>
+                    <button mat-menu-item (click)="openPreviewDialog(woodburning)">Preview</button>
+                    <button mat-menu-item (click)="openEditWoodburningDialog(woodburning)">Edit</button>
+                    <button mat-menu-item (click)="openDeleteDialog(woodburning)">Delete</button>
+                </mat-menu>
+            </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>

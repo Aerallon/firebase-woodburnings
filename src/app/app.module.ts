@@ -16,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {
   MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
   MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
-  MatNativeDateModule, MatTableModule, MatDividerModule, MatSnackBarModule
+  MatNativeDateModule, MatTableModule, MatDividerModule, MatSnackBarModule, MatIconModule,
+  MatMenuModule
 } from '@angular/material';
 
 @NgModule({
@@ -44,7 +45,9 @@ import {
     MatNativeDateModule,
     MatTableModule,
     MatDividerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   bootstrap: [
     AppComponent
