@@ -12,12 +12,11 @@ import { CreateWoodburningComponent } from './create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings.component';
 import { WoodburningStoreService } from './woodburning-store.service';
-import { FirestoreService } from './firestore.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
   MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
   MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
-  MatNativeDateModule, MatTableModule, MatDividerModule, MAT_LABEL_GLOBAL_OPTIONS
+  MatNativeDateModule, MatTableModule, MatDividerModule, MatSnackBarModule
 } from '@angular/material';
 
 @NgModule({
@@ -44,15 +43,14 @@ import {
     ReactiveFormsModule,
     MatNativeDateModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule
   ],
   bootstrap: [
     AppComponent
   ],
   providers: [
-    WoodburningStoreService,
-    // FirestoreService,
-    // {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
+    WoodburningStoreService
   ],
   exports: [
     CreateWoodburningComponent,
