@@ -17,6 +17,7 @@ export class ListWoodburningsComponent implements OnInit {
 
   public allWoodburnings$: Observable<WoodburningDetails[]>;
   deleteWoodburningDialogRef: MatDialogRef<DeleteWoodburningComponent>;
+  editWoodburningDialogRef: MatDialogRef<EditWoodburningComponent>;
 
   displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
     'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
@@ -37,9 +38,8 @@ export class ListWoodburningsComponent implements OnInit {
   }
 
   public openEditWoodburningDialog(woodburning: WoodburningDetails): void {
-    console.log('openEditWoodburningDialog');
-    console.log(woodburning);
-    this.dialog.open(EditWoodburningComponent, { width: '500px' });
+    this.editWoodburningDialogRef = this.dialog.open(EditWoodburningComponent, { width: '500px' });
+    this.editWoodburningDialogRef.componentInstance.woodburning = woodburning;
   }
 
   public openDeleteDialog(woodburning: WoodburningDetails): void {

@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
 import { WoodburningStoreService } from './woodburning-store.service';
 import { WoodburningDetails } from './interfaces';
-// import { firestore } from 'firebase';
 
 @Component({
     templateUrl: './edit-woodburning.component.html',
@@ -14,24 +12,9 @@ import { WoodburningDetails } from './interfaces';
 
 export class EditWoodburningComponent implements OnInit {
 
+  @Input() woodburning: WoodburningDetails;
+  currentWoodburning: WoodburningDetails;
   form: FormGroup;
-
-  woodburningInfo: BehaviorSubject <WoodburningDetails> = new BehaviorSubject <WoodburningDetails>({
-    id: '',
-    title: '',
-    size: '',
-    material: '',
-    // dateFinished: firestore.Timestamp,
-    dateFinished: '',
-    totalTimeTakenMinutes: 0,
-    totalTimeTakenHours: 0,
-    imageUrl: '',
-    sharedOnline: false,
-    framed: false,
-    forSale: false,
-    sellingPrice: 0,
-    sold: false
-  });
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<EditWoodburningComponent>,
@@ -39,35 +22,34 @@ export class EditWoodburningComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.currentWoodburning = this.woodburning;
     this.createForm();
   }
 
   createForm(): void {
     this.form = this.formBuilder.group({
-      'title': [this.woodburningInfo.getValue().title, Validators.required],
-      'size': [this.woodburningInfo.getValue().size, Validators.required],
-      'material': [this.woodburningInfo.getValue().material, Validators.required],
-      'dateFinished': [this.woodburningInfo.getValue().dateFinished, Validators.required],
-      'totalTimeTakenMinutes': [this.woodburningInfo.getValue().totalTimeTakenMinutes, Validators.required],
-      'totalTimeTakenHours': [this.woodburningInfo.getValue().totalTimeTakenHours, Validators.required],
-      'imageUrl': [this.woodburningInfo.getValue().imageUrl, Validators.required],
-      'sharedOnline': [this.woodburningInfo.getValue().sharedOnline, Validators.required],
-      'framed': [this.woodburningInfo.getValue().framed, Validators.required],
-      'forSale': [this.woodburningInfo.getValue().forSale, Validators.required],
-      'sellingPrice': [this.woodburningInfo.getValue().sellingPrice], // should only be required if for sale is true
-      'sold': [this.woodburningInfo.getValue().sold, Validators.required]
+      'title': [this.currentWoodburning.title, Validators.required],
+      'size': [this.currentWoodburning.size, Validators.required],
+      'material': [this.currentWoodburning.material, Validators.required],
+      'dateFinished': [this.currentWoodburning.dateFinished, Validators.required],
+      'totalTimeTakenMinutes': [this.currentWoodburning.totalTimeTakenMinutes, Validators.required],
+      'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, Validators.required],
+      'imageUrl': [this.currentWoodburning.imageUrl, Validators.required],
+      'sharedOnline': [this.currentWoodburning.sharedOnline, Validators.required],
+      'framed': [this.currentWoodburning.framed, Validators.required],
+      'forSale': [this.currentWoodburning.forSale, Validators.required],
+      'sellingPrice': [this.currentWoodburning.sellingPrice], // should only be required if for sale is true
+      'sold': [this.currentWoodburning.sold, Validators.required]
     });
   }
 
-  updateWoodburning(woodburning: WoodburningDetails): void {
+  editWoodburning(): void {
     if (!this.form.valid) {
       const message = 'Not all fields were entered. Fill out required.';
       this.woodburningStoreService.openSnackBar(message, '');
     } else {
-      //'BRNhjBiolRvPS3agyx9X' - butterfly ID
-      const woodburningId = this.woodburningStoreService.get(woodburning.id).toString();
       const woodburningFormData = {
-        id: woodburningId,
+        id: this.currentWoodburning.id,
         title: this.form.value.title,
         size: this.form.value.size,
         material: this.form.value.material,

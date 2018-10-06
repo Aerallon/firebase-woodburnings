@@ -1,7 +1,7 @@
-<mat-card-title>Edit Woodburning</mat-card-title>
 <mat-dialog-content>
+  <mat-card-title>Edit Woodburning</mat-card-title>
   <div *ngIf="form">
-    <form [formGroup]="form" *ngIf="woodburningInfo | async as w" class="edit-woodburning-form">
+    <form [formGroup]="form" *ngIf="currentWoodburning as w" class="edit-woodburning-form">
         <mat-card>
             <mat-card-content>
                 <div class="row">
@@ -27,6 +27,7 @@
                 </div>
                 <div class="row">
                     <mat-form-field>
+                        <!-- TODO: This field isn't being populated -->
                         <input matInput readonly [matDatepicker]="dateFinishedDatePicker" formControlName="dateFinished"
                                placeholder="Date Finished" required="true" value="{{ w.dateFinished }}">
                         <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
