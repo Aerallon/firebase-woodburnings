@@ -34,7 +34,7 @@ export class ListWoodburningsComponent implements OnInit {
   }
 
   public openPreviewDialog(woodburning: WoodburningDetails): void {
-    this.previewWoodburningDialogRef = this.dialog.open(PreviewWoodburningComponent, { width: '500px' });
+    this.previewWoodburningDialogRef = this.dialog.open(PreviewWoodburningComponent, { width: '550px' });
     this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
   }
 
