@@ -1,0 +1,24 @@
+@import '../common/colors';
+
+.preview-dialog {
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  .preview-dialog-body {
+    .woodburning-image {
+      max-height: 150px;
+    }
+    .woodburning-main-data {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .woodburning-additional-data {
+
+    }
+    .preview-woodburning-button {
+      width: 294px;
+    }
+    .cancelButton {
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+}

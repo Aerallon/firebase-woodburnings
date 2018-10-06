@@ -4,6 +4,7 @@ import { WoodburningStoreService } from './woodburning-store.service';
 import { WoodburningDetails } from './interfaces';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { DeleteWoodburningComponent } from './delete-woodburning.component';
+import { PreviewWoodburningComponent } from './preview-woodburning.component';
 import { Observable } from 'rxjs';
 
 
@@ -18,6 +19,7 @@ export class ListWoodburningsComponent implements OnInit {
   public allWoodburnings$: Observable<WoodburningDetails[]>;
   deleteWoodburningDialogRef: MatDialogRef<DeleteWoodburningComponent>;
   editWoodburningDialogRef: MatDialogRef<EditWoodburningComponent>;
+  previewWoodburningDialogRef: MatDialogRef<PreviewWoodburningComponent>;
 
   displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
     'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
@@ -32,9 +34,8 @@ export class ListWoodburningsComponent implements OnInit {
   }
 
   public openPreviewDialog(woodburning: WoodburningDetails): void {
-    console.log('openPreviewDialog');
-    console.log(woodburning);
-    // this.dialog.open(PreviewWoodburningComponent, { width: '500px' });
+    this.previewWoodburningDialogRef = this.dialog.open(PreviewWoodburningComponent, { width: '500px' });
+    this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
   }
 
   public openEditWoodburningDialog(woodburning: WoodburningDetails): void {

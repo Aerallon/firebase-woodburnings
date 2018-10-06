@@ -1,0 +1,29 @@
+<mat-dialog-content class="preview-dialog">
+    <mat-card-title>Previewing <strong>{{currentWoodburning.title}}</strong></mat-card-title>
+    <mat-card-content class="preview-dialog-body">
+        <div>
+            <img src="{{currentWoodburning.imageUrl}}" alt="{{currentWoodburning.title}}" class="woodburning-image">
+        </div>
+        <div class="woodburning-main-data">
+            <div><strong>Size</strong>: {{currentWoodburning.size}}</div>
+            <div><strong>Material</strong>: {{currentWoodburning.material}}</div>
+            <div><strong>Date Finished</strong>: {{currentWoodburning.dateFinished}}</div>
+            <div><strong>Total Time Taken (Minutes)</strong>: {{currentWoodburning.totalTimeTakenMinutes}}</div>
+            <div><strong>Total Time Taken (Hours)</strong>: {{currentWoodburning.totalTimeTakenHours}}</div>
+        </div>
+        <div class="woodburning-additional-data">
+            <div><strong>Shared Online?</strong>: {{currentWoodburning.sharedOnline}}</div>
+            <div><strong>Framed?</strong>: {{currentWoodburning.framed}}</div>
+            <div><strong>For Sale?</strong>: {{currentWoodburning.forSale}}</div>
+            <div><strong>Selling Price?</strong>: ${{currentWoodburning.sellingPrice}}</div>
+            <div><strong>Sold?</strong>: {{currentWoodburning.sold}}</div>
+        </div>
+    </mat-card-content>
+    <mat-card-content>
+        <div class="preview-woodburning-button">
+            <button mat-button class="cancelButton" (click)="close()">
+                Cancel
+            </button>
+        </div>
+    </mat-card-content>
+</mat-dialog-content>
