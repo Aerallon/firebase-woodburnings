@@ -11,6 +11,8 @@ import { HomePageComponent } from './home-page.component';
 import { CreateWoodburningComponent } from './create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings.component';
+import { DeleteWoodburningComponent } from './delete-woodburning.component';
+import { PreviewWoodburningComponent } from './preview-woodburning.component';
 import { WoodburningStoreService } from './woodburning-store.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
@@ -26,7 +28,9 @@ import {
     HomePageComponent,
     CreateWoodburningComponent,
     EditWoodburningComponent,
-    ListWoodburningsComponent
+    ListWoodburningsComponent,
+    DeleteWoodburningComponent,
+    PreviewWoodburningComponent
   ],
   imports: [
     BrowserModule,
@@ -58,12 +62,16 @@ import {
   exports: [
     CreateWoodburningComponent,
     EditWoodburningComponent,
-    ListWoodburningsComponent
+    ListWoodburningsComponent,
+    DeleteWoodburningComponent,
+    PreviewWoodburningComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
     EditWoodburningComponent,
-    ListWoodburningsComponent
+    ListWoodburningsComponent,
+    DeleteWoodburningComponent,
+    PreviewWoodburningComponent
   ]
 })
 export class AppModule { }
