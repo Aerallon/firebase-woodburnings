@@ -1,0 +1,16 @@
+<mat-dialog-content class="delete-dialog">
+    <mat-card-title>Delete Woodburning</mat-card-title>
+    <mat-card-content class="delete-dialog-body">
+        <div>Are you sure you want to delete <strong>{{currentWoodburning.title}}</strong>?</div>
+    </mat-card-content>
+    <mat-card-content>
+        <div class="delete-woodburning-buttons">
+            <button mat-raised-button class="submitButton" (click)="deleteWoodburning()">
+                Delete Woodburning
+            </button>
+            <button mat-button class="cancelButton" (click)="close()">
+                Cancel
+            </button>
+        </div>
+    </mat-card-content>
+</mat-dialog-content>

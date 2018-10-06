@@ -1,0 +1,24 @@
+@import '../common/colors';
+
+mat-card-title {
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.delete-dialog {
+  .delete-dialog-body {
+    font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+  .delete-woodburning-buttons {
+    width: 294px;
+  }
+  .submitButton {
+    color: $white;
+    background-color: $blue;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  .cancelButton {
+    color: $white;
+    text-transform: uppercase;
+  }
+}

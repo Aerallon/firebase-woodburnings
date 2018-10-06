@@ -30,6 +30,10 @@ export class WoodburningStoreService {
     return this.firestoreService.update(`woodburnings/${woodburning.id}`, woodburning);
   }
 
+  public delete(woodburning: WoodburningDetails): void {
+    this.firestoreService.delete(`woodburnings/${woodburning.id}`);
+  }
+
   public openSnackBar(message: string, action: string): void {
     this.snackBar.open(message, action, {
       duration: 2000,

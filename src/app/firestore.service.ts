@@ -75,15 +75,6 @@ export class FirestoreService {
     return batch.commit().then(() => null);
   }
 
-  set<T>(ref: DocPredicate<T>, data: any): Observable<null> {
-    const setPromise = this.setDocument(ref, data)
-      .catch(err => {
-        console.log('set request for ' + this.doc(ref).ref.id + ' raised an error');
-        throw err;
-      });
-    return fromPromise(setPromise);
-  }
-
   add<T>(ref: CollectionPredicate<T>, data: any): Observable<null> {
     if (!data.id) {
       data.id = this.id;
@@ -100,73 +91,8 @@ export class FirestoreService {
     return fromPromise(addPromise);
   }
 
-  upsert<T>(ref: DocPredicate<T>, data: any): Observable<null> {
-    const upsertPromise = this.doesDocumentExist(ref).then(
-      doesExist => doesExist ? this.updateDocument(ref, data) : this.setDocument(ref, data)
-    );
-    return fromPromise(upsertPromise);
-  }
-
-  remove<T>(ref: DocPredicate<T>, data: any): Observable<null> {
-    data.deleted = this.timestamp;
-    return this.update(ref, data);
-  }
-
-  atomicSet<T>(requests: AtomicRequestMessage | AtomicRequestMessage[]): Observable<null> {
-    const timestamp = this.timestamp;
-    const batch = this.angularFirestore.firestore.batch();
-
-    if (!(requests instanceof Array)) {
-      requests = [requests];
-    }
-
-    for (const request of requests) {
-      const collectionReference = this.col(request.collectionReference).ref;
-      for (const d of request.data) {
-        d.createdAt = timestamp;
-        d.updatedAt = timestamp;
-
-        if (!d.id) {
-          d.id = this.id;
-        }
-
-        batch.set(collectionReference.doc(d.id), d);
-      }
-    }
-
-    return fromPromise(batch.commit()
-      .then(() => null)
-      .catch(err => {
-        console.log(`batch update request raised an error`);
-        throw err;
-      }));
-  }
-
-  atomicUpdate<T>(requests: AtomicRequestMessage | AtomicRequestMessage[]): Observable<null> {
-    const timestamp = this.timestamp;
-    const batch = this.angularFirestore.firestore.batch();
-
-    if (!(requests instanceof Array)) {
-      requests = [requests];
-    }
-
-    for (const request of requests) {
-      const collectionReference = this.col(request.collectionReference).ref;
-      for (const d of request.data) {
-        d.updatedAt = timestamp;
-
-        batch.update(collectionReference.doc(d.id), d);
-      }
-    }
-
-    const batchPromise = batch.commit()
-      .then(() => null)
-      .catch(err => {
-      console.log(`batch update request raised an error`);
-      throw err;
-    });
-
-    return fromPromise(batchPromise);
+  delete<T>(ref: DocPredicate<T>): void {
+    this.doc(ref).delete();
   }
 
   private doesDocumentExist<T>(ref: DocPredicate<T>): Promise<boolean> {
@@ -175,9 +101,4 @@ export class FirestoreService {
       map(snapshot => snapshot.payload.exists)
     ).toPromise();
   }
-}
-
-export interface AtomicRequestMessage {
-  collectionReference: string;
-  data: any[];
 }
