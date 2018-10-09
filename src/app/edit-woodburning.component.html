@@ -30,6 +30,7 @@
                         <!-- TODO: This field isn't being populated -->
                         <input matInput readonly [matDatepicker]="dateFinishedDatePicker" formControlName="dateFinished"
                                placeholder="Date Finished" required="true" value="{{ w.dateFinished }}">
+                                <!--This instead of value, ngModel made it live update in the table? Dah fuk? [(ngModel)]="w.dateFinished"-->
                         <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
                         <mat-datepicker #dateFinishedDatePicker></mat-datepicker>
                         <mat-error>Required</mat-error>

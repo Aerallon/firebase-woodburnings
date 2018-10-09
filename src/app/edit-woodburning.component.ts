@@ -15,6 +15,7 @@ export class EditWoodburningComponent implements OnInit {
   @Input() woodburning: WoodburningDetails;
   currentWoodburning: WoodburningDetails;
   form: FormGroup;
+  formattedDate: Date;
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<EditWoodburningComponent>,
@@ -23,6 +24,7 @@ export class EditWoodburningComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentWoodburning = this.woodburning;
+    this.formattedDate = this.currentWoodburning.dateFinished.toDate();
     this.createForm();
   }
 
@@ -31,7 +33,7 @@ export class EditWoodburningComponent implements OnInit {
       'title': [this.currentWoodburning.title, Validators.required],
       'size': [this.currentWoodburning.size, Validators.required],
       'material': [this.currentWoodburning.material, Validators.required],
-      'dateFinished': [this.currentWoodburning.dateFinished, Validators.required],
+      'dateFinished': [this.formattedDate, Validators.required],
       'totalTimeTakenMinutes': [this.currentWoodburning.totalTimeTakenMinutes, Validators.required],
       'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, Validators.required],
       'imageUrl': [this.currentWoodburning.imageUrl, Validators.required],
@@ -64,6 +66,8 @@ export class EditWoodburningComponent implements OnInit {
         sold: this.form.value.sold
       };
       this.woodburningStoreService.update(woodburningFormData);
+      const message = 'Successfully edited ' + woodburningFormData.title + '.';
+      this.woodburningStoreService.openSnackBar(message, '');
       this.dialogRef.close();
     }
   }

@@ -16,6 +16,6 @@ export class HomePageComponent {
   }
 
   public openCreateWoodburningDialog(): void {
-    this.createWoodburningDialogRef = this.dialog.open(CreateWoodburningComponent, { width: '50px' });
+    this.createWoodburningDialogRef = this.dialog.open(CreateWoodburningComponent, { width: '500px' });
   }
 }

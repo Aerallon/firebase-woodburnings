@@ -14,7 +14,7 @@
         </ng-container>
         <ng-container matColumnDef="dateFinished">
             <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>
-            <mat-cell *matCellDef="let woodburning">{{ woodburning.dateFinished }}</mat-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="totalTimeTakenMinutes">
             <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>

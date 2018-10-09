@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { WoodburningStoreService } from './woodburning-store.service';
-import { stringify } from 'querystring';
 import { FirestoreService } from './firestore.service';
 
 @Component({
@@ -63,6 +62,8 @@ export class CreateWoodburningComponent implements OnInit {
         sold: this.form.value.sold
       };
       this.woodburningStoreService.add(woodburningFormData);
+      const message = 'Successfully created new woodburning entry.';
+      this.woodburningStoreService.openSnackBar(message, '');
       this.dialogRef.close();
     }
   }

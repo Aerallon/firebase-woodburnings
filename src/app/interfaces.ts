@@ -1,12 +1,11 @@
-// import { firestore } from 'firebase';
+import { firestore } from 'firebase';
 
 export interface WoodburningDetails {
     id: string;
     title: string;
     size: string;
     material: string;
-    // dateFinished: firestore.Timestamp;
-    dateFinished: string;
+    dateFinished: firestore.Timestamp;
     totalTimeTakenMinutes: number;
     totalTimeTakenHours: number;
     imageUrl: string;

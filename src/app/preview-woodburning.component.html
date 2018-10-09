@@ -7,7 +7,7 @@
         <div class="woodburning-main-data">
             <div><strong>Size</strong>: {{currentWoodburning.size}}</div>
             <div><strong>Material</strong>: {{currentWoodburning.material}}</div>
-            <div><strong>Date Finished</strong>: {{currentWoodburning.dateFinished}}</div>
+            <div><strong>Date Finished</strong>: {{currentWoodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</div>
             <div><strong>Total Time Taken (Minutes)</strong>: {{currentWoodburning.totalTimeTakenMinutes}}</div>
             <div><strong>Total Time Taken (Hours)</strong>: {{currentWoodburning.totalTimeTakenHours}}</div>
         </div>
