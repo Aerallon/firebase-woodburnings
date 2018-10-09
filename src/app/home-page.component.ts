@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CreateWoodburningComponent } from './create-woodburning.component';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
     templateUrl: './home-page.component.html',
@@ -9,11 +9,13 @@ import { MatDialog } from '@angular/material';
 })
 
 export class HomePageComponent {
+
+  createWoodburningDialogRef: MatDialogRef<CreateWoodburningComponent>;
+
   constructor(private dialog: MatDialog) {
   }
 
   public openCreateWoodburningDialog(): void {
-    console.log('openCreateWoodburningDialog');
-    this.dialog.open(CreateWoodburningComponent, { width: '500px' });
+    this.createWoodburningDialogRef = this.dialog.open(CreateWoodburningComponent, { width: '50px' });
   }
 }
