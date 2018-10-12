@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/smelnyk/Personal Projects/Firebase/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! /Users/smelnyk/Personal Projects/firebase-woodburnings/src/styles.scss */"./src/styles.scss");
 
 
 /***/ })
