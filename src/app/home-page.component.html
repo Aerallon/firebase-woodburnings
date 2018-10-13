@@ -3,6 +3,12 @@
         <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="75" width="75"
                                    alt="Prairie Pyro Designs"></div>
         <div class="ppd-title">Prairie Pyro Designs</div>
+        <div class="logout" *ngIf="isLoggedIn$$ | async">
+          <button mat-raised-button (click)="logout()">
+              <mat-icon>exit_to_app</mat-icon>
+              <span>Logout</span>
+          </button>
+        </div>
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content>

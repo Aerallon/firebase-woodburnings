@@ -14,7 +14,15 @@ import { ListWoodburningsComponent } from './list-woodburnings.component';
 import { DeleteWoodburningComponent } from './delete-woodburning.component';
 import { PreviewWoodburningComponent } from './preview-woodburning.component';
 import { WoodburningStoreService } from './woodburning-store.service';
+import { LoginComponent } from './login/login.component';
+import { UserService } from './user.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './core/auth.service';
+import { AuthGuard } from './core/auth-guard.service';
+import { routes } from './routes';
+import { RouterModule } from '@angular/router';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
   MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
@@ -30,12 +38,14 @@ import {
     EditWoodburningComponent,
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
-    PreviewWoodburningComponent
+    PreviewWoodburningComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    CoreModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
@@ -51,27 +61,34 @@ import {
     MatDividerModule,
     MatSnackBarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   bootstrap: [
     AppComponent
   ],
   providers: [
-    WoodburningStoreService
+    WoodburningStoreService,
+    AuthService,
+    AuthGuard,
+    UserService
   ],
   exports: [
     CreateWoodburningComponent,
     EditWoodburningComponent,
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
-    PreviewWoodburningComponent
+    PreviewWoodburningComponent,
+    LoginComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
     EditWoodburningComponent,
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
-    PreviewWoodburningComponent
+    PreviewWoodburningComponent,
+    LoginComponent
   ]
 })
 export class AppModule { }

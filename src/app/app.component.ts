@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { AuthService } from './core/auth.service';
 
 @Component({
     selector: 'app',
@@ -7,8 +9,13 @@ import { Component } from '@angular/core';
 })
 
 /** The base component that bootstraps angular */
-export class AppComponent {
-  constructor() {
-    // put something here
+export class AppComponent implements OnInit {
+
+  isLoggedIn$$: BehaviorSubject<boolean>;
+
+  constructor( private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
   }
 }

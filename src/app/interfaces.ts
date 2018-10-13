@@ -15,3 +15,13 @@ export interface WoodburningDetails {
     sellingPrice: number;
     sold: boolean;
 }
+
+export interface AppUser {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  displayName: string;
+  profileImageUrl?: string;
+  isDeleted: boolean;
+}
