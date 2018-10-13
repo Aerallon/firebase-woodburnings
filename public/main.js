@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<home-page></home-page>"
+module.exports = "<div *ngIf=\"(isLoggedIn$$ | async)\">\n    <home-page></home-page>\n</div>\n<div *ngIf=\"!(isLoggedIn$$ | async)\">\n    <woodburning-portal-login></woodburning-portal-login>\n</div>"
 
 /***/ }),
 
@@ -56,6 +56,7 @@ module.exports = "/**\n * Applies styles for users in high contrast mode. Note t
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/auth.service */ "./src/app/core/auth.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,16 +67,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(authService) {
+        this.authService = authService;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_core_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -104,15 +110,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _home_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home-page.component */ "./src/app/home-page.component.ts");
-/* harmony import */ var _create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./create-woodburning.component */ "./src/app/create-woodburning.component.ts");
-/* harmony import */ var _edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-woodburning.component */ "./src/app/edit-woodburning.component.ts");
-/* harmony import */ var _list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./list-woodburnings.component */ "./src/app/list-woodburnings.component.ts");
-/* harmony import */ var _delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./delete-woodburning.component */ "./src/app/delete-woodburning.component.ts");
-/* harmony import */ var _preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./preview-woodburning.component */ "./src/app/preview-woodburning.component.ts");
+/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/home-page.component.ts");
+/* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
+/* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
+/* harmony import */ var _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./list-woodburnings/list-woodburnings.component */ "./src/app/list-woodburnings/list-woodburnings.component.ts");
+/* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
+/* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
 /* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./core/auth-guard.service */ "./src/app/core/auth-guard.service.ts");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./routes */ "./src/app/routes.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -136,6 +150,14 @@ var firebaseConfig = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["env
 
 
 
+
+
+
+
+
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -143,53 +165,62 @@ var AppModule = (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _home_page_component__WEBPACK_IMPORTED_MODULE_7__["HomePageComponent"],
-                _create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
-                _preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"]
+                _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__["HomePageComponent"],
+                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
                 angularfire2__WEBPACK_IMPORTED_MODULE_1__["AngularFireModule"].initializeApp(firebaseConfig),
                 angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestoreModule"],
+                _core_core_module__WEBPACK_IMPORTED_MODULE_21__["CoreModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatSliderModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatDialogModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatSlideToggleModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatDatepickerModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatNativeDateModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatDividerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatSnackBarModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatMenuModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSliderModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSlideToggleModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDatepickerModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDividerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSnackBarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatMenuModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_20__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_19__["routes"]),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_22__["HttpClientModule"]
             ],
             bootstrap: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
             ],
             providers: [
-                _woodburning_store_service__WEBPACK_IMPORTED_MODULE_13__["WoodburningStoreService"]
+                _woodburning_store_service__WEBPACK_IMPORTED_MODULE_13__["WoodburningStoreService"],
+                _core_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"],
+                _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"],
+                _user_service__WEBPACK_IMPORTED_MODULE_15__["UserService"]
             ],
             exports: [
-                _create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
-                _preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"]
+                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
             ],
             entryComponents: [
-                _create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
-                _preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"]
+                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
             ]
         })
     ], AppModule);
@@ -200,10 +231,215 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ "./src/app/create-woodburning.component.html":
-/*!***************************************************!*\
-  !*** ./src/app/create-woodburning.component.html ***!
-  \***************************************************/
+/***/ "./src/app/core/auth-guard.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/core/auth-guard.service.ts ***!
+  \********************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuthGuard = (function () {
+    function AuthGuard(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function (route, state) {
+        var _this = this;
+        return this.authService.isLoggedIn.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (isLoggedIn) {
+            if (!isLoggedIn) {
+                _this.authService.redirectUrl = state.url;
+                _this.router.navigate(['/login']);
+            }
+        }));
+    };
+    AuthGuard.prototype.canActivateChild = function (route, state) {
+        return this.canActivate(route, state);
+    };
+    AuthGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], AuthGuard);
+    return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/auth.service.ts":
+/*!**************************************!*\
+  !*** ./src/app/core/auth.service.ts ***!
+  \**************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_auth__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var AuthService = (function () {
+    function AuthService(angularFireAuth, angularFirestore, router, http) {
+        this.angularFireAuth = angularFireAuth;
+        this.angularFirestore = angularFirestore;
+        this.router = router;
+        this.http = http;
+        this.userIsLoggedIn$$ = new rxjs__WEBPACK_IMPORTED_MODULE_6__["BehaviorSubject"](false);
+        this.userIsAuthed$ = this.angularFireAuth.user.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (u) { return !!u; }));
+        this.userId = this.angularFireAuth.user.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (u) { return u ? u.providerData[0].uid : ''; }));
+    }
+    Object.defineProperty(AuthService.prototype, "isLoggedIn", {
+        get: function () {
+            var _this = this;
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["combineLatest"])(this.userIsAuthed$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (_a) {
+                var userIsAuthed = _a[0];
+                var isLoggedIn = userIsAuthed;
+                _this.userIsLoggedIn$$.next(isLoggedIn);
+                return isLoggedIn;
+            }));
+        },
+        enumerable: true,
+        configurable: true
+    });
+    AuthService.prototype.login = function () {
+        var _this = this;
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["from"])(this.angularFireAuth.auth.signInWithPopup(new firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"].GoogleAuthProvider())
+            .then(function (response) {
+            _this.storeCurrentUser(response.additionalUserInfo.profile);
+            return response.additionalUserInfo.profile;
+        }));
+    };
+    AuthService.prototype.logout = function () {
+        var _this = this;
+        this.angularFireAuth.auth.signOut().then(function () {
+            _this.router.navigate(['/login']);
+        });
+    };
+    AuthService.prototype.storeCurrentUser = function (profile) {
+        var user = {
+            id: profile.id,
+            email: profile.email,
+            firstName: profile.given_name,
+            lastName: profile.family_name,
+            displayName: profile.given_name + ' ' + profile.family_name,
+            profileImageUrl: profile.picture,
+            isDeleted: false
+        };
+        localStorage.setItem('currentUser', JSON.stringify(user));
+    };
+    AuthService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [angularfire2_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"],
+            angularfire2_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], AuthService);
+    return AuthService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/core.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/core/core.module.ts ***!
+  \*************************************/
+/*! exports provided: CoreModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreModule", function() { return CoreModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angularfire2_auth__WEBPACK_IMPORTED_MODULE_3__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var CoreModule = (function () {
+    function CoreModule() {
+    }
+    CoreModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestoreModule"],
+                angularfire2_auth__WEBPACK_IMPORTED_MODULE_3__["AngularFireAuthModule"]
+            ],
+            providers: [_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]]
+        })
+    ], CoreModule);
+    return CoreModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/create-woodburning/create-woodburning.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/create-woodburning/create-woodburning.component.html ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -211,10 +447,10 @@ module.exports = "<mat-card-title>Create Woodburning</mat-card-title>\n<mat-dial
 
 /***/ }),
 
-/***/ "./src/app/create-woodburning.component.scss":
-/*!***************************************************!*\
-  !*** ./src/app/create-woodburning.component.scss ***!
-  \***************************************************/
+/***/ "./src/app/create-woodburning/create-woodburning.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/create-woodburning/create-woodburning.component.scss ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -222,10 +458,10 @@ module.exports = "mat-form-field {\n  width: 100%;\n  margin-bottom: 16px;\n  co
 
 /***/ }),
 
-/***/ "./src/app/create-woodburning.component.ts":
-/*!*************************************************!*\
-  !*** ./src/app/create-woodburning.component.ts ***!
-  \*************************************************/
+/***/ "./src/app/create-woodburning/create-woodburning.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/create-woodburning/create-woodburning.component.ts ***!
+  \********************************************************************/
 /*! exports provided: CreateWoodburningComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -235,8 +471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _firestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./firestore.service */ "./src/app/firestore.service.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _firestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../firestore.service */ "./src/app/firestore.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -309,8 +545,8 @@ var CreateWoodburningComponent = (function () {
     };
     CreateWoodburningComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./create-woodburning.component.html */ "./src/app/create-woodburning.component.html"),
-            styles: [__webpack_require__(/*! ./create-woodburning.component.scss */ "./src/app/create-woodburning.component.scss")],
+            template: __webpack_require__(/*! ./create-woodburning.component.html */ "./src/app/create-woodburning/create-woodburning.component.html"),
+            styles: [__webpack_require__(/*! ./create-woodburning.component.scss */ "./src/app/create-woodburning/create-woodburning.component.scss")],
             selector: 'create-woodburning'
         }),
         __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
@@ -325,10 +561,10 @@ var CreateWoodburningComponent = (function () {
 
 /***/ }),
 
-/***/ "./src/app/delete-woodburning.component.html":
-/*!***************************************************!*\
-  !*** ./src/app/delete-woodburning.component.html ***!
-  \***************************************************/
+/***/ "./src/app/delete-woodburning/delete-woodburning.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/delete-woodburning/delete-woodburning.component.html ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -336,10 +572,10 @@ module.exports = "<mat-dialog-content class=\"delete-dialog\">\n    <mat-card-ti
 
 /***/ }),
 
-/***/ "./src/app/delete-woodburning.component.scss":
-/*!***************************************************!*\
-  !*** ./src/app/delete-woodburning.component.scss ***!
-  \***************************************************/
+/***/ "./src/app/delete-woodburning/delete-woodburning.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/delete-woodburning/delete-woodburning.component.scss ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -347,10 +583,10 @@ module.exports = "mat-card-title {\n  font-family: Roboto, \"Helvetica Neue\", A
 
 /***/ }),
 
-/***/ "./src/app/delete-woodburning.component.ts":
-/*!*************************************************!*\
-  !*** ./src/app/delete-woodburning.component.ts ***!
-  \*************************************************/
+/***/ "./src/app/delete-woodburning/delete-woodburning.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/delete-woodburning/delete-woodburning.component.ts ***!
+  \********************************************************************/
 /*! exports provided: DeleteWoodburningComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -359,7 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteWoodburningComponent", function() { return DeleteWoodburningComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -395,8 +631,8 @@ var DeleteWoodburningComponent = (function () {
     ], DeleteWoodburningComponent.prototype, "woodburning", void 0);
     DeleteWoodburningComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./delete-woodburning.component.html */ "./src/app/delete-woodburning.component.html"),
-            styles: [__webpack_require__(/*! ./delete-woodburning.component.scss */ "./src/app/delete-woodburning.component.scss")],
+            template: __webpack_require__(/*! ./delete-woodburning.component.html */ "./src/app/delete-woodburning/delete-woodburning.component.html"),
+            styles: [__webpack_require__(/*! ./delete-woodburning.component.scss */ "./src/app/delete-woodburning/delete-woodburning.component.scss")],
             selector: 'delete-woodburning'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
@@ -409,10 +645,10 @@ var DeleteWoodburningComponent = (function () {
 
 /***/ }),
 
-/***/ "./src/app/edit-woodburning.component.html":
-/*!*************************************************!*\
-  !*** ./src/app/edit-woodburning.component.html ***!
-  \*************************************************/
+/***/ "./src/app/edit-woodburning/edit-woodburning.component.html":
+/*!******************************************************************!*\
+  !*** ./src/app/edit-woodburning/edit-woodburning.component.html ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -420,10 +656,10 @@ module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit Woodburning</mat-
 
 /***/ }),
 
-/***/ "./src/app/edit-woodburning.component.scss":
-/*!*************************************************!*\
-  !*** ./src/app/edit-woodburning.component.scss ***!
-  \*************************************************/
+/***/ "./src/app/edit-woodburning/edit-woodburning.component.scss":
+/*!******************************************************************!*\
+  !*** ./src/app/edit-woodburning/edit-woodburning.component.scss ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -431,10 +667,10 @@ module.exports = "mat-form-field {\n  width: 100%;\n  margin-bottom: 16px; }\n\n
 
 /***/ }),
 
-/***/ "./src/app/edit-woodburning.component.ts":
-/*!***********************************************!*\
-  !*** ./src/app/edit-woodburning.component.ts ***!
-  \***********************************************/
+/***/ "./src/app/edit-woodburning/edit-woodburning.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/edit-woodburning/edit-woodburning.component.ts ***!
+  \****************************************************************/
 /*! exports provided: EditWoodburningComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -444,7 +680,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -521,8 +757,8 @@ var EditWoodburningComponent = (function () {
     ], EditWoodburningComponent.prototype, "woodburning", void 0);
     EditWoodburningComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./edit-woodburning.component.html */ "./src/app/edit-woodburning.component.html"),
-            styles: [__webpack_require__(/*! ./edit-woodburning.component.scss */ "./src/app/edit-woodburning.component.scss")],
+            template: __webpack_require__(/*! ./edit-woodburning.component.html */ "./src/app/edit-woodburning/edit-woodburning.component.html"),
+            styles: [__webpack_require__(/*! ./edit-woodburning.component.scss */ "./src/app/edit-woodburning/edit-woodburning.component.scss")],
             selector: 'edit-woodburning'
         }),
         __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
@@ -657,32 +893,32 @@ var FirestoreService = (function () {
 
 /***/ }),
 
-/***/ "./src/app/home-page.component.html":
-/*!******************************************!*\
-  !*** ./src/app/home-page.component.html ***!
-  \******************************************/
+/***/ "./src/app/home-page/home-page.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/home-page/home-page.component.html ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content>\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
+module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n          <button mat-raised-button (click)=\"logout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n          </button>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content>\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
 
 /***/ }),
 
-/***/ "./src/app/home-page.component.scss":
-/*!******************************************!*\
-  !*** ./src/app/home-page.component.scss ***!
-  \******************************************/
+/***/ "./src/app/home-page/home-page.component.scss":
+/*!****************************************************!*\
+  !*** ./src/app/home-page/home-page.component.scss ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Roboto, \"Helvetica Neue\", Arial, Helvetica, sans-serif; }\n  .home .home-header .ppd-logo {\n    padding-right: 24px;\n    float: left;\n    padding-bottom: 24px; }\n  .home .home-header .ppd-title {\n    font-size: 24px;\n    line-height: 75px; }\n  .home .woodburning-table {\n    margin-top: 10px;\n    padding-top: 10px;\n    height: 100%; }\n  .home .woodburning-table .woodburning-table-header {\n      font-size: 18px;\n      padding-bottom: 10px; }\n  .home .home-page-buttons {\n    margin-top: 24px;\n    margin-bottom: 25px; }\n  .home .home-page-buttons .submitButton {\n      color: #ffffff;\n      background-color: #057ec1;\n      text-transform: uppercase; }\n  .home .home-footer {\n    font-size: 14px;\n    padding: 24px; }\n"
+module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Roboto, \"Helvetica Neue\", Arial, Helvetica, sans-serif; }\n  .home .home-header {\n    width: 100%; }\n  .home .home-header .ppd-logo {\n      padding-right: 24px;\n      float: left;\n      padding-bottom: 24px; }\n  .home .home-header .ppd-title {\n      font-size: 24px;\n      line-height: 75px; }\n  .home .home-header .logout {\n      padding-top: 20px;\n      padding-left: 10px; }\n  .home .woodburning-table {\n    margin-top: 10px;\n    padding-top: 10px;\n    height: 100%; }\n  .home .woodburning-table .woodburning-table-header {\n      font-size: 18px;\n      padding-bottom: 10px; }\n  .home .home-page-buttons {\n    margin-top: 24px;\n    margin-bottom: 25px; }\n  .home .home-page-buttons .submitButton {\n      color: #ffffff;\n      background-color: #057ec1;\n      text-transform: uppercase; }\n  .home .home-footer {\n    font-size: 14px;\n    padding: 24px; }\n"
 
 /***/ }),
 
-/***/ "./src/app/home-page.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/home-page.component.ts ***!
-  \****************************************/
+/***/ "./src/app/home-page/home-page.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/home-page/home-page.component.ts ***!
+  \**************************************************/
 /*! exports provided: HomePageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -690,8 +926,9 @@ module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Rob
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create-woodburning.component */ "./src/app/create-woodburning.component.ts");
+/* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/auth.service */ "./src/app/core/auth.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -704,20 +941,29 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HomePageComponent = (function () {
-    function HomePageComponent(dialog) {
+    function HomePageComponent(dialog, authService) {
         this.dialog = dialog;
+        this.authService = authService;
     }
+    HomePageComponent.prototype.ngOnInit = function () {
+        this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
+    };
     HomePageComponent.prototype.openCreateWoodburningDialog = function () {
-        this.createWoodburningDialogRef = this.dialog.open(_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__["CreateWoodburningComponent"], { width: '500px' });
+        this.createWoodburningDialogRef = this.dialog.open(_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__["CreateWoodburningComponent"], { width: '500px' });
+    };
+    HomePageComponent.prototype.logout = function () {
+        this.authService.logout();
     };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/home-page.component.html"),
-            styles: [__webpack_require__(/*! ./home-page.component.scss */ "./src/app/home-page.component.scss")],
+            template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/home-page/home-page.component.html"),
+            styles: [__webpack_require__(/*! ./home-page.component.scss */ "./src/app/home-page/home-page.component.scss")],
             selector: 'home-page'
         }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"],
+            _core_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
     ], HomePageComponent);
     return HomePageComponent;
 }());
@@ -726,10 +972,10 @@ var HomePageComponent = (function () {
 
 /***/ }),
 
-/***/ "./src/app/list-woodburnings.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/list-woodburnings.component.html ***!
-  \**************************************************/
+/***/ "./src/app/list-woodburnings/list-woodburnings.component.html":
+/*!********************************************************************!*\
+  !*** ./src/app/list-woodburnings/list-woodburnings.component.html ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -737,10 +983,10 @@ module.exports = "<div class=\"table-info\" content>\n    <mat-table #table [dat
 
 /***/ }),
 
-/***/ "./src/app/list-woodburnings.component.scss":
-/*!**************************************************!*\
-  !*** ./src/app/list-woodburnings.component.scss ***!
-  \**************************************************/
+/***/ "./src/app/list-woodburnings/list-woodburnings.component.scss":
+/*!********************************************************************!*\
+  !*** ./src/app/list-woodburnings/list-woodburnings.component.scss ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -748,10 +994,10 @@ module.exports = ".mat-table {\n  width: 100%;\n  max-height: 500px; }\n  .mat-t
 
 /***/ }),
 
-/***/ "./src/app/list-woodburnings.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/list-woodburnings.component.ts ***!
-  \************************************************/
+/***/ "./src/app/list-woodburnings/list-woodburnings.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/list-woodburnings/list-woodburnings.component.ts ***!
+  \******************************************************************/
 /*! exports provided: ListWoodburningsComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -760,10 +1006,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListWoodburningsComponent", function() { return ListWoodburningsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit-woodburning.component */ "./src/app/edit-woodburning.component.ts");
-/* harmony import */ var _delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./delete-woodburning.component */ "./src/app/delete-woodburning.component.ts");
-/* harmony import */ var _preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./preview-woodburning.component */ "./src/app/preview-woodburning.component.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
+/* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
+/* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -791,21 +1037,21 @@ var ListWoodburningsComponent = (function () {
         this.allWoodburnings$ = this.woodburningStoreService.list();
     };
     ListWoodburningsComponent.prototype.openPreviewDialog = function (woodburning) {
-        this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
+        this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
         this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
     };
     ListWoodburningsComponent.prototype.openEditWoodburningDialog = function (woodburning) {
-        this.editWoodburningDialogRef = this.dialog.open(_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__["EditWoodburningComponent"], { width: '500px' });
+        this.editWoodburningDialogRef = this.dialog.open(_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__["EditWoodburningComponent"], { width: '500px' });
         this.editWoodburningDialogRef.componentInstance.woodburning = woodburning;
     };
     ListWoodburningsComponent.prototype.openDeleteDialog = function (woodburning) {
-        this.deleteWoodburningDialogRef = this.dialog.open(_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__["DeleteWoodburningComponent"], { width: '500px' });
+        this.deleteWoodburningDialogRef = this.dialog.open(_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__["DeleteWoodburningComponent"], { width: '500px' });
         this.deleteWoodburningDialogRef.componentInstance.woodburning = woodburning;
     };
     ListWoodburningsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./list-woodburnings.component.html */ "./src/app/list-woodburnings.component.html"),
-            styles: [__webpack_require__(/*! ./list-woodburnings.component.scss */ "./src/app/list-woodburnings.component.scss")],
+            template: __webpack_require__(/*! ./list-woodburnings.component.html */ "./src/app/list-woodburnings/list-woodburnings.component.html"),
+            styles: [__webpack_require__(/*! ./list-woodburnings.component.scss */ "./src/app/list-woodburnings/list-woodburnings.component.scss")],
             selector: 'list-woodburnings'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"],
@@ -818,10 +1064,111 @@ var ListWoodburningsComponent = (function () {
 
 /***/ }),
 
-/***/ "./src/app/preview-woodburning.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/preview-woodburning.component.html ***!
-  \****************************************************/
+/***/ "./src/app/login/login.component.html":
+/*!********************************************!*\
+  !*** ./src/app/login/login.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card class=\"login-card\">\n  <h1>Welcome to my Woodburning Firebase Portal</h1>\n  <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"150\" width=\"150\"\n                             alt=\"Prairie Pyro Designs\"></div>\n  <button (click)=\"login()\" mat-raised-button color=\"primary\">Login</button>\n</mat-card>\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.scss":
+/*!********************************************!*\
+  !*** ./src/app/login/login.component.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: flex;\n  justify-content: center; }\n\n.login-card {\n  flex: 1;\n  line-height: 60px;\n  margin: 40px 20px;\n  max-width: 500px;\n  text-align: center; }\n\n.login-card button {\n    width: 100%; }\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/login/login.component.ts ***!
+  \******************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LoginComponent = (function () {
+    function LoginComponent(authService, router, userService) {
+        this.authService = authService;
+        this.router = router;
+        this.userService = userService;
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.isLoggedIn.subscribe(function (isLoggedIn) {
+            if (isLoggedIn) {
+                _this.handleLogin();
+            }
+        });
+    };
+    LoginComponent.prototype.login = function () {
+        var _this = this;
+        this.authService.login()
+            .subscribe(function (profile) {
+            var user = {
+                id: profile.id,
+                email: profile.email,
+                firstName: profile.given_name,
+                lastName: profile.family_name,
+                displayName: profile.given_name + ' ' + profile.family_name,
+                profileImageUrl: profile.picture,
+                isDeleted: false
+            };
+            if (!_this.userService.get(user.id)) {
+                _this.userService.add(user).subscribe();
+            }
+        });
+    };
+    LoginComponent.prototype.handleLogin = function () {
+        this.router.navigate(['/home']);
+    };
+    LoginComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'woodburning-portal-login',
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
+            styles: [__webpack_require__(/*! ./login.component.scss */ "./src/app/login/login.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_core_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/preview-woodburning/preview-woodburning.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/preview-woodburning/preview-woodburning.component.html ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -829,10 +1176,10 @@ module.exports = "<mat-dialog-content class=\"preview-dialog\">\n    <mat-card-t
 
 /***/ }),
 
-/***/ "./src/app/preview-woodburning.component.scss":
-/*!****************************************************!*\
-  !*** ./src/app/preview-woodburning.component.scss ***!
-  \****************************************************/
+/***/ "./src/app/preview-woodburning/preview-woodburning.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/preview-woodburning/preview-woodburning.component.scss ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -840,10 +1187,10 @@ module.exports = ".preview-dialog {\n  font-family: Roboto, \"Helvetica Neue\", 
 
 /***/ }),
 
-/***/ "./src/app/preview-woodburning.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/preview-woodburning.component.ts ***!
-  \**************************************************/
+/***/ "./src/app/preview-woodburning/preview-woodburning.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/preview-woodburning/preview-woodburning.component.ts ***!
+  \**********************************************************************/
 /*! exports provided: PreviewWoodburningComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -879,13 +1226,103 @@ var PreviewWoodburningComponent = (function () {
     ], PreviewWoodburningComponent.prototype, "woodburning", void 0);
     PreviewWoodburningComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./preview-woodburning.component.html */ "./src/app/preview-woodburning.component.html"),
-            styles: [__webpack_require__(/*! ./preview-woodburning.component.scss */ "./src/app/preview-woodburning.component.scss")],
+            template: __webpack_require__(/*! ./preview-woodburning.component.html */ "./src/app/preview-woodburning/preview-woodburning.component.html"),
+            styles: [__webpack_require__(/*! ./preview-woodburning.component.scss */ "./src/app/preview-woodburning/preview-woodburning.component.scss")],
             selector: 'preview-woodburning'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]])
     ], PreviewWoodburningComponent);
     return PreviewWoodburningComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/routes.ts":
+/*!***************************!*\
+  !*** ./src/app/routes.ts ***!
+  \***************************/
+/*! exports provided: routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
+/* harmony import */ var _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/auth-guard.service */ "./src/app/core/auth-guard.service.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/home-page.component.ts");
+
+
+
+var routes = [
+    {
+        path: 'login',
+        component: _login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"]
+    },
+    {
+        path: 'home',
+        component: _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"],
+        canActivate: [_core_auth_guard_service__WEBPACK_IMPORTED_MODULE_0__["AuthGuard"]],
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/user.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/user.service.ts ***!
+  \*********************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _firestore_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./firestore.service */ "./src/app/firestore.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UserService = (function () {
+    function UserService(firestoreService) {
+        this.firestoreService = firestoreService;
+    }
+    UserService.prototype.get = function (userId) {
+        return this.firestoreService.get("users/" + userId);
+    };
+    UserService.prototype.add = function (appUser) {
+        return this.firestoreService.add('users', appUser);
+    };
+    Object.defineProperty(UserService.prototype, "currentUser", {
+        get: function () {
+            try {
+                return JSON.parse(localStorage.getItem('currentUser'));
+            }
+            catch (err) {
+                console.log('Missing user');
+                return null;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UserService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_firestore_service__WEBPACK_IMPORTED_MODULE_1__["FirestoreService"]])
+    ], UserService);
+    return UserService;
 }());
 
 

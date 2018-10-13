@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "ng lint",
     "serve": "ng serve --port 4000",
-    "start": "npm run"
+    "start": "npm run",
+    "build": "ng build --output-path public"
   },
   "private": true,
   "dependencies": {
