@@ -1,15 +1,21 @@
-@import '../common/colors';
+@import '../../common/colors';
 
 mat-form-field {
   width: 100%;
   margin-bottom: 16px;
+  color: $white !important;
+}
+
+
+.mat-input-element {
+  color: $white !important;
 }
 
 mat-card-title {
   font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-.edit-woodburning-form {
+.create-woodburning-form {
   .row {
     width: 260px;
   }
@@ -18,7 +24,7 @@ mat-card-title {
     padding-bottom: 25px;
   }
 
-  .edit-woodburning-buttons {
+  .create-woodburning-buttons {
     width: 288px;
   }
 

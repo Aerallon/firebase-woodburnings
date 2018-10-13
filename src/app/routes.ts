@@ -2,7 +2,7 @@ import {Routes} from '@angular/router';
 
 import { AuthGuard } from './core/auth-guard.service';
 import { LoginComponent } from './login/login.component';
-import { HomePageComponent } from './home-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
   {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CreateWoodburningComponent } from './create-woodburning.component';
+import { CreateWoodburningComponent } from '../create-woodburning/create-woodburning.component';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { BehaviorSubject } from 'rxjs';
-import { AuthService } from './core/auth.service';
+import { AuthService } from '../core/auth.service';
 
 @Component({
     templateUrl: './home-page.component.html',

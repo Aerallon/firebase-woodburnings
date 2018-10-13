@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { WoodburningDetails } from './interfaces';
+import { WoodburningDetails } from '../interfaces';
 import { MatDialogRef } from '@angular/material';
 
 @Component({
