@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           profileImageUrl: profile.picture,
           isDeleted: false
         };
-        // if the user doesn't exists already
+        // if the user doesn't exists already - I don't think this is working... I'm not getting users in my database
         if (!this.userService.get(user.id)) {
           this.userService.add(user as AppUser).subscribe();
         }

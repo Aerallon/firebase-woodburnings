@@ -6,6 +6,7 @@ import { EditWoodburningComponent } from '../edit-woodburning/edit-woodburning.c
 import { DeleteWoodburningComponent } from '../delete-woodburning/delete-woodburning.component';
 import { PreviewWoodburningComponent } from '../preview-woodburning/preview-woodburning.component';
 import { Observable } from 'rxjs';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -20,17 +21,20 @@ export class ListWoodburningsComponent implements OnInit {
   deleteWoodburningDialogRef: MatDialogRef<DeleteWoodburningComponent>;
   editWoodburningDialogRef: MatDialogRef<EditWoodburningComponent>;
   previewWoodburningDialogRef: MatDialogRef<PreviewWoodburningComponent>;
+  isAdmin: boolean;
 
   displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
     'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
     'sold', 'menu'];
 
   constructor(private dialog: MatDialog,
-              private woodburningStoreService: WoodburningStoreService) {
+              private woodburningStoreService: WoodburningStoreService,
+              private userService: UserService) {
   }
 
   ngOnInit(): void {
     this.allWoodburnings$ = this.woodburningStoreService.list();
+    this.isAdmin = this.userService.checkIfAdmin();
   }
 
   public openPreviewDialog(woodburning: WoodburningDetails): void {

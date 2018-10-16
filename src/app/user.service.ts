@@ -26,4 +26,13 @@ export class UserService {
       return null;
     }
   }
+
+  public checkIfAdmin(): boolean {
+    const currentUser = this.currentUser;
+    if (currentUser.id === '101054700932503011491' ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

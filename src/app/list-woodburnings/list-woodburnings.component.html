@@ -52,8 +52,8 @@
                 </button>
                 <mat-menu #actions>
                     <button mat-menu-item (click)="openPreviewDialog(woodburning)">Preview</button>
-                    <button mat-menu-item (click)="openEditWoodburningDialog(woodburning)">Edit</button>
-                    <button mat-menu-item (click)="openDeleteDialog(woodburning)">Delete</button>
+                    <button mat-menu-item (click)="openEditWoodburningDialog(woodburning)" *ngIf="isAdmin">Edit</button>
+                    <button mat-menu-item (click)="openDeleteDialog(woodburning)" *ngIf="isAdmin">Delete</button>
                 </mat-menu>
             </mat-cell>
         </ng-container>
