@@ -900,7 +900,7 @@ var FirestoreService = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n          <button mat-raised-button (click)=\"logout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n          </button>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content>\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
+module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n          <button mat-raised-button (click)=\"logout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n          </button>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content *ngIf=\"isAdmin\">\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
 
 /***/ }),
 
@@ -929,6 +929,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -942,13 +943,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HomePageComponent = (function () {
-    function HomePageComponent(dialog, authService) {
+    function HomePageComponent(dialog, authService, userService) {
         this.dialog = dialog;
         this.authService = authService;
+        this.userService = userService;
     }
     HomePageComponent.prototype.ngOnInit = function () {
         this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
+        this.isAdmin = this.userService.checkIfAdmin();
     };
     HomePageComponent.prototype.openCreateWoodburningDialog = function () {
         this.createWoodburningDialogRef = this.dialog.open(_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__["CreateWoodburningComponent"], { width: '500px' });
@@ -963,7 +967,8 @@ var HomePageComponent = (function () {
             selector: 'home-page'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"],
-            _core_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
+            _core_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+            _user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"]])
     ], HomePageComponent);
     return HomePageComponent;
 }());
@@ -979,7 +984,7 @@ var HomePageComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"table-info\" content>\n    <mat-table #table [dataSource]=\"allWoodburnings$\">\n        <ng-container matColumnDef=\"title\">\n            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.title }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"size\">\n            <mat-header-cell *matHeaderCellDef>Size</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.size }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"material\">\n            <mat-header-cell *matHeaderCellDef>Material</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.material }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"dateFinished\">\n            <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenMinutes\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenMinutes }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenHours\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Hours)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenHours }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sharedOnline\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Shared Online?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sharedOnline }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"framed\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Framed?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.framed }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"forSale\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>For Sale?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.forSale }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sellingPrice\">\n            <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">${{ woodburning.sellingPrice }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sold\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sold }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"menu\">\n            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\" class=\"woodburning-menu\">\n                <button mat-icon-button color=\"white\" [matMenuTriggerFor]=\"actions\">\n                    <mat-icon>more_vert</mat-icon>\n                </button>\n                <mat-menu #actions>\n                    <button mat-menu-item (click)=\"openPreviewDialog(woodburning)\">Preview</button>\n                    <button mat-menu-item (click)=\"openEditWoodburningDialog(woodburning)\">Edit</button>\n                    <button mat-menu-item (click)=\"openDeleteDialog(woodburning)\">Delete</button>\n                </mat-menu>\n            </mat-cell>\n        </ng-container>\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\" matRipple></mat-row>\n    </mat-table>\n</div>\n"
+module.exports = "<div class=\"table-info\" content>\n    <mat-table #table [dataSource]=\"allWoodburnings$\">\n        <ng-container matColumnDef=\"title\">\n            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.title }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"size\">\n            <mat-header-cell *matHeaderCellDef>Size</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.size }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"material\">\n            <mat-header-cell *matHeaderCellDef>Material</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.material }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"dateFinished\">\n            <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenMinutes\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenMinutes }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenHours\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Hours)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenHours }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sharedOnline\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Shared Online?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sharedOnline }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"framed\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Framed?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.framed }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"forSale\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>For Sale?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.forSale }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sellingPrice\">\n            <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">${{ woodburning.sellingPrice }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sold\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sold }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"menu\">\n            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\" class=\"woodburning-menu\">\n                <button mat-icon-button color=\"white\" [matMenuTriggerFor]=\"actions\">\n                    <mat-icon>more_vert</mat-icon>\n                </button>\n                <mat-menu #actions>\n                    <button mat-menu-item (click)=\"openPreviewDialog(woodburning)\">Preview</button>\n                    <button mat-menu-item (click)=\"openEditWoodburningDialog(woodburning)\" *ngIf=\"isAdmin\">Edit</button>\n                    <button mat-menu-item (click)=\"openDeleteDialog(woodburning)\" *ngIf=\"isAdmin\">Delete</button>\n                </mat-menu>\n            </mat-cell>\n        </ng-container>\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\" matRipple></mat-row>\n    </mat-table>\n</div>\n"
 
 /***/ }),
 
@@ -1010,6 +1015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
 /* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
 /* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1025,16 +1031,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ListWoodburningsComponent = (function () {
-    function ListWoodburningsComponent(dialog, woodburningStoreService) {
+    function ListWoodburningsComponent(dialog, woodburningStoreService, userService) {
         this.dialog = dialog;
         this.woodburningStoreService = woodburningStoreService;
+        this.userService = userService;
         this.displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
             'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
             'sold', 'menu'];
     }
     ListWoodburningsComponent.prototype.ngOnInit = function () {
         this.allWoodburnings$ = this.woodburningStoreService.list();
+        this.isAdmin = this.userService.checkIfAdmin();
     };
     ListWoodburningsComponent.prototype.openPreviewDialog = function (woodburning) {
         this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
@@ -1055,7 +1064,8 @@ var ListWoodburningsComponent = (function () {
             selector: 'list-woodburnings'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"],
-            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"]])
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"],
+            _user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
     ], ListWoodburningsComponent);
     return ListWoodburningsComponent;
 }());
@@ -1316,6 +1326,15 @@ var UserService = (function () {
         enumerable: true,
         configurable: true
     });
+    UserService.prototype.checkIfAdmin = function () {
+        var currentUser = this.currentUser;
+        if (currentUser.id === '101054700932503011491') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
     UserService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
