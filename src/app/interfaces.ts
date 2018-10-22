@@ -24,4 +24,5 @@ export interface AppUser {
   displayName: string;
   profileImageUrl?: string;
   isDeleted: boolean;
+  isAdmin: boolean;
 }

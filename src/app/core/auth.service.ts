@@ -69,7 +69,8 @@ export class AuthService {
       lastName: profile.family_name,
       displayName: profile.given_name + ' ' + profile.family_name,
       profileImageUrl: profile.picture,
-      isDeleted: false
+      isDeleted: false,
+      isAdmin: false
     };
     localStorage.setItem('currentUser', JSON.stringify(user));
   }

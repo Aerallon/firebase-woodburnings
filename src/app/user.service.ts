@@ -18,6 +18,10 @@ export class UserService {
     return this.firestoreService.add('users', appUser);
   }
 
+  public update(appUser: AppUser): Observable<null> {
+    return this.firestoreService.update(`users/${appUser.id}`, appUser);
+  }
+
   public get currentUser(): AppUser {
     try {
       return JSON.parse(localStorage.getItem('currentUser'));
@@ -29,7 +33,7 @@ export class UserService {
 
   public checkIfAdmin(): boolean {
     const currentUser = this.currentUser;
-    if (currentUser.id === '101054700932503011491' ) {
+    if (currentUser.isAdmin === true ) {
       return true;
     } else {
       return false;
