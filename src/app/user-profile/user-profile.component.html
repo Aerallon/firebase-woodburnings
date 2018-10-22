@@ -1,0 +1,49 @@
+<mat-dialog-content>
+  <mat-card-title>Edit User Details</mat-card-title>
+  <div *ngIf="form">
+    <form [formGroup]="form" *ngIf="currentUser as user" class="edit-user-form">
+        <mat-card>
+            <mat-card-content>
+                <div class="row">
+                    <mat-form-field>
+                        <input matInput formControlName="firstName" placeholder="First Name"
+                               required="true" value="{{ user.firstName }}">
+                        <mat-error>Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <input matInput formControlName="lastName" placeholder="Last Name"
+                               required="true" value="{{ user.lastName }}">
+                        <mat-error>Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <input matInput formControlName="email" placeholder="Email"
+                               required="true" value="{{ user.email }}">
+                        <mat-error>Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <span><img src="{{user.profileImageUrl}}" width="75px" height="75px"></span>
+                    <mat-form-field>
+                        <input matInput formControlName="profileImageUrl" placeholder="Profile Image URL"
+                               value="{{ user.profileImageUrl }}">
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <mat-card-content>
+                <div class="edit-user-buttons">
+                    <button mat-raised-button class="submitButton" (click)="updateUser()">
+                        Update User Details
+                    </button>
+                    <button mat-button class="cancelButton" (click)="close()">
+                        Cancel
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </form>
+  </div>
+</mat-dialog-content>

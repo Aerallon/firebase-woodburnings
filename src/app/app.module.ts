@@ -13,6 +13,7 @@ import { EditWoodburningComponent } from './edit-woodburning/edit-woodburning.co
 import { ListWoodburningsComponent } from './list-woodburnings/list-woodburnings.component';
 import { DeleteWoodburningComponent } from './delete-woodburning/delete-woodburning.component';
 import { PreviewWoodburningComponent } from './preview-woodburning/preview-woodburning.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { WoodburningStoreService } from './woodburning-store.service';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './user.service';
@@ -39,7 +40,8 @@ import {
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import {
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -88,7 +91,8 @@ import {
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileComponent
   ]
 })
 export class AppModule { }

@@ -4,6 +4,8 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 import { UserService } from '../user.service';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
+import { AppUser } from '../interfaces';
 
 @Component({
     templateUrl: './home-page.component.html',
@@ -14,8 +16,10 @@ import { UserService } from '../user.service';
 export class HomePageComponent implements OnInit {
 
   createWoodburningDialogRef: MatDialogRef<CreateWoodburningComponent>;
+  userProfileDialogRef: MatDialogRef<UserProfileComponent>;
   isLoggedIn$$: BehaviorSubject<boolean>;
   isAdmin: boolean;
+  currentUser: AppUser;
 
   constructor(private dialog: MatDialog,
               private authService: AuthService,
@@ -25,6 +29,14 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
     this.isAdmin = this.userService.checkIfAdmin();
+    this.userService.get(this.userService.currentUser.id).subscribe( user => {
+      this.currentUser = user;
+    });
+  }
+
+  public openEditUserProfileDialog(): void {
+    this.userProfileDialogRef = this.dialog.open(UserProfileComponent, {width: '500px'});
+    this.userProfileDialogRef.componentInstance.user = this.currentUser;
   }
 
   public openCreateWoodburningDialog(): void {

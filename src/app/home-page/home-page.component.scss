@@ -6,7 +6,6 @@
   font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 
   .home-header {
-    width: 100%;
     .ppd-logo {
       padding-right: 24px;
       float: left;
@@ -14,11 +13,20 @@
     }
     .ppd-title {
       font-size: 24px;
-      line-height: 75px;
+      line-height: 76px;
     }
-    .logout {
-      padding-top: 20px;
-      padding-left: 10px;
+    .nav-actions {
+      .user-profile-button {
+        padding-right: 10px;
+        float: left;
+        padding-left: 15px;
+        line-height: 76px;
+      }
+      .logout {
+        float: right;
+        padding-top: 20px;
+        padding-left: 10px;
+      }
     }
   }
 
