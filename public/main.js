@@ -116,17 +116,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./list-woodburnings/list-woodburnings.component */ "./src/app/list-woodburnings/list-woodburnings.component.ts");
 /* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
 /* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./core/auth.service */ "./src/app/core/auth.service.ts");
-/* harmony import */ var _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./core/auth-guard.service */ "./src/app/core/auth-guard.service.ts");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./routes */ "./src/app/routes.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./core/auth-guard.service */ "./src/app/core/auth-guard.service.ts");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./routes */ "./src/app/routes.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -135,6 +136,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 var firebaseConfig = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].firebaseConfig;
+
 
 
 
@@ -171,40 +173,41 @@ var AppModule = (function () {
                 _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
                 _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
                 angularfire2__WEBPACK_IMPORTED_MODULE_1__["AngularFireModule"].initializeApp(firebaseConfig),
                 angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestoreModule"],
-                _core_core_module__WEBPACK_IMPORTED_MODULE_21__["CoreModule"],
+                _core_core_module__WEBPACK_IMPORTED_MODULE_22__["CoreModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSliderModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatFormFieldModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSlideToggleModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDatepickerModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatDividerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSnackBarModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatMenuModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_20__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_19__["routes"]),
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_22__["HttpClientModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatSliderModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatSlideToggleModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatDatepickerModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["ReactiveFormsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatNativeDateModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatDividerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatSnackBarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatMenuModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_21__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_20__["routes"]),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"]
             ],
             bootstrap: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
             ],
             providers: [
-                _woodburning_store_service__WEBPACK_IMPORTED_MODULE_13__["WoodburningStoreService"],
-                _core_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"],
-                _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"],
-                _user_service__WEBPACK_IMPORTED_MODULE_15__["UserService"]
+                _woodburning_store_service__WEBPACK_IMPORTED_MODULE_14__["WoodburningStoreService"],
+                _core_auth_service__WEBPACK_IMPORTED_MODULE_18__["AuthService"],
+                _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"],
+                _user_service__WEBPACK_IMPORTED_MODULE_16__["UserService"]
             ],
             exports: [
                 _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
@@ -212,7 +215,8 @@ var AppModule = (function () {
                 _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
                 _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"]
             ],
             entryComponents: [
                 _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
@@ -220,7 +224,8 @@ var AppModule = (function () {
                 _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
                 _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"]
             ]
         })
     ], AppModule);
@@ -371,7 +376,8 @@ var AuthService = (function () {
             lastName: profile.family_name,
             displayName: profile.given_name + ' ' + profile.family_name,
             profileImageUrl: profile.picture,
-            isDeleted: false
+            isDeleted: false,
+            isAdmin: false
         };
         localStorage.setItem('currentUser', JSON.stringify(user));
     };
@@ -900,7 +906,7 @@ var FirestoreService = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n          <button mat-raised-button (click)=\"logout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n          </button>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content *ngIf=\"isAdmin\">\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
+module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"nav-actions\">\n            <div class=\"user-profile-button\">\n              <button mat-raised-button (click)=\"openEditUserProfileDialog()\">\n                  <mat-icon>face</mat-icon>\n                  <span>Edit Profile</span>\n              </button>\n            </div>\n            <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n              <button mat-raised-button (click)=\"logout()\">\n                  <mat-icon>exit_to_app</mat-icon>\n                  <span>Logout</span>\n              </button>\n            </div>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content *ngIf=\"isAdmin\">\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
 
 /***/ }),
 
@@ -911,7 +917,7 @@ module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-h
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Roboto, \"Helvetica Neue\", Arial, Helvetica, sans-serif; }\n  .home .home-header {\n    width: 100%; }\n  .home .home-header .ppd-logo {\n      padding-right: 24px;\n      float: left;\n      padding-bottom: 24px; }\n  .home .home-header .ppd-title {\n      font-size: 24px;\n      line-height: 75px; }\n  .home .home-header .logout {\n      padding-top: 20px;\n      padding-left: 10px; }\n  .home .woodburning-table {\n    margin-top: 10px;\n    padding-top: 10px;\n    height: 100%; }\n  .home .woodburning-table .woodburning-table-header {\n      font-size: 18px;\n      padding-bottom: 10px; }\n  .home .home-page-buttons {\n    margin-top: 24px;\n    margin-bottom: 25px; }\n  .home .home-page-buttons .submitButton {\n      color: #ffffff;\n      background-color: #057ec1;\n      text-transform: uppercase; }\n  .home .home-footer {\n    font-size: 14px;\n    padding: 24px; }\n"
+module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Roboto, \"Helvetica Neue\", Arial, Helvetica, sans-serif; }\n  .home .home-header .ppd-logo {\n    padding-right: 24px;\n    float: left;\n    padding-bottom: 24px; }\n  .home .home-header .ppd-title {\n    font-size: 24px;\n    line-height: 76px; }\n  .home .home-header .nav-actions .user-profile-button {\n    padding-right: 10px;\n    float: left;\n    padding-left: 15px;\n    line-height: 76px; }\n  .home .home-header .nav-actions .logout {\n    float: right;\n    padding-top: 20px;\n    padding-left: 10px; }\n  .home .woodburning-table {\n    margin-top: 10px;\n    padding-top: 10px;\n    height: 100%; }\n  .home .woodburning-table .woodburning-table-header {\n      font-size: 18px;\n      padding-bottom: 10px; }\n  .home .home-page-buttons {\n    margin-top: 24px;\n    margin-bottom: 25px; }\n  .home .home-page-buttons .submitButton {\n      color: #ffffff;\n      background-color: #057ec1;\n      text-transform: uppercase; }\n  .home .home-footer {\n    font-size: 14px;\n    padding: 24px; }\n"
 
 /***/ }),
 
@@ -930,6 +936,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/auth.service */ "./src/app/core/auth.service.ts");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -944,6 +951,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HomePageComponent = (function () {
     function HomePageComponent(dialog, authService, userService) {
         this.dialog = dialog;
@@ -951,8 +959,16 @@ var HomePageComponent = (function () {
         this.userService = userService;
     }
     HomePageComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
         this.isAdmin = this.userService.checkIfAdmin();
+        this.userService.get(this.userService.currentUser.id).subscribe(function (user) {
+            _this.currentUser = user;
+        });
+    };
+    HomePageComponent.prototype.openEditUserProfileDialog = function () {
+        this.userProfileDialogRef = this.dialog.open(_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_5__["UserProfileComponent"], { width: '500px' });
+        this.userProfileDialogRef.componentInstance.user = this.currentUser;
     };
     HomePageComponent.prototype.openCreateWoodburningDialog = function () {
         this.createWoodburningDialogRef = this.dialog.open(_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__["CreateWoodburningComponent"], { width: '500px' });
@@ -1141,18 +1157,21 @@ var LoginComponent = (function () {
         var _this = this;
         this.authService.login()
             .subscribe(function (profile) {
-            var user = {
+            var userProfile = {
                 id: profile.id,
                 email: profile.email,
                 firstName: profile.given_name,
                 lastName: profile.family_name,
                 displayName: profile.given_name + ' ' + profile.family_name,
                 profileImageUrl: profile.picture,
-                isDeleted: false
+                isDeleted: false,
+                isAdmin: false
             };
-            if (!_this.userService.get(user.id)) {
-                _this.userService.add(user).subscribe();
-            }
+            _this.userService.get(userProfile.id).subscribe(function (user) {
+                if (user === undefined) {
+                    _this.userService.add(userProfile).subscribe();
+                }
+            });
         });
     };
     LoginComponent.prototype.handleLogin = function () {
@@ -1280,6 +1299,126 @@ var routes = [
 
 /***/ }),
 
+/***/ "./src/app/user-profile/user-profile.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/user-profile/user-profile.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit User Details</mat-card-title>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" *ngIf=\"currentUser as user\" class=\"edit-user-form\">\n        <mat-card>\n            <mat-card-content>\n                <div class=\"row\">\n                    <mat-form-field>\n                        <input matInput formControlName=\"firstName\" placeholder=\"First Name\"\n                               required=\"true\" value=\"{{ user.firstName }}\">\n                        <mat-error>Required</mat-error>\n                    </mat-form-field>\n                </div>\n                <div class=\"row\">\n                    <mat-form-field>\n                        <input matInput formControlName=\"lastName\" placeholder=\"Last Name\"\n                               required=\"true\" value=\"{{ user.lastName }}\">\n                        <mat-error>Required</mat-error>\n                    </mat-form-field>\n                </div>\n                <div class=\"row\">\n                    <mat-form-field>\n                        <input matInput formControlName=\"email\" placeholder=\"Email\"\n                               required=\"true\" value=\"{{ user.email }}\">\n                        <mat-error>Required</mat-error>\n                    </mat-form-field>\n                </div>\n                <div class=\"row\">\n                    <span><img src=\"{{user.profileImageUrl}}\" width=\"75px\" height=\"75px\"></span>\n                    <mat-form-field>\n                        <input matInput formControlName=\"profileImageUrl\" placeholder=\"Profile Image URL\"\n                               value=\"{{ user.profileImageUrl }}\">\n                    </mat-form-field>\n                </div>\n            </mat-card-content>\n            <mat-card-content>\n                <div class=\"edit-user-buttons\">\n                    <button mat-raised-button class=\"submitButton\" (click)=\"updateUser()\">\n                        Update User Details\n                    </button>\n                    <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                        Cancel\n                    </button>\n                </div>\n            </mat-card-content>\n        </mat-card>\n    </form>\n  </div>\n</mat-dialog-content>"
+
+/***/ }),
+
+/***/ "./src/app/user-profile/user-profile.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/user-profile/user-profile.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-form-field {\n  width: 100%;\n  margin-bottom: 16px; }\n\nmat-card-title {\n  font-family: Roboto, \"Helvetica Neue\", Arial, Helvetica, sans-serif; }\n\n.edit-user-form .row {\n  width: 260px; }\n\n.edit-user-form .row mat-slide-toggle {\n  padding-bottom: 25px; }\n\n.edit-user-form .edit-user-buttons {\n  width: 288px; }\n\n.edit-user-form .submitButton {\n  color: #ffffff;\n  background-color: #057ec1;\n  text-transform: uppercase; }\n\n.edit-user-form .cancelButton {\n  color: #ffffff;\n  text-transform: uppercase; }\n"
+
+/***/ }),
+
+/***/ "./src/app/user-profile/user-profile.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/user-profile/user-profile.component.ts ***!
+  \********************************************************/
+/*! exports provided: UserProfileComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProfileComponent", function() { return UserProfileComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var UserProfileComponent = (function () {
+    function UserProfileComponent(formBuilder, dialogRef, userService, woodburningStoreService) {
+        this.formBuilder = formBuilder;
+        this.dialogRef = dialogRef;
+        this.userService = userService;
+        this.woodburningStoreService = woodburningStoreService;
+    }
+    UserProfileComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.userService.get(this.user.id).subscribe(function (currentUser) {
+            _this.currentUser = currentUser;
+        });
+        this.createForm();
+    };
+    UserProfileComponent.prototype.createForm = function () {
+        this.form = this.formBuilder.group({
+            'firstName': [this.user.firstName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'lastName': [this.user.lastName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'email': [this.user.email, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'profileImageUrl': [this.user.profileImageUrl],
+        });
+    };
+    UserProfileComponent.prototype.updateUser = function () {
+        if (!this.form.valid) {
+            var message = 'Not all fields were entered. Fill out required.';
+            this.woodburningStoreService.openSnackBar(message, '');
+        }
+        else {
+            var userFormData = {
+                id: this.currentUser.id,
+                email: this.form.value.email,
+                firstName: this.form.value.firstName,
+                lastName: this.form.value.lastName,
+                displayName: this.form.value.firstName + ' ' + this.form.value.lastName,
+                profileImageUrl: this.form.value.profileImageUrl,
+                isDeleted: this.currentUser.isDeleted,
+                isAdmin: this.currentUser.isAdmin
+            };
+            this.userService.update(userFormData);
+            var message = 'Successfully edited ' + userFormData.displayName + '.';
+            this.woodburningStoreService.openSnackBar(message, '');
+            this.dialogRef.close();
+        }
+    };
+    UserProfileComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], UserProfileComponent.prototype, "user", void 0);
+    UserProfileComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./user-profile.component.html */ "./src/app/user-profile/user-profile.component.html"),
+            styles: [__webpack_require__(/*! ./user-profile.component.scss */ "./src/app/user-profile/user-profile.component.scss")],
+            selector: 'user-profile'
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
+            _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_4__["WoodburningStoreService"]])
+    ], UserProfileComponent);
+    return UserProfileComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/user.service.ts":
 /*!*********************************!*\
   !*** ./src/app/user.service.ts ***!
@@ -1313,6 +1452,9 @@ var UserService = (function () {
     UserService.prototype.add = function (appUser) {
         return this.firestoreService.add('users', appUser);
     };
+    UserService.prototype.update = function (appUser) {
+        return this.firestoreService.update("users/" + appUser.id, appUser);
+    };
     Object.defineProperty(UserService.prototype, "currentUser", {
         get: function () {
             try {
@@ -1328,7 +1470,7 @@ var UserService = (function () {
     });
     UserService.prototype.checkIfAdmin = function () {
         var currentUser = this.currentUser;
-        if (currentUser.id === '101054700932503011491') {
+        if (currentUser.isAdmin === true) {
             return true;
         }
         else {
