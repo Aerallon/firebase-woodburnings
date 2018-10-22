@@ -34,7 +34,9 @@ export class ListWoodburningsComponent implements OnInit {
 
   ngOnInit(): void {
     this.allWoodburnings$ = this.woodburningStoreService.list();
-    this.isAdmin = this.userService.checkIfAdmin();
+    this.userService.get(this.userService.currentUser.id).subscribe( user => {
+      this.isAdmin = user.isAdmin;
+    });
   }
 
   public openPreviewDialog(woodburning: WoodburningDetails): void {

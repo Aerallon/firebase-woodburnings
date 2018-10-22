@@ -1058,8 +1058,11 @@ var ListWoodburningsComponent = (function () {
             'sold', 'menu'];
     }
     ListWoodburningsComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.allWoodburnings$ = this.woodburningStoreService.list();
-        this.isAdmin = this.userService.checkIfAdmin();
+        this.userService.get(this.userService.currentUser.id).subscribe(function (user) {
+            _this.isAdmin = user.isAdmin;
+        });
     };
     ListWoodburningsComponent.prototype.openPreviewDialog = function (woodburning) {
         this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
