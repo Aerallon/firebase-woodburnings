@@ -28,9 +28,9 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
-    this.isAdmin = this.userService.checkIfAdmin();
     this.userService.get(this.userService.currentUser.id).subscribe( user => {
       this.currentUser = user;
+      this.isAdmin = user.isAdmin;
     });
   }
 

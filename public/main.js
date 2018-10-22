@@ -961,9 +961,9 @@ var HomePageComponent = (function () {
     HomePageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
-        this.isAdmin = this.userService.checkIfAdmin();
         this.userService.get(this.userService.currentUser.id).subscribe(function (user) {
             _this.currentUser = user;
+            _this.isAdmin = user.isAdmin;
         });
     };
     HomePageComponent.prototype.openEditUserProfileDialog = function () {
