@@ -30,19 +30,20 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.authService.login()
       .subscribe((profile: GoogleAuthProviderResponse) => {
-        const user = {
+        const userProfile = {
           id: profile.id,
           email: profile.email,
           firstName: profile.given_name,
           lastName: profile.family_name,
           displayName: profile.given_name + ' ' + profile.family_name,
           profileImageUrl: profile.picture,
-          isDeleted: false
+          isDeleted: false,
+          isAdmin: false
         };
-        // if the user doesn't exists already - I don't think this is working... I'm not getting users in my database
-        if (!this.userService.get(user.id)) {
-          this.userService.add(user as AppUser).subscribe();
-        }
+        this.userService.get(userProfile.id).subscribe(user => {
+          if (user === undefined) {
+            this.userService.add(userProfile as AppUser).subscribe();
+        }});
       });
   }
 
