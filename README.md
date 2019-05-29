@@ -3,7 +3,6 @@
 ## What can you do?
 * Login with your Google Account
 * Once logged in, Edit your Profile
-* Logout once done
 * Both user types will be able to see all the currently created woodburnings in the table.
 * If Admin:
     * Create new Woodburning Entries
@@ -12,6 +11,7 @@
     * Preview Existing Woodburning Entries
 * If not an Admin:
     * Preview Existing Woodburning Entries only
+* Logout of app
 
 ## What does it look like? 
 Login Page:
