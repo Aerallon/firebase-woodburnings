@@ -1,0 +1,36 @@
+<mat-card class="admin-home">
+    <mat-card-header class="admin-home-header">
+        <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="75" width="75"
+                                   alt="Prairie Pyro Designs"></div>
+        <div class="ppd-title">Prairie Pyro Designs</div>
+        <div class="nav-actions">
+            <div class="user-profile-button">
+              <button mat-raised-button (click)="openEditUserProfileDialog()">
+                  <mat-icon>face</mat-icon>
+                  <span>Edit Profile</span>
+              </button>
+            </div>
+            <div class="logout" *ngIf="isLoggedIn$$ | async">
+              <button mat-raised-button (click)="logout()">
+                  <mat-icon>exit_to_app</mat-icon>
+                  <span>Logout</span>
+              </button>
+            </div>
+        </div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content *ngIf="isAdmin">
+        <div class="admin-home-page-buttons">
+            <button mat-raised-button class="submitButton" (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
+        </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-content class="woodburning-table">
+        <div class="woodburning-table-header"> All Woodburnings</div>
+        <list-woodburnings></list-woodburnings>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="admin-home-footer">
+        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>
+    </mat-card-footer>
+</mat-card>

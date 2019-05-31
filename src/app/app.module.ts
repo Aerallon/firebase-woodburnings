@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './home-page/home-page.component';
+import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
 import { CreateWoodburningComponent } from './create-woodburning/create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning/edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings/list-woodburnings.component';
@@ -20,8 +20,6 @@ import { UserService } from './user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './core/auth.service';
 import { AuthGuard } from './core/auth-guard.service';
-import { routes } from './routes';
-import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import {
@@ -30,18 +28,30 @@ import {
   MatNativeDateModule, MatTableModule, MatDividerModule, MatSnackBarModule, MatIconModule,
   MatMenuModule
 } from '@angular/material';
+import { NavModule } from './nav/nav.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageModule } from './home-page/home-page.module';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { ForSaleComponent } from './for-sale/for-sale.component';
+import { GalleryComponent } from './gallery/gallery.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
+    AdminHomePageComponent,
     CreateWoodburningComponent,
     EditWoodburningComponent,
     ListWoodburningsComponent,
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AboutMeComponent,
+    ContactMeComponent,
+    ForSaleComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -64,8 +74,10 @@ import {
     MatSnackBarModule,
     MatIconModule,
     MatMenuModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    NavModule,
+    HomePageModule
   ],
   bootstrap: [
     AppComponent
@@ -83,7 +95,11 @@ import {
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AboutMeComponent,
+    ContactMeComponent,
+    ForSaleComponent,
+    GalleryComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -92,7 +108,11 @@ import {
     DeleteWoodburningComponent,
     PreviewWoodburningComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AboutMeComponent,
+    ContactMeComponent,
+    ForSaleComponent,
+    GalleryComponent
   ]
 })
 export class AppModule { }
