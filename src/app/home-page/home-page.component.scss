@@ -1,59 +1,8 @@
-@import '../../common/colors';
-
 .home {
   font-size: 14px;
   width: 96%;
   font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 
   .home-header {
-    .ppd-logo {
-      padding-right: 24px;
-      float: left;
-      padding-bottom: 24px;
-    }
-    .ppd-title {
-      font-size: 24px;
-      line-height: 76px;
-    }
-    .nav-actions {
-      .user-profile-button {
-        padding-right: 10px;
-        float: left;
-        padding-left: 15px;
-        line-height: 76px;
-      }
-      .logout {
-        float: right;
-        padding-top: 20px;
-        padding-left: 10px;
-      }
-    }
-  }
-
-  .woodburning-table {
-    margin-top: 10px;
-    padding-top: 10px;
-    .woodburning-table-header {
-      font-size: 18px;
-      padding-bottom: 10px;
-    }
-    height: 100%;
-  }
-
-  .home-page-buttons {
-
-    margin-top: 24px;
-    margin-bottom: 25px;
-
-    .submitButton {
-      color: $white;
-      background-color: $blue;
-      text-transform: uppercase;
-    }
-  }
-
-  .home-footer {
-    font-size: 14px;
-    padding: 24px;
   }
 }

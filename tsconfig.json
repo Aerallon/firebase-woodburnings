@@ -27,5 +27,6 @@
   "compileOnSave": false,
   "angularCompilerOptions": {
     "skipMetadataEmit": true
-  }
+  },
+  "include": ["src/**/*.ts", "node_modules/angular-bootstrap-md/**/*.ts"]
 }

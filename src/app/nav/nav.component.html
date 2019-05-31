@@ -1,0 +1,55 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple">
+
+    <!-- Navbar brand -->
+    <!--    <mdb-navbar-brand><a class="navbar-brand" href="#">Prairie Pyro</a></mdb-navbar-brand>-->
+
+    <!-- Logo -->
+    <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="150" width="150"
+                             alt="Prairie Pyro Designs"></div>
+
+    <!-- Collapsible content -->
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="home">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="for-sale">For Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="about-me">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="contact">Contact</a>
+            </li>
+            <!-- TODO: Have login pop up and be needed to be logged in to get here - login and then redirect -->
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home-page">Admin</a>
+            </li>
+
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
+                  <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>
+                </a>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                    <div *ngIf="!(isLoggedIn$$ | async)">
+                      <a class="dropdown-item waves-light" mdbWavesEffect routerLink="login">Login</a>
+                    </div>
+                    <div *ngIf="(isLoggedIn$$ | async)">
+                      <!-- TODO: Open a Dialog -->
+                      <a class="dropdown-item waves-light" mdbWavesEffect routerLink="user-profile">My account</a>
+                      <!-- TODO: Call the logout function on click -->
+                      <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </links>
+
+</mdb-navbar>
+<ng-content></ng-content>
