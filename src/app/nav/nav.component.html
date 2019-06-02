@@ -1,13 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple">
-
-    <!-- Navbar brand -->
-    <!--    <mdb-navbar-brand><a class="navbar-brand" href="#">Prairie Pyro</a></mdb-navbar-brand>-->
-
-    <!-- Logo -->
-    <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="150" width="150"
-                             alt="Prairie Pyro Designs"></div>
-
-    <!-- Collapsible content -->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -50,6 +41,5 @@
             </li>
         </ul>
     </links>
-
 </mdb-navbar>
 <ng-content></ng-content>
