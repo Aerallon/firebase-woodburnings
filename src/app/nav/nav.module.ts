@@ -4,7 +4,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material';
+import { MatCardModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { MatIconModule } from '@angular/material';
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   exports: [
     NavComponent

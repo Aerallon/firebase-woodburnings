@@ -35,6 +35,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutMeComponent,
     ContactMeComponent,
     ForSaleComponent,
-    GalleryComponent
+    GalleryComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +101,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutMeComponent,
     ContactMeComponent,
     ForSaleComponent,
-    GalleryComponent
+    GalleryComponent,
+    BlogComponent
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -112,7 +115,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutMeComponent,
     ContactMeComponent,
     ForSaleComponent,
-    GalleryComponent
+    GalleryComponent,
+    BlogComponent
   ]
 })
 export class AppModule { }

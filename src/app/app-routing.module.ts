@@ -9,19 +9,12 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent
-  },
-  {
-    path: 'about-me',
-    component: AboutMeComponent
-  },
-  {
-    path: 'contact',
-    component: ContactMeComponent
   },
   {
     path: 'for-sale',
@@ -30,6 +23,18 @@ export const routes: Routes = [
   {
     path: 'gallery',
     component: GalleryComponent
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
+    path: 'about-me',
+    component: AboutMeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactMeComponent
   },
   {
     path: 'login',

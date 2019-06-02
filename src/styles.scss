@@ -3,3 +3,27 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import '~@angular/material/prebuilt-themes/purple-green.css';
+
+.page{
+  font-size: 14px;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+  .ppd-logo {
+      padding-right: 24px;
+      float: left;
+      padding-bottom: 24px;
+    }
+  .ppd-title {
+    font-size: 24px;
+    line-height: 76px;
+  }
+}
+
+.page-content {
+  padding: 14px;
+}
+
+mat-card {
+  border-radius: 0;
+}
