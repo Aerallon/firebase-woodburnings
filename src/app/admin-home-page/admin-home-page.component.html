@@ -1,5 +1,5 @@
-<mat-card class="admin-home">
-    <mat-card-header class="admin-home-header">
+<mat-card class="page">
+    <mat-card-header>
         <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="75" width="75"
                                    alt="Prairie Pyro Designs"></div>
         <div class="ppd-title">Prairie Pyro Designs</div>
@@ -20,7 +20,7 @@
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content *ngIf="isAdmin">
-        <div class="admin-home-page-buttons">
+        <div class="buttons">
             <button mat-raised-button class="submitButton" (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
         </div>
     </mat-card-content>
@@ -29,8 +29,4 @@
         <div class="woodburning-table-header"> All Woodburnings</div>
         <list-woodburnings></list-woodburnings>
     </mat-card-content>
-    <mat-divider></mat-divider>
-    <mat-card-footer class="admin-home-footer">
-        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>
-    </mat-card-footer>
 </mat-card>
