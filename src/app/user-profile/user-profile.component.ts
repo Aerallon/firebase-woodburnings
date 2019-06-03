@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { UserService } from '../user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppUser } from '../interfaces';
 import { WoodburningStoreService } from '../woodburning-store.service';
+import { Subscription } from 'rxjs';
 
 @Component({
     templateUrl: './user-profile.component.html',
@@ -11,11 +12,12 @@ import { WoodburningStoreService } from '../woodburning-store.service';
     selector: 'user-profile'
 })
 
-export class UserProfileComponent implements OnInit {
+export class UserProfileComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
   @Input() user: AppUser;
   currentUser: AppUser;
+  private subscriptions: Subscription[] = [];
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<UserProfileComponent>,
@@ -24,9 +26,11 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.get(this.user.id).subscribe( currentUser => {
-      this.currentUser = currentUser;
-    });
+    this.subscriptions.push(
+      this.userService.get(this.user.id).subscribe( currentUser => {
+        this.currentUser = currentUser;
+      })
+    );
     this.createForm();
   }
 
@@ -63,5 +67,11 @@ export class UserProfileComponent implements OnInit {
 
   close(): void {
     this.dialogRef.close();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(subscription => {
+        subscription.unsubscribe();
+    });
   }
 }

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase/app';
 
@@ -23,8 +22,7 @@ export class AuthService {
 
   constructor( private angularFireAuth: AngularFireAuth,
                private angularFirestore: AngularFirestore,
-               private router: Router,
-               private http: HttpClient ) {
+               private router: Router ) {
 
     this.userIsAuthed$ = this.angularFireAuth.user.pipe(
       map(u => !!u)
@@ -56,7 +54,7 @@ export class AuthService {
   public logout(): void {
     this.angularFireAuth.auth.signOut().then(
       () => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       }
     );
   }

@@ -23,17 +23,19 @@ export class NavComponent implements OnInit, OnDestroy {
   loginDialogRef: MatDialogRef<LoginComponent>;
   private subscriptions: Subscription[] = [];
 
-  constructor( private dialog: MatDialog,
-               private authService: AuthService,
-               private userService: UserService,
-               private router: Router) {}
+  constructor(private dialog: MatDialog,
+              private authService: AuthService,
+              private userService: UserService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
-    this.subscriptions.push(this.userService.get(this.userService.currentUser.id).subscribe( user => {
-      this.currentUser = user;
-      this.isAdmin = user.isAdmin;
-    }));
+    this.subscriptions.push(this.userService.get(
+      this.userService.currentUser.id).subscribe( user => {
+        this.currentUser = user;
+        this.isAdmin = user.isAdmin;
+      })
+    );
   }
 
   public accessAdmin(goingToAdmin: boolean): void {

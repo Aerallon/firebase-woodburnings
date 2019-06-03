@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
 import { AuthGuard } from './core/auth-guard.service';
 import { HomePageComponent } from './home-page/home-page.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
