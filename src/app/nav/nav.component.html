@@ -1,6 +1,7 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
     <links>
         <ul class="navbar-nav mr-auto">
+            <!-- TODO: Have tabs be highlighed when clicked on - due to this active in this class -->
             <li class="nav-item active">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="home">Home
                     <span class="sr-only">(current)</span>
@@ -21,6 +22,7 @@
             <li class="nav-item">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="contact">Contact</a>
             </li>
+            <!-- TODO: Hide Admin tab unless logged in and is an admin -->
             <li class="nav-item">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home"
                    (click)="accessAdmin(true)">Admin

@@ -30,6 +30,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
+    // I believe this errors on logout...
     this.subscriptions.push(this.userService.get(
       this.userService.currentUser.id).subscribe( user => {
         this.currentUser = user;
