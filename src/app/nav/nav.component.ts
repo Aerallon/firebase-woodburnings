@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { BehaviorSubject, Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
 import { MatDialog, MatDialogRef } from '@angular/material';
@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 
 export class NavComponent implements OnInit, OnDestroy {
 
-  isLoggedIn$$: BehaviorSubject<boolean>;
+  isLoggedIn$: Observable<boolean>;
   isAdmin: boolean;
   currentUser: AppUser;
   userProfileDialogRef: MatDialogRef<UserProfileComponent>;
@@ -29,7 +29,7 @@ export class NavComponent implements OnInit, OnDestroy {
               private router: Router) {}
 
   ngOnInit(): void {
-    this.isLoggedIn$$ = this.authService.userIsLoggedIn$$;
+    this.isLoggedIn$ = this.authService.isLoggedIn;
     // I believe this errors on logout...
     this.subscriptions.push(this.userService.get(
       this.userService.currentUser.id).subscribe( user => {
@@ -39,23 +39,13 @@ export class NavComponent implements OnInit, OnDestroy {
     );
   }
 
-  public accessAdmin(goingToAdmin: boolean): void {
-    if (this.isLoggedIn$$.getValue() === true) {
-      this.router.navigate(['/admin-home']);
-    }
-    else {
-      this.openLoginDialog(goingToAdmin);
-    }
-  }
-
   public openEditUserProfileDialog(): void {
     this.userProfileDialogRef = this.dialog.open(UserProfileComponent, {width: '500px'});
     this.userProfileDialogRef.componentInstance.user = this.currentUser;
   }
 
-  public openLoginDialog(goingToAdmin: boolean): void {
+  public openLoginDialog(): void {
     this.loginDialogRef = this.dialog.open(LoginComponent, {width: '500px'});
-    this.loginDialogRef.componentInstance.goingToAdmin = goingToAdmin;
   }
 
   logout(): void {

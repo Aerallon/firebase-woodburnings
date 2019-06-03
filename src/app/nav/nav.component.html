@@ -1,42 +1,38 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
     <links>
         <ul class="navbar-nav mr-auto">
-            <!-- TODO: Have tabs be highlighed when clicked on - due to this active in this class -->
-            <li class="nav-item active">
-                <a class="nav-link waves-light" mdbWavesEffect routerLink="home">Home
-                    <span class="sr-only">(current)</span>
-                </a>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="home">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="for-sale">For Sale</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="gallery">Gallery</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="blog">Blog</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect routerLink="about-me">About</a>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="about-me" >About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="contact">Contact</a>
             </li>
-            <!-- TODO: Hide Admin tab unless logged in and is an admin -->
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home"
-                   (click)="accessAdmin(true)">Admin
+            <li class="nav-item" *ngIf="(isLoggedIn$ | async) && isAdmin" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home">Admin
                 </a>
             </li>
             <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
                   <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>
                 </a>
+                <!-- TODO: Show Login top level if not logged in otherwise show profile dropdown -->
                 <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-                    <div *ngIf="!(isLoggedIn$$ | async)">
-                      <a class="dropdown-item waves-light" mdbWavesEffect (click)="openLoginDialog(false)">Login</a>
+                    <div *ngIf="!(isLoggedIn$ | async)">
+                      <a class="dropdown-item waves-light" mdbWavesEffect (click)="openLoginDialog()">Login</a>
                     </div>
-                    <div *ngIf="(isLoggedIn$$ | async)">
+                    <div *ngIf="(isLoggedIn$ | async)">
                       <a class="dropdown-item waves-light" mdbWavesEffect
                          (click)="openEditUserProfileDialog()">
                           <mat-icon>face</mat-icon> My account

@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../core/auth.service';
 import { GoogleAuthProviderResponse } from '../core/auth';
@@ -14,7 +14,6 @@ import { Subscription } from 'rxjs';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  @Input() goingToAdmin: boolean = false;
   private subscriptions: Subscription[] = [];
 
   constructor(
@@ -51,9 +50,6 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.userService.get(userProfile.id).subscribe(user => {
             if (user === undefined) {
               this.userService.add(userProfile as AppUser).subscribe();
-            }
-            if (this.goingToAdmin) {
-              this.router.navigate(['/admin-home']);
             }
           })
         );
