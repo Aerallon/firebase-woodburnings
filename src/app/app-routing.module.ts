@@ -37,14 +37,6 @@ export const routes: Routes = [
     component: ContactMeComponent
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'user-profile',
-    component: UserProfileComponent
-  },
-  {
     path: 'admin-home',
     component: AdminHomePageComponent,
     canActivate: [AuthGuard],

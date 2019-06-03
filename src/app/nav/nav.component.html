@@ -21,24 +21,27 @@
             <li class="nav-item">
                 <a class="nav-link waves-light" mdbWavesEffect routerLink="contact">Contact</a>
             </li>
-            <!-- TODO: Have login pop up and be needed to be logged in to get here - login and then redirect -->
             <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home-page">Admin</a>
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home"
+                   (click)="accessAdmin(true)">Admin
+                </a>
             </li>
-
             <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
                   <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>
                 </a>
                 <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
                     <div *ngIf="!(isLoggedIn$$ | async)">
-                      <a class="dropdown-item waves-light" mdbWavesEffect routerLink="login">Login</a>
+                      <a class="dropdown-item waves-light" mdbWavesEffect (click)="openLoginDialog(false)">Login</a>
                     </div>
                     <div *ngIf="(isLoggedIn$$ | async)">
-                      <!-- TODO: Open a Dialog -->
-                      <a class="dropdown-item waves-light" mdbWavesEffect routerLink="user-profile">My account</a>
-                      <!-- TODO: Call the logout function on click -->
-                      <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+                      <a class="dropdown-item waves-light" mdbWavesEffect
+                         (click)="openEditUserProfileDialog()">
+                          <mat-icon>face</mat-icon> My account
+                      </a>
+                      <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">
+                          <mat-icon>exit_to_app</mat-icon> Log out
+                      </a>
                     </div>
                 </div>
             </li>
