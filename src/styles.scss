@@ -5,6 +5,34 @@
 @import '~@angular/material/prebuilt-themes/purple-green.css';
 @import './common/colors';
 
+.mat-focused .mat-form-field-label {
+  color: #FF7900 !important;
+}
+
+.mat-form-field-label {
+  color: #FFA500 !important;
+}
+
+.mat-form-field-underline {
+  background-color: #FFA500 !important;
+}
+
+.mat-form-field-ripple {
+  background-color: #FFA500 !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #FFA500 !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #FF7900 !important;
+}
+
+mat-card-title {
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 .page{
   font-size: 14px;
   width: 100%;
@@ -25,6 +53,27 @@
   padding: 14px;
 }
 
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form {
+  .form-content {
+    padding-left: 15px;
+    padding-bottom: 0;
+  }
+
+  .row {
+    width: 260px;
+  }
+
+  .row mat-slide-toggle {
+    padding-bottom: 25px;
+  }
+}
+
 .buttons {
   padding-top: 14px;
   margin-top: 24px;
@@ -32,7 +81,13 @@
 
   .submitButton {
     color: $white;
-    background-color: $blue;
+    background-color: #FFA500;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+
+  .cancelButton {
+    color: $white;
     text-transform: uppercase;
   }
 }
