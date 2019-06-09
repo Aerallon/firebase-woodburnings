@@ -45,7 +45,7 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   public openLoginDialog(): void {
-    this.loginDialogRef = this.dialog.open(LoginComponent, {width: '500px'});
+    this.loginDialogRef = this.dialog.open(LoginComponent, {width: '400px'});
   }
 
   logout(): void {
