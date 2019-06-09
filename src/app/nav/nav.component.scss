@@ -3,10 +3,20 @@
   padding: 24px;
   text-align: right;
   background-color: orange;
-  color: #FFFFFF;
+  color: white;
   margin-right: 0;
 }
 
 mat-icon {
   vertical-align: middle;
+}
+
+.dropdown-menu {
+  background-color: #FFA500 !important;
+  a {
+    color: white;
+  }
+  a:hover {
+    background-color: #FF7900 !important;
+  }
 }
