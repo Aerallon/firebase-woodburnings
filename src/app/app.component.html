@@ -1,6 +1,3 @@
-<div *ngIf="(isLoggedIn$$ | async)">
-    <home-page></home-page>
-</div>
-<div *ngIf="!(isLoggedIn$$ | async)">
-    <woodburning-portal-login></woodburning-portal-login>
-</div>
+<nav-bar>
+    <router-outlet></router-outlet>
+</nav-bar>

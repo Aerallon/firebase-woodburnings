@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"(isLoggedIn$$ | async)\">\n    <home-page></home-page>\n</div>\n<div *ngIf=\"!(isLoggedIn$$ | async)\">\n    <woodburning-portal-login></woodburning-portal-login>\n</div>"
+module.exports = "<div *ngIf=\"(isLoggedIn$ | async)\">\n    <admin-home-page></admin-home-page>\n</div>\n<div *ngIf=\"!(isLoggedIn$ | async)\">\n    <woodburning-portal-login></woodburning-portal-login>\n</div>"
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/home-page.component.ts");
+/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/admin-home-page.component.ts");
 /* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
 /* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
 /* harmony import */ var _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./list-woodburnings/list-woodburnings.component */ "./src/app/list-woodburnings/list-woodburnings.component.ts");
@@ -167,7 +167,7 @@ var AppModule = (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__["HomePageComponent"],
+                _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_7__["AdminHomePageComponent"],
                 _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
                 _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
                 _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
@@ -901,18 +901,18 @@ var FirestoreService = (function () {
 
 /***/ "./src/app/home-page/home-page.component.html":
 /*!****************************************************!*\
-  !*** ./src/app/home-page/home-page.component.html ***!
+  !*** ./src/app/home-page/admin-home-page.component.html ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"nav-actions\">\n            <div class=\"user-profile-button\">\n              <button mat-raised-button (click)=\"openEditUserProfileDialog()\">\n                  <mat-icon>face</mat-icon>\n                  <span>Edit Profile</span>\n              </button>\n            </div>\n            <div class=\"logout\" *ngIf=\"isLoggedIn$$ | async\">\n              <button mat-raised-button (click)=\"logout()\">\n                  <mat-icon>exit_to_app</mat-icon>\n                  <span>Logout</span>\n              </button>\n            </div>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content *ngIf=\"isAdmin\">\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
+module.exports = "<mat-card class=\"home\">\n    <mat-card-header class=\"admin-home-header\">\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs</div>\n        <div class=\"nav-actions\">\n            <div class=\"user-profile-button\">\n              <button mat-raised-button (click)=\"openEditUserProfileDialog()\">\n                  <mat-icon>face</mat-icon>\n                  <span>Edit Profile</span>\n              </button>\n            </div>\n            <div class=\"logout\" *ngIf=\"isLoggedIn$ | async\">\n              <button mat-raised-button (click)=\"logout()\">\n                  <mat-icon>exit_to_app</mat-icon>\n                  <span>Logout</span>\n              </button>\n            </div>\n        </div>\n    </mat-card-header>\n    <mat-divider></mat-divider>\n    <mat-card-content *ngIf=\"isAdmin\">\n        <div class=\"home-page-buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"openCreateWoodburningDialog()\">Create Woodburning Entry</button>\n        </div>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-content class=\"woodburning-table\">\n        <div class=\"woodburning-table-header\"> All Woodburnings</div>\n        <list-woodburnings></list-woodburnings>\n    </mat-card-content>\n    <mat-divider></mat-divider>\n    <mat-card-footer class=\"home-footer\">\n        <div>Copyright(c) 2018 - Prairie Pyro Designs</div>\n    </mat-card-footer>\n</mat-card>"
 
 /***/ }),
 
 /***/ "./src/app/home-page/home-page.component.scss":
 /*!****************************************************!*\
-  !*** ./src/app/home-page/home-page.component.scss ***!
+  !*** ./src/app/home-page/admin-home-page.component.scss ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -923,14 +923,14 @@ module.exports = ".home {\n  font-size: 14px;\n  width: 96%;\n  font-family: Rob
 
 /***/ "./src/app/home-page/home-page.component.ts":
 /*!**************************************************!*\
-  !*** ./src/app/home-page/home-page.component.ts ***!
+  !*** ./src/app/home-page/admin-home-page.component.ts ***!
   \**************************************************/
-/*! exports provided: HomePageComponent */
+/*! exports provided: AdminHomePageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminHomePageComponent", function() { return HomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
@@ -978,8 +978,8 @@ var HomePageComponent = (function () {
     };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/home-page/home-page.component.html"),
-            styles: [__webpack_require__(/*! ./home-page.component.scss */ "./src/app/home-page/home-page.component.scss")],
+            template: __webpack_require__(/*! ./admin-home-page.component.html */ "./src/app/home-page/admin-home-page.component.html"),
+            styles: [__webpack_require__(/*! ./admin-home-page.component.scss */ "./src/app/home-page/admin-home-page.component.scss")],
             selector: 'home-page'
         }),
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"],
@@ -1283,7 +1283,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _core_auth_guard_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/auth-guard.service */ "./src/app/core/auth-guard.service.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/home-page.component.ts");
+/* harmony import */ var _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home-page/home-page.component */ "./src/app/home-page/admin-home-page.component.ts");
 
 
 
@@ -1294,7 +1294,7 @@ var routes = [
     },
     {
         path: 'home',
-        component: _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"],
+        component: _home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["AdminHomePageComponent"],
         canActivate: [_core_auth_guard_service__WEBPACK_IMPORTED_MODULE_0__["AuthGuard"]],
     }
 ];

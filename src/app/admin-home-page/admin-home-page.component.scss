@@ -1,0 +1,18 @@
+@import '../../common/colors';
+
+.woodburning-table {
+  margin-top: 10px;
+  padding-top: 10px;
+  .woodburning-table-header {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  height: 100%;
+}
+
+mat-card {
+  border-radius: 0;
+}
+
+
+

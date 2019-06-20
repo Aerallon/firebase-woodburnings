@@ -1,0 +1,49 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark red darken-4" [containerInside]="false">
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="home">Home</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="for-sale">For Sale</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="gallery">Gallery</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="blog">Blog</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="about-me" >About</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="contact">Contact</a>
+            </li>
+            <li class="nav-item" *ngIf="(isLoggedIn$ | async) && isAdmin" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="admin-home">Admin</a>
+            </li>
+
+            <li class="nav-item" *ngIf="!(isLoggedIn$ | async)" [routerLinkActive]="['active']">
+                <a class="nav-link waves-light" mdbWavesEffect (click)="openLoginDialog()">Login</a>
+            </li>
+            <li class="nav-item dropdown" dropdown *ngIf="(isLoggedIn$ | async)">
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
+                  <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>
+                </a>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                  <a class="dropdown-item waves-light" mdbWavesEffect
+                     (click)="openEditUserProfileDialog()">
+                      <mat-icon>face</mat-icon> My account
+                  </a>
+                  <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">
+                      <mat-icon>exit_to_app</mat-icon> Log out
+                  </a>
+                </div>
+            </li>
+        </ul>
+    </links>
+</mdb-navbar>
+<ng-content></ng-content>
+<mat-card-footer class="footer">
+    <div>Copyright(c) 2019 - Prairie Pyro Designs</div>
+</mat-card-footer>

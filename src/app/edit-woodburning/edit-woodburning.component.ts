@@ -50,6 +50,7 @@ export class EditWoodburningComponent implements OnInit {
       const message = 'Not all fields were entered. Fill out required.';
       this.woodburningStoreService.openSnackBar(message, '');
     } else {
+      // TODO: Fix the bug where it's not setting the right date from firestore
       const woodburningFormData = {
         id: this.currentWoodburning.id,
         title: this.form.value.title,
