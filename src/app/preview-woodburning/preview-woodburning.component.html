@@ -15,8 +15,10 @@
             <div><strong>Shared Online?</strong>: {{currentWoodburning.sharedOnline}}</div>
             <div><strong>Framed?</strong>: {{currentWoodburning.framed}}</div>
             <div><strong>For Sale?</strong>: {{currentWoodburning.forSale}}</div>
-            <div><strong>Selling Price?</strong>: ${{currentWoodburning.sellingPrice}}</div>
-            <div><strong>Sold?</strong>: {{currentWoodburning.sold}}</div>
+            <div *ngIf="currentWoodburning.forSale">
+                <strong>Selling Price:</strong> ${{currentWoodburning.sellingPrice}}
+            </div>
+            <div *ngIf="currentWoodburning.forSale"><strong>Sold:</strong> {{currentWoodburning.sold}}</div>
         </div>
     </mat-card-content>
     <mat-card-content>
