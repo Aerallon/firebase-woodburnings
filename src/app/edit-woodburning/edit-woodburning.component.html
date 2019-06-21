@@ -68,7 +68,7 @@
             </div>
             <div class="row">
                 <mat-form-field>
-                    <input matInput formControlName="sellingPrice" placeholder="sellingPrice"
+                    <input matInput formControlName="sellingPrice" placeholder="Selling Price"
                            required="true" value="{{ w.sellingPrice }}">
                     <mat-error>Required</mat-error>
                 </mat-form-field>
@@ -76,6 +76,12 @@
             <div class="row">
                 <mat-slide-toggle formControlName="sold" [checked]="w.sold">
                     Sold?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="etsyListing" placeholder="Etsy Listing"
+                           value="{{ w.etsyListing }}">
+                </mat-form-field>
             </div>
         </mat-card-content>
         <mat-card-content>

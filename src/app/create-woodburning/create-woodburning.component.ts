@@ -36,8 +36,9 @@ export class CreateWoodburningComponent implements OnInit {
       'sharedOnline': [false],
       'framed': [false],
       'forSale': [false],
-      'sellingPrice': [''], // should only be required if for sale is true
-      'sold': [false]
+      'sellingPrice': [''], // TODO: Should only be required if for sale is true
+      'sold': [false],
+      'etsyListing': [''] // TODO: Should only be required if for sale is true
     });
   }
 
@@ -59,7 +60,8 @@ export class CreateWoodburningComponent implements OnInit {
         framed: this.form.value.framed,
         forSale: this.form.value.forSale,
         sellingPrice: this.form.value.sellingPrice,
-        sold: this.form.value.sold
+        sold: this.form.value.sold,
+        etsyListing: this.form.value.etsyListing
       };
       this.woodburningStoreService.add(woodburningFormData);
       const message = 'Successfully created new woodburning entry.';

@@ -1,85 +1,88 @@
 <mat-card-title>Create Woodburning</mat-card-title>
 <mat-dialog-content>
   <div *ngIf="form">
-    <form [formGroup]="form" class="create-woodburning-form">
-        <mat-card>
-            <mat-card-content>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="title" placeholder="Title" required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="size" placeholder="Size" required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="material" placeholder="Material" required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput readonly [matDatepicker]="dateFinishedDatePicker" formControlName="dateFinished"
-                               placeholder="Date Finished" required="true">
-                        <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
-                        <mat-datepicker #dateFinishedDatePicker></mat-datepicker>
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="totalTimeTakenMinutes"
-                               placeholder="Total Time Taken (Minutes)" required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="totalTimeTakenHours" placeholder="Total Time Taken (Hours)"
-                               required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="imageUrl" placeholder="Image Url" required="true">
-                        <mat-error>Required</mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-slide-toggle formControlName="sharedOnline">Shared Online?</mat-slide-toggle>
-                </div>
-                <div class="row">
-                    <mat-slide-toggle formControlName="framed">Framed?</mat-slide-toggle>
-                </div>
-                <div class="row">
-                    <mat-slide-toggle formControlName="forSale">For Sale?</mat-slide-toggle>
-                </div>
-                <div class="row">
-                    <mat-form-field>
-                        <input matInput formControlName="sellingPrice" placeholder="Selling Price">
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <mat-slide-toggle formControlName="sold">Sold?</mat-slide-toggle>
-                </div>
-            </mat-card-content>
-            <mat-card-content>
-                <div class="create-woodburning-buttons">
-                    <button mat-raised-button class="submitButton" (click)="createWoodburning()">
-                        Create Woodburning
-                    </button>
-                    <button mat-button class="cancelButton" (click)="close()">
-                        Cancel
-                    </button>
-                </div>
-            </mat-card-content>
-        </mat-card>
+    <form [formGroup]="form" class="form">
+        <mat-card-content class="form-content">
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="title" placeholder="Title" required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="size" placeholder="Size" required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="material" placeholder="Material" required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput readonly [matDatepicker]="dateFinishedDatePicker" formControlName="dateFinished"
+                           placeholder="Date Finished" required="true">
+                    <mat-datepicker-toggle matSuffix [for]="dateFinishedDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="totalTimeTakenMinutes"
+                           placeholder="Total Time Taken (Minutes)" required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="totalTimeTakenHours" placeholder="Total Time Taken (Hours)"
+                           required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="imageUrl" placeholder="Image Url" required="true">
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="sharedOnline">Shared Online?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="framed">Framed?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="forSale">For Sale?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="sellingPrice" placeholder="Selling Price">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="sold">Sold?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="etsyListing" placeholder="Etsy Listing Url">
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="buttons">
+                <button mat-raised-button class="submitButton" (click)="createWoodburning()">
+                    Create Woodburning
+                </button>
+                <button mat-button class="cancelButton" (click)="close()">
+                    Cancel
+                </button>
+            </div>
+        </mat-card-content>
     </form>
   </div>
 </mat-dialog-content>

@@ -12,17 +12,21 @@
             <div><strong>Total Time Taken (Hours)</strong>: {{currentWoodburning.totalTimeTakenHours}}</div>
         </div>
         <div class="woodburning-additional-data">
-            <div><strong>Shared Online?</strong>: {{currentWoodburning.sharedOnline}}</div>
-            <div><strong>Framed?</strong>: {{currentWoodburning.framed}}</div>
-            <div><strong>For Sale?</strong>: {{currentWoodburning.forSale}}</div>
+            <div><strong>Shared Online?</strong> {{currentWoodburning.sharedOnline}}</div>
+            <div><strong>Framed?</strong> {{currentWoodburning.framed}}</div>
+            <div><strong>For Sale?</strong> {{currentWoodburning.forSale}}</div>
             <div *ngIf="currentWoodburning.forSale">
                 <strong>Selling Price:</strong> ${{currentWoodburning.sellingPrice}}
             </div>
             <div *ngIf="currentWoodburning.forSale"><strong>Sold:</strong> {{currentWoodburning.sold}}</div>
+            <div *ngIf="currentWoodburning.forSale">
+                <strong>Etsy Listing:</strong>
+                <a href="{{currentWoodburning.etsyListing}}" target="_blank"> {{currentWoodburning.etsyListing}}</a>
+            </div>
         </div>
     </mat-card-content>
     <mat-card-content>
-        <div class="preview-woodburning-button">
+        <div class="buttons">
             <button mat-button class="cancelButton" (click)="close()">
                 Cancel
             </button>
