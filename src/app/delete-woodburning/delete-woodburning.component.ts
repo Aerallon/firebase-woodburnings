@@ -24,6 +24,7 @@ export class DeleteWoodburningComponent implements OnInit {
 
   deleteWoodburning(): void {
     this.woodburningStoreService.delete(this.currentWoodburning);
+    // TODO: Listen to the delete call and show proper success or error message depending on the call
     const message = 'Successfully deleted ' + this.woodburning.title + '.';
     this.woodburningStoreService.openSnackBar(message, '');
     this.dialogRef.close();

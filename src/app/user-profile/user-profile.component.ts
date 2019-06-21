@@ -16,7 +16,6 @@ export class UserProfileComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
   @Input() user: AppUser;
-  currentUser: AppUser;
   private subscriptions: Subscription[] = [];
 
   constructor(private formBuilder: FormBuilder,
@@ -26,11 +25,6 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscriptions.push(
-      this.userService.get(this.user.id).subscribe( currentUser => {
-        this.currentUser = currentUser;
-      })
-    );
     this.createForm();
   }
 
@@ -49,14 +43,14 @@ export class UserProfileComponent implements OnInit, OnDestroy {
       this.woodburningStoreService.openSnackBar(message, '');
     } else {
       const userFormData = {
-        id: this.currentUser.id,
+        id: this.user.id,
         email: this.form.value.email,
         firstName: this.form.value.firstName,
         lastName: this.form.value.lastName,
         displayName: this.form.value.firstName + ' ' + this.form.value.lastName,
         profileImageUrl: this.form.value.profileImageUrl,
-        isDeleted: this.currentUser.isDeleted,
-        isAdmin: this.currentUser.isAdmin
+        isDeleted: this.user.isDeleted,
+        isAdmin: this.user.isAdmin
       };
       this.userService.update(userFormData);
       const message = 'Successfully edited ' + userFormData.displayName + '.';
