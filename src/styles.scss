@@ -33,11 +33,6 @@ mat-card-title {
   font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-// TODO: Have a better option for this since a double scroll on admin table is gross
-mat-card-content {
-  overflow: auto;
-}
-
 .page{
   font-size: 14px;
   width: 100%;
