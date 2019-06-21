@@ -49,16 +49,21 @@ Profile:
 * When creating a new woodburning entry, have a image uploader option in the form so the images can be stored in the 
 firestore's image storer
 * Add ability for an admin to post, edit and delete blogs from the UI instead of it being written in a new html doc
+* Search functionality for the admin table
+* Filtering functionality for the admin table
 
 ## Possible Roadmap Items - Main Site:
 * Implement the ability for someone to buy woodburnings from the For Sale page
     * Link to Square/Stripe/Paypal or something
     * Would need to gather shipping information
+    * Have the ability to edit mailing and billing addresses in the user profile section
 * Have ability to sort cards shown in the gallery and for sale page (by price, name, etc.)
+* Have ability to search cards shown in the gallery and for sale page (by name)
+* Add an Events page that will pull in Facebook page Events
+* Create the ability to create, edit and delete blogs
 
 ## Up next: 
 * Add content to the home page
 * Add content to the about page
 * Add more content to the Contact page
-* Implement the For Sale page - even if it doesn't have the ability to be bought through my site - link to etsy
-* Implement the Gallery page
+* Add some hardcoded blogs to start
