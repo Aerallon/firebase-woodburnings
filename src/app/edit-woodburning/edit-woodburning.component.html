@@ -59,15 +59,15 @@
             <div class="row">
                 <mat-slide-toggle formControlName="forSale" [checked]="w.forSale">For Sale?</mat-slide-toggle>
             </div>
-            <div class="row">
+            <div class="row" *ngIf="form.controls.forSale.value == true">
                 <mat-form-field>
                     <input matInput formControlName="sellingPrice" placeholder="Selling Price" value="{{ w.sellingPrice }}">
                 </mat-form-field>
             </div>
-            <div class="row">
+            <div class="row" *ngIf="form.controls.forSale.value == true">
                 <mat-slide-toggle formControlName="sold" [checked]="w.sold">Sold?</mat-slide-toggle>
             </div>
-            <div class="row">
+            <div class="row" *ngIf="form.controls.forSale.value == true">
                 <mat-form-field>
                     <input matInput formControlName="etsyListing" placeholder="Etsy Listing" value="{{ w.etsyListing }}">
                 </mat-form-field>
