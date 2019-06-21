@@ -39,7 +39,8 @@ export class EditWoodburningComponent implements OnInit {
       'framed': [this.currentWoodburning.framed, Validators.required],
       'forSale': [this.currentWoodburning.forSale, Validators.required],
       'sellingPrice': [this.currentWoodburning.sellingPrice], // TODO: should only be required if for sale is true
-      'sold': [this.currentWoodburning.sold, Validators.required]
+      'sold': [this.currentWoodburning.sold, Validators.required],
+      'etsyListing': [this.currentWoodburning.etsyListing] // TODO: Should only be required if for sale is true
     });
   }
 
@@ -61,7 +62,8 @@ export class EditWoodburningComponent implements OnInit {
         framed: this.form.value.framed,
         forSale: this.form.value.forSale,
         sellingPrice: this.form.value.sellingPrice,
-        sold: this.form.value.sold
+        sold: this.form.value.sold,
+        etsyListing: this.form.value.etsyListing
       };
       this.woodburningStoreService.update(woodburningFormData);
       // TODO: Handle error message if something goes wrong with the update - success will currently always be shown

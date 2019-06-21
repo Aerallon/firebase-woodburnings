@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WoodburningDetails } from '../interfaces';
 import { MatDialogRef } from '@angular/material';
 
@@ -8,16 +8,11 @@ import { MatDialogRef } from '@angular/material';
     selector: 'preview-woodburning'
 })
 
-export class PreviewWoodburningComponent implements OnInit {
+export class PreviewWoodburningComponent {
 
     @Input() woodburning: WoodburningDetails;
-    currentWoodburning: WoodburningDetails;
 
     constructor(public dialogRef: MatDialogRef<PreviewWoodburningComponent>) {}
-
-    ngOnInit(): void {
-        this.currentWoodburning = this.woodburning;
-    }
 
     close(): void {
         this.dialogRef.close();

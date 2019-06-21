@@ -1,6 +1,5 @@
 .mat-table {
   width: 100%;
-  max-height: 500px;
 
   .mat-header-cell {
     font-size: 14px;
@@ -54,7 +53,11 @@
     flex: 0 0 48px;
   }
 
+  .mat-column-etsyListing {
+    flex: 0 0 78px;
+  }
+
   .mat-column-menu {
-    flex: 0 0 44px;
+    flex: 0 0 52px;
   }
 }

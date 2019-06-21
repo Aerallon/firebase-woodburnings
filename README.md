@@ -19,11 +19,11 @@ Login Page:
 Home: 
 <img width="1439" alt="Screen Shot 2019-06-19 at 6 40 39 PM" src="https://user-images.githubusercontent.com/20227727/59810296-c7351900-92c1-11e9-8496-07f4e989c333.png">
 
-For Sale:
-<img width="1438" alt="Screen Shot 2019-06-19 at 6 41 57 PM" src="https://user-images.githubusercontent.com/20227727/59810330-f0ee4000-92c1-11e9-92b7-6c7cf371c7c8.png">
+For sale:
+<img width="1423" alt="Screen Shot 2019-06-21 at 5 27 42 PM" src="https://user-images.githubusercontent.com/20227727/59955868-f1b1de00-9449-11e9-89ea-f3712f8f4842.png">
 
-Gallery:
-<img width="1440" alt="Screen Shot 2019-06-19 at 6 42 15 PM" src="https://user-images.githubusercontent.com/20227727/59810335-fba8d500-92c1-11e9-9fda-6258083290d6.png">
+Gallery: 
+<img width="1424" alt="Screen Shot 2019-06-21 at 5 28 39 PM" src="https://user-images.githubusercontent.com/20227727/59955899-0a21f880-944a-11e9-8dfd-08372d089dd9.png">
 
 Blog:
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 42 32 PM" src="https://user-images.githubusercontent.com/20227727/59810339-05323d00-92c2-11e9-8d07-878f6c583f28.png">
@@ -49,16 +49,21 @@ Profile:
 * When creating a new woodburning entry, have a image uploader option in the form so the images can be stored in the 
 firestore's image storer
 * Add ability for an admin to post, edit and delete blogs from the UI instead of it being written in a new html doc
+* Search functionality for the admin table
+* Filtering functionality for the admin table
 
 ## Possible Roadmap Items - Main Site:
 * Implement the ability for someone to buy woodburnings from the For Sale page
     * Link to Square/Stripe/Paypal or something
     * Would need to gather shipping information
+    * Have the ability to edit mailing and billing addresses in the user profile section
 * Have ability to sort cards shown in the gallery and for sale page (by price, name, etc.)
+* Have ability to search cards shown in the gallery and for sale page (by name)
+* Add an Events page that will pull in Facebook page Events
+* Create the ability to create, edit and delete blogs
 
 ## Up next: 
 * Add content to the home page
 * Add content to the about page
 * Add more content to the Contact page
-* Implement the For Sale page - even if it doesn't have the ability to be bought through my site - link to etsy
-* Implement the Gallery page
+* Add some hardcoded blogs to start

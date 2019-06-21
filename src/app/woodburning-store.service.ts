@@ -18,6 +18,12 @@ export class WoodburningStoreService {
     });
   }
 
+  public listForSale(): Observable<WoodburningDetails[]> {
+    return this.firestoreService.list('woodburnings', ref => {
+      return ref.where('forSale', '==', true).where('sold', '==', false);
+    });
+  }
+
   public get(woodburningId: string): Observable<WoodburningDetails> {
     return this.firestoreService.get<WoodburningDetails>(`woodburnings/${woodburningId}`);
   }

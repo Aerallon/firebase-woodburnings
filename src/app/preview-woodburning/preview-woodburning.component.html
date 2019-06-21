@@ -1,28 +1,33 @@
 <mat-dialog-content class="preview-dialog">
-    <mat-card-title>Previewing <strong>{{currentWoodburning.title}}</strong></mat-card-title>
+    <mat-card-title>Previewing <strong>{{woodburning.title}}</strong></mat-card-title>
     <mat-card-content class="preview-dialog-body">
         <div>
-            <img src="{{currentWoodburning.imageUrl}}" alt="{{currentWoodburning.title}}" class="woodburning-image">
+            <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="woodburning-image">
         </div>
         <div class="woodburning-main-data">
-            <div><strong>Size</strong>: {{currentWoodburning.size}}</div>
-            <div><strong>Material</strong>: {{currentWoodburning.material}}</div>
-            <div><strong>Date Finished</strong>: {{currentWoodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</div>
-            <div><strong>Total Time Taken (Minutes)</strong>: {{currentWoodburning.totalTimeTakenMinutes}}</div>
-            <div><strong>Total Time Taken (Hours)</strong>: {{currentWoodburning.totalTimeTakenHours}}</div>
+            <div><strong>Size</strong>: {{woodburning.size}}</div>
+            <div><strong>Material</strong>: {{woodburning.material}}</div>
+            <div><strong>Date Finished</strong>: {{woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</div>
+            <div><strong>Total Time Taken (Minutes)</strong>: {{woodburning.totalTimeTakenMinutes}}</div>
+            <div><strong>Total Time Taken (Hours)</strong>: {{woodburning.totalTimeTakenHours}}</div>
         </div>
         <div class="woodburning-additional-data">
-            <div><strong>Shared Online?</strong>: {{currentWoodburning.sharedOnline}}</div>
-            <div><strong>Framed?</strong>: {{currentWoodburning.framed}}</div>
-            <div><strong>For Sale?</strong>: {{currentWoodburning.forSale}}</div>
-            <div *ngIf="currentWoodburning.forSale">
-                <strong>Selling Price:</strong> ${{currentWoodburning.sellingPrice}}
+            <!-- TODO: Since preview is used elsewhere, only show some of these if an Admin? -->
+            <div><strong>Shared Online?</strong> {{woodburning.sharedOnline}}</div>
+            <div><strong>Framed?</strong> {{woodburning.framed}}</div>
+            <div><strong>For Sale?</strong> {{woodburning.forSale}}</div>
+            <div *ngIf="woodburning.forSale">
+                <strong>Selling Price:</strong> ${{woodburning.sellingPrice}}
             </div>
-            <div *ngIf="currentWoodburning.forSale"><strong>Sold:</strong> {{currentWoodburning.sold}}</div>
+            <div *ngIf="woodburning.forSale">
+                <strong>Etsy Listing:</strong>
+                <a href="{{woodburning.etsyListing}}" target="_blank"> {{woodburning.etsyListing}}</a>
+            </div>
+            <div *ngIf="woodburning.forSale"><strong>Sold:</strong> {{woodburning.sold}}</div>
         </div>
     </mat-card-content>
     <mat-card-content>
-        <div class="preview-woodburning-button">
+        <div class="buttons">
             <button mat-button class="cancelButton" (click)="close()">
                 Cancel
             </button>

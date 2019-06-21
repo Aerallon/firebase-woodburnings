@@ -26,7 +26,7 @@ import {
   MatCardModule, MatInputModule, MatButtonModule, MatSliderModule,
   MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatDatepickerModule,
   MatNativeDateModule, MatTableModule, MatDividerModule, MatSnackBarModule, MatIconModule,
-  MatMenuModule
+  MatMenuModule, MatGridListModule
 } from '@angular/material';
 import { NavModule } from './nav/nav.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -79,7 +79,8 @@ import { BlogComponent } from './blog/blog.component';
     HttpClientModule,
     AppRoutingModule,
     NavModule,
-    HomePageModule
+    HomePageModule,
+    MatGridListModule
   ],
   bootstrap: [
     AppComponent

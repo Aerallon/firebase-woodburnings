@@ -39,13 +39,27 @@
         <ng-container matColumnDef="sellingPrice">
             <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
             <mat-cell *matCellDef="let woodburning">
-                <span *ngIf="woodburning.forSale">$</span>
-                {{ woodburning.sellingPrice }}
+                <div *ngIf="woodburning.forSale">
+                    <span *ngIf="woodburning.forSale">$</span>
+                    {{ woodburning.sellingPrice }}
+                </div>
+                <div *ngIf="!woodburning.forSale">
+                    N/A
+                </div>
             </mat-cell>
         </ng-container>
         <ng-container matColumnDef="sold" class="boolean-field">
             <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>
             <mat-cell *matCellDef="let woodburning">{{ woodburning.sold }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="etsyListing">
+            <mat-header-cell *matHeaderCellDef>Etsy Listing</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">
+                <div *ngIf="woodburning.etsyListing">
+                    <a href="{{ woodburning.etsyListing }}" target="_blank">Etsy Listing</a>
+                </div>
+                <div *ngIf="!woodburning.etsyListing">N/A</div>
+            </mat-cell>
         </ng-container>
         <ng-container matColumnDef="menu">
             <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
