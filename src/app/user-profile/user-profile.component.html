@@ -1,7 +1,7 @@
 <mat-dialog-content>
   <mat-card-title>Edit Profile</mat-card-title>
   <div *ngIf="form">
-    <form [formGroup]="form" *ngIf="currentUser as user" class="form">
+    <form [formGroup]="form" *ngIf="user" class="form">
         <mat-card-content class="form-content">
             <div class="row">
                 <mat-form-field>

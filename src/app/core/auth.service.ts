@@ -29,7 +29,7 @@ export class AuthService {
     );
 
     this.userId = this.angularFireAuth.user.pipe(
-      map(u => u ? u.providerData[0].uid : '')
+      map(u => u ? u.uid : '')
     );
   }
 
@@ -46,7 +46,6 @@ export class AuthService {
   public login(): Observable<GoogleAuthProviderResponse> {
     return fromPromise(this.angularFireAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then(response => {
-        this.storeCurrentUser(response.additionalUserInfo.profile as GoogleAuthProviderResponse);
         return response.additionalUserInfo.profile as GoogleAuthProviderResponse;
       }));
   }
@@ -57,19 +56,5 @@ export class AuthService {
         this.router.navigate(['/home']);
       }
     );
-  }
-
-  private storeCurrentUser(profile: GoogleAuthProviderResponse): void {
-    const user = {
-      id: profile.id,
-      email: profile.email,
-      firstName: profile.given_name,
-      lastName: profile.family_name,
-      displayName: profile.given_name + ' ' + profile.family_name,
-      profileImageUrl: profile.picture,
-      isDeleted: false,
-      isAdmin: false
-    };
-    localStorage.setItem('currentUser', JSON.stringify(user));
   }
 }
