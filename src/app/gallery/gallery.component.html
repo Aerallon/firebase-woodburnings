@@ -8,5 +8,16 @@
         These are all the woodburnings I've completed during my life time. Sorted by latest made. Click on
         the woodburning to learn more information about it! This does include the ones I have for sale as
         well!
+
+        <mat-grid-list cols="3" rowHeight="300px" gutterSize="5px">
+          <mat-grid-tile
+          *ngFor="let woodburning of allWoodburnings$ | async">
+              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+              <!-- TODO: Make it clickable to open up details about it - reuse the preview component? -->
+              <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}">
+              <mat-grid-tile-footer *ngIf="woodburning.forSale && woodburning.sold">Sold</mat-grid-tile-footer>
+              <mat-grid-tile-footer *ngIf="woodburning.forSale && !woodburning.sold">{{woodburning.sellingPrice}}</mat-grid-tile-footer>
+          </mat-grid-tile>
+        </mat-grid-list>
     </mat-card-content>
 </mat-card>
