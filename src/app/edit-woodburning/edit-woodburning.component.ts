@@ -15,7 +15,6 @@ export class EditWoodburningComponent implements OnInit {
   @Input() woodburning: WoodburningDetails;
   currentWoodburning: WoodburningDetails;
   form: FormGroup;
-  formattedDate: Date;
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<EditWoodburningComponent>,
@@ -24,7 +23,6 @@ export class EditWoodburningComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentWoodburning = this.woodburning;
-    this.formattedDate = this.currentWoodburning.dateFinished.toDate();
     this.createForm();
   }
 
@@ -33,14 +31,14 @@ export class EditWoodburningComponent implements OnInit {
       'title': [this.currentWoodburning.title, Validators.required],
       'size': [this.currentWoodburning.size, Validators.required],
       'material': [this.currentWoodburning.material, Validators.required],
-      'dateFinished': [this.formattedDate, Validators.required],
+      'dateFinished': [this.currentWoodburning.dateFinished.toDate(), Validators.required],
       'totalTimeTakenMinutes': [this.currentWoodburning.totalTimeTakenMinutes, Validators.required],
       'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, Validators.required],
       'imageUrl': [this.currentWoodburning.imageUrl, Validators.required],
       'sharedOnline': [this.currentWoodburning.sharedOnline, Validators.required],
       'framed': [this.currentWoodburning.framed, Validators.required],
       'forSale': [this.currentWoodburning.forSale, Validators.required],
-      'sellingPrice': [this.currentWoodburning.sellingPrice], // should only be required if for sale is true
+      'sellingPrice': [this.currentWoodburning.sellingPrice], // TODO: should only be required if for sale is true
       'sold': [this.currentWoodburning.sold, Validators.required]
     });
   }
@@ -50,7 +48,6 @@ export class EditWoodburningComponent implements OnInit {
       const message = 'Not all fields were entered. Fill out required.';
       this.woodburningStoreService.openSnackBar(message, '');
     } else {
-      // TODO: Fix the bug where it's not setting the right date from firestore
       const woodburningFormData = {
         id: this.currentWoodburning.id,
         title: this.form.value.title,
@@ -67,6 +64,7 @@ export class EditWoodburningComponent implements OnInit {
         sold: this.form.value.sold
       };
       this.woodburningStoreService.update(woodburningFormData);
+      // TODO: Handle error message if something goes wrong with the update - success will currently always be shown
       const message = 'Successfully edited ' + woodburningFormData.title + '.';
       this.woodburningStoreService.openSnackBar(message, '');
       this.dialogRef.close();
