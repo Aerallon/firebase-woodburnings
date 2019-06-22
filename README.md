@@ -3,13 +3,9 @@
 ## What can you do?
 * Login with your Google Account
 * Once logged in, you have the ability to edit your Profile
-* If Admin, an new admin tab will show up with the following actions:
-    * Create new Woodburning Entries
-    * Edit existing Woodburning Entries
-    * Delete existing Woodburning Entries
-    * Preview Existing Woodburning Entries
+* There is an admin portal but myself only
 * If not an Admin:
-    * Tabs available: All but admin
+    * Tabs available: Home, For Sale, Gallery, About, and Contact
 * Logout of app
 
 ## What does it look like? 
@@ -38,42 +34,15 @@ Admin:
 Manage Woodburnings - new look:
 <img width="1425" alt="Screen Shot 2019-06-22 at 2 11 50 PM" src="https://user-images.githubusercontent.com/20227727/59968481-bbcb3300-94f7-11e9-8e3c-e512de6da81a.png">
 
-Admin - Manage Blogs:
+Manage Blogs:
 <img width="1440" alt="Screen Shot 2019-06-22 at 1 58 03 PM" src="https://user-images.githubusercontent.com/20227727/59968366-fd5ade80-94f5-11e9-8feb-c72997beca3e.png">
 
-Admin - Manage Materials:
+Manage Materials:
 <img width="1440" alt="Screen Shot 2019-06-22 at 1 59 28 PM" src="https://user-images.githubusercontent.com/20227727/59968364-f9c75780-94f5-11e9-903c-8df6593df480.png">
 
-Admin - Manage Map Locations:
+Manage Map Locations:
 <img width="1439" alt="Screen Shot 2019-06-22 at 1 57 56 PM" src="https://user-images.githubusercontent.com/20227727/59968361-eb793b80-94f5-11e9-9fe3-0a5a2b6f3cfb.png">
 
 Profile:
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 43 37 PM" src="https://user-images.githubusercontent.com/20227727/59810377-327eeb00-92c2-11e9-9604-2b9054a69c42.png">
 <img width="527" alt="Screen Shot 2019-06-19 at 6 43 47 PM" src="https://user-images.githubusercontent.com/20227727/59810378-327eeb00-92c2-11e9-888c-c69c41818098.png">
-
-## Possible Roadmap Items - Admin Related:
-* Sort Column Headers in admin table
-* Toggle boolean columns right in the admin table
-* Add a map with all the countries and States/Provinces that I have a woodburning in
-* Stats to the Admin Section
-* When creating a new woodburning entry, have a image uploader option in the form so the images can be stored in the 
-firestore's image storer
-* Add ability for an admin to post, edit and delete blogs from the UI instead of it being written in a new html doc
-* Search functionality for the admin table
-* Filtering functionality for the admin table
-
-## Possible Roadmap Items - Main Site:
-* Implement the ability for someone to buy woodburnings from the For Sale page
-    * Link to Square/Stripe/Paypal or something
-    * Would need to gather shipping information
-    * Have the ability to edit mailing and billing addresses in the user profile section
-* Have ability to sort cards shown in the gallery and for sale page (by price, name, etc.)
-* Have ability to search cards shown in the gallery and for sale page (by name)
-* Add an Events page that will pull in Facebook page Events
-* Create the ability to create, edit and delete blogs
-
-## Up next: 
-* Add content to the home page
-* Add content to the about page
-* Add more content to the Contact page
-* Add some hardcoded blogs to start
