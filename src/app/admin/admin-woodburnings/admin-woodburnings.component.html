@@ -1,0 +1,18 @@
+<mat-card class="page">
+    <mat-card-header>
+        <div class="ppd-logo">
+            <img src="/assets/images/ppd-logo.jpg" height="75" width="75" alt="Prairie Pyro Designs">
+        </div>
+        <div class="ppd-title">Manage Woodburnings</div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div class="buttons">
+            <button mat-raised-button class="submitButton" (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
+        </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-content class="woodburning-table">
+        <list-woodburnings></list-woodburnings>
+    </mat-card-content>
+</mat-card>

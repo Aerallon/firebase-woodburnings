@@ -3,16 +3,19 @@
         <div class="ppd-logo">
             <img src="/assets/images/ppd-logo.jpg" height="75" width="75" alt="Prairie Pyro Designs">
         </div>
-        <div class="ppd-title">Admin Area</div>
+        <div class="ppd-title">Manage Map Pin Locations</div>
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content>
         <div class="buttons">
-            <button mat-raised-button class="submitButton" (click)="openCreateWoodburningDialog()">Create Woodburning Entry</button>
+            <!-- (click)="openAddPinLocationDialog()" -->
+            <button mat-raised-button class="submitButton" >Add Pin Location</button>
         </div>
     </mat-card-content>
     <mat-divider></mat-divider>
     <mat-card-content class="woodburning-table">
-        <list-woodburnings></list-woodburnings>
+            <!-- TODO: Build this component -->
+            <!-- <list-map-locations></list-map-locations>-->
+        Table of all the map locations goes here
     </mat-card-content>
 </mat-card>
