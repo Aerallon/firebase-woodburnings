@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
+import { AdminWoodburningsComponent } from './admin/admin-woodburnings/admin-woodburnings.component';
 import { AuthGuard } from './core/auth-guard.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -8,9 +8,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BlogComponent } from './blog/blog.component';
-import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
-import { AdminMapLocationsComponent } from './admin-map-locations/admin-map-locations.component';
-import { AdminMaterialsComponent } from './admin-materials/admin-materials.component';
+import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
+import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-map-locations.component';
+import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
 
 export const routes: Routes = [
   {
@@ -38,8 +38,8 @@ export const routes: Routes = [
     component: ContactMeComponent
   },
   {
-    path: 'admin-home',
-    component: AdminHomePageComponent,
+    path: 'admin-woodburnings',
+    component: AdminWoodburningsComponent,
     canActivate: [AuthGuard],
   },
   {

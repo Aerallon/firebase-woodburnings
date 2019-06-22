@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { CreateWoodburningComponent } from '../create-woodburning/create-woodburning.component';
+import { CreateWoodburningComponent } from '../../create-woodburning/create-woodburning.component';
 import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
-    templateUrl: './admin-home-page.component.html',
-    styleUrls: ['./admin-home-page.component.scss'],
+    templateUrl: './admin-woodburnings.component.html',
+    styleUrls: ['./admin-woodburnings.component.scss'],
     selector: 'admin-home-page'
 })
 
-export class AdminHomePageComponent {
+export class AdminWoodburningsComponent {
 
   createWoodburningDialogRef: MatDialogRef<CreateWoodburningComponent>;
 

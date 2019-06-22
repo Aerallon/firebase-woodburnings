@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
+import { AdminWoodburningsComponent } from './admin/admin-woodburnings/admin-woodburnings.component';
 import { CreateWoodburningComponent } from './create-woodburning/create-woodburning.component';
 import { EditWoodburningComponent } from './edit-woodburning/edit-woodburning.component';
 import { ListWoodburningsComponent } from './list-woodburnings/list-woodburnings.component';
@@ -36,15 +36,15 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BlogComponent } from './blog/blog.component';
-import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
-import { AdminMapLocationsComponent } from './admin-map-locations/admin-map-locations.component';
-import { AdminMaterialsComponent } from './admin-materials/admin-materials.component';
+import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
+import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-map-locations.component';
+import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminHomePageComponent,
+    AdminWoodburningsComponent,
     CreateWoodburningComponent,
     EditWoodburningComponent,
     ListWoodburningsComponent,
