@@ -34,8 +34,9 @@ About:
 Contact:
 <img width="1439" alt="Screen Shot 2019-06-19 at 6 41 10 PM" src="https://user-images.githubusercontent.com/20227727/59810323-e633ab00-92c1-11e9-9d67-b1b6efe53c22.png">
 
-Admin - Manage Woodburnings:
-<img width="1440" alt="Screen Shot 2019-06-19 at 6 43 19 PM" src="https://user-images.githubusercontent.com/20227727/59810365-209d4800-92c2-11e9-8224-dd0623066b24.png">
+Admin:
+Manage Woodburnings - new look:
+<img width="1425" alt="Screen Shot 2019-06-22 at 2 11 50 PM" src="https://user-images.githubusercontent.com/20227727/59968481-bbcb3300-94f7-11e9-8e3c-e512de6da81a.png">
 
 Admin - Manage Blogs:
 <img width="1440" alt="Screen Shot 2019-06-22 at 1 58 03 PM" src="https://user-images.githubusercontent.com/20227727/59968366-fd5ade80-94f5-11e9-8feb-c72997beca3e.png">
