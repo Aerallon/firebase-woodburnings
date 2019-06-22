@@ -8,6 +8,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BlogComponent } from './blog/blog.component';
+import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
+import { AdminMapLocationsComponent } from './admin-map-locations/admin-map-locations.component';
+import { AdminMaterialsComponent } from './admin-materials/admin-materials.component';
 
 export const routes: Routes = [
   {
@@ -37,6 +40,21 @@ export const routes: Routes = [
   {
     path: 'admin-home',
     component: AdminHomePageComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'admin-map-locations',
+    component: AdminMapLocationsComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'admin-blogs',
+    component: AdminBlogsComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'admin-materials',
+    component: AdminMaterialsComponent,
     canActivate: [AuthGuard],
   },
   {
