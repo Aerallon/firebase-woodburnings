@@ -1,10 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { UserService } from '../user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppUser } from '../interfaces';
 import { WoodburningStoreService } from '../woodburning-store.service';
-import { Subscription } from 'rxjs';
 
 @Component({
     templateUrl: './user-profile.component.html',
@@ -12,11 +11,10 @@ import { Subscription } from 'rxjs';
     selector: 'user-profile'
 })
 
-export class UserProfileComponent implements OnInit, OnDestroy {
+export class UserProfileComponent implements OnInit {
 
   form: FormGroup;
   @Input() user: AppUser;
-  private subscriptions: Subscription[] = [];
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<UserProfileComponent>,
@@ -61,11 +59,5 @@ export class UserProfileComponent implements OnInit, OnDestroy {
 
   close(): void {
     this.dialogRef.close();
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(subscription => {
-        subscription.unsubscribe();
-    });
   }
 }
