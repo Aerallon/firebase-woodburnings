@@ -13,7 +13,7 @@ Login Page:
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 51 53 PM" src="https://user-images.githubusercontent.com/20227727/59810611-5989ec80-92c3-11e9-8e52-755adb6d22c4.png">
 
 Home: 
-<img width="1439" alt="Screen Shot 2019-06-19 at 6 40 39 PM" src="https://user-images.githubusercontent.com/20227727/59810296-c7351900-92c1-11e9-8496-07f4e989c333.png">
+<img width="1428" alt="Screen Shot 2019-06-22 at 11 52 13 PM" src="https://user-images.githubusercontent.com/20227727/59972238-d2e64100-9548-11e9-8094-a9d21a2cbcc3.png">
 
 For sale:
 <img width="1423" alt="Screen Shot 2019-06-21 at 5 27 42 PM" src="https://user-images.githubusercontent.com/20227727/59955868-f1b1de00-9449-11e9-89ea-f3712f8f4842.png">
@@ -25,13 +25,13 @@ Blog:
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 42 32 PM" src="https://user-images.githubusercontent.com/20227727/59810339-05323d00-92c2-11e9-8d07-878f6c583f28.png">
 
 About:
-<img width="1440" alt="Screen Shot 2019-06-19 at 6 42 48 PM" src="https://user-images.githubusercontent.com/20227727/59810349-0f543b80-92c2-11e9-9401-f38c16bbd36a.png">
+<img width="1424" alt="Screen Shot 2019-06-22 at 10 17 40 PM" src="https://user-images.githubusercontent.com/20227727/59971572-bf80a900-953b-11e9-982e-2d1a7c4217ec.png">
 
 Contact:
-<img width="1439" alt="Screen Shot 2019-06-19 at 6 41 10 PM" src="https://user-images.githubusercontent.com/20227727/59810323-e633ab00-92c1-11e9-9d67-b1b6efe53c22.png">
+<img width="1440" alt="Screen Shot 2019-06-22 at 10 19 44 PM" src="https://user-images.githubusercontent.com/20227727/59971577-dd4e0e00-953b-11e9-9175-087d98920725.png">
 
 Admin:
-Manage Woodburnings - new look:
+Manage Woodburnings:
 <img width="1425" alt="Screen Shot 2019-06-22 at 2 11 50 PM" src="https://user-images.githubusercontent.com/20227727/59968481-bbcb3300-94f7-11e9-8e3c-e512de6da81a.png">
 
 Manage Blogs:

@@ -30,7 +30,7 @@ export class WoodburningStoreService {
 
   public getFeatured(): Observable<WoodburningDetails[]> {
     return this.firestoreService.list('woodburnings', ref => {
-      return ref.where('isFeatured', '==', true);
+      return ref.where('isFeatured', '==', true).limit(1);
     });
   }
 
