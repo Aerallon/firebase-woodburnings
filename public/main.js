@@ -317,7 +317,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">About Prairie Pyro's Artist</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        Hi there! My name is Stephanie and let me tell you how I got to where I am now. :)\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">About Prairie Pyro's Artist</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n\n        <h3 class=\"question\">Hi there!</h3>\n        <div class=\"answer\">\n            My name is Stephanie and thank you for taking an interest in me and what I do! I've setup this\n            information to be kind of like an interview/FAQ. If there's something here that I didn't cover, please\n            <a target=\"_blank\" routerLink=\"/contact\">contact</a> me and I will update this section as well as answer\n            your question(s)!\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What is Pyrography/Woodburning?</h3>\n        <div class=\"answer\">\n            Pyrography or pyrogravure is the art of decorating wood or other materials with burn marks resulting from\n            the controlled application of a heated object such as a poker, or in my usecase, a woodburning machine\n            made by <a target=\"_blank\" href=\"https://www.razertip.com/\">Razertip</a>. It is also known as pokerwork\n            or wood burning. You can read more on <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Pyrography\">\n            wikipedia</a>.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What got you into Pyrography/Woodburning?</h3>\n        <div class=\"answer\">\n            I first learned about this art when I was in grade 9, around the age of 14 or 15. I was able to take a\n            special class of my choosing which would happen every 10 business days and would last for the whole day.\n            I chose Woodworking from the options given (there was Carpentry, Make Up and Hair, Sewing, etc). In this\n            class, I learned how to woodburn, carve wood, use a scrollsaw and create art pieces called\n            <a target=\"_blank\" href=\"http://ow.ly/dRHS30oZh24\">Instarsias</a>.\n            I took this class for two years in a row and had a knack for it right from the\n            get go - Art talents do run in the family in various mediums. My parents bought me a machine when I was\n            in grade 12 and I've been woodburning ever since.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>When did you decide to start selling your art?</h3>\n        <div class=\"answer\">I started selling my art around 8 years ago (2011). A close fiend and my boyfriend at the\n            time convinced me that I should start selling the art I'm making as well as take custom orders to do\n            more. I was hesitant at first since I didn't know how much extra work it was going to be but I took the\n            leap anyway and I haven't regretted it since. Kudos to them for giving me the push I needed to do this\n            otherwise Prairie Pyro Designs wouldn't have been born. I was also starting to have quite a few finished\n            pieces that were piling up that I wasn't quite sure what to do with so this also helped with the\n            motivation. Once the first piece sold, it was super exciting and pushed me to start kicking things into\n            high gear.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>How did you come up with Prairie Pyro Designs for a name?</h3>\n        <div class=\"answer\">\n            I have two good friends to thank for this actually! Naming things is hard, as many know, so I saught out\n            feedback from people in my friend circle. I knew I wanted Pyro in the name since it related to\n            Pyrography. One friend suggested Prairie Pyro since I live in Saskatchewan, a prairie province in Canada.\n            I loved it! Another friend suggested that I add Designs to the end so it sounded more professional. And\n            just like that, Prairie Pyro Designs was born. I even have a mascot! It's the flame in my logo that you\n            can see at the top of every page.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>Do you teach Pyrography/Woodburning?</h3>\n        <div class=\"answer\">\n            I have started teaching woodburning classes/workshop through\n            <a target=\"_blank\" href=\"http://www.leevalley.com/en/home/SeminarList.aspx?c=1&rs=65\">Lee Valley</a>.\n            They are roughly once a month and they can be found on their\n            <a target=\"_blank\" href=\"http://www.leevalley.com/en/home/SeminarList.aspx?c=1&rs=65\">Seminar</a>\n            page. I will also post any upcoming workshop events on my\n            <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook</a> page. I do not\n            currently have the space to hold workshop outside of the ones through Lee Valley yet but I am working on\n            this and hope that within the next year, I'm able to teach more workshops on a more regular basis. I have\n            paired up with <a target=\"_blank\" href=\"https://www.razertip.com/\">Razertip</a> (maker of the woodburning\n            tool that I use) and so if a space is provided, they would lend me the machines to hold some workshops.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What is your favourite piece that you've done?</h3>\n        <div class=\"answer\">\n            It's a <a target=\"_blank\"\n            href=\"https://www.facebook.com/PrairiePyroDesigns/photos/a.1497740186933820/886275904746921/?type=3&theater\">\n            Ornate Wolf head</a> originally drawn by artist known as Bioworkz. This piece is mine alone and is\n            currently my favourite creation. It is on my wall in the living room and the first thing people see when\n            they come over.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What is the largest piece that you have completed?</h3>\n        <div class=\"answer\">\n            The largest piece that I have completed so far is a 12\" x 16\" and it took 30 hours. It's a\n            <a target=\"_blank\"\n            href=\"https://www.facebook.com/PrairiePyroDesigns/photos/a.1497740186933820/886275904746921/?type=3&theater\">\n            Ornate Wolf head</a> originally drawn by artist known as Bioworkz.\n            <br/><br/>\n            I do have a 20\" x 24\" started though! It's going to be awhile before it's completed but it's going to be\n            awesome! Follow me on <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook</a>\n            page to know when it's posted!\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What plans do you have for Prairie Pyro Designs in the future?</h3>\n        <div class=\"answer\">\n            I plan to start getting into carving again and then combining the two arts. This will give my pieces\n            more depth.\n            <br/><br/>\n            Another thing I want to do when I have my own workshop/garage will be to build some\n            kitchen tables, side tables, coffee tables, and/or end tables and woodburn the surfaces and/or legs. I'll\n            either be making these myself or teaming up with someone and sharing the money earned from it.\n            <br/><br/>\n            Another thing I want to do is take some art classes so I can do more freehand art to maybe accomadate\n            more custom requests!\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>What is the machine that you use to woodburn with and where can I get one?</h3>\n        <div class=\"answer\">I use a woodburning machine made by a company called\n            <a target=\"_blank\" href=\"https://www.razertip.com/\">Razertip</a>.\n            They are located in Martensville, SK, Canada. It's a local company for me. I've been using my first\n            machine for nearly 7 years now and I've not had a single issue with it. This includes it falling on the\n            floor a couple of times. Razertip has great warranty though in case something goes wrong! You can buy the\n            machines from their <a target=\"_blank\" href=\"https://www.razertip.com/\">website</a>, from their warehouse\n            in Martensville and/or in\n            <a target=\"_blank\" href=\"http://www.leevalley.com/en/wood/page.aspx?p=31042&cat=1,41115,45497\">Lee Valley</a> in\n            Saskatoon, SK. I recommend the following\n            <a target=\"_blank\" href=\"https://store.razertip.com/mm5/merchant.mvc?Screen=PROD&Product_Code=SK-1HD\">\n            single unit machine</a> and this\n            <a target=\"_blank\" href=\"https://store.razertip.com/mm5/merchant.mvc?Screen=PROD&Product_Code=F9\">pen\n            like tip</a>. This is the tip I use for every single woodburning, including the shading. I don't really\n            use any others.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>Are you on social media sites? I want to follow you!</h3>\n        <div class=\"answer\">\n            Yes I am! I'm on all of the following!\n            <br/><mat-icon>label</mat-icon>\n                <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook</a>\n            <br/><mat-icon>label</mat-icon>\n                <a target=\"_blank\" href=\"https://twitter.com/prairiepyro\">Twitter</a>\n            <br/><mat-icon>label</mat-icon>\n                <a target=\"_blank\" href=\"https://www.instagram.com/prairiepyrodesigns/\">Instagram</a>\n            <br><mat-icon>label</mat-icon>\n                <a target=\"_blank\" href=\"https://www.deviantart.com/stepher17\">DeviantArt</a>\n            <br/><br/>\n            Also check out my <a target=\"_blank\" href=\"https://www.etsy.com/ca/shop/PrairiePyroDesigns\">Etsy store</a>!\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>Do you do custom orders?</h3>\n        <div class=\"answer\">\n            Yes! To request one, you can do so via my\n            <a target=\"_blank\" href=\"https://www.etsy.com/ca/shop/PrairiePyroDesigns\">Etsy store</a> or my\n            <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook page</a>.\n            <br/><br/>\n            Note: I am unable to do custom work on a finished piece of wood - this includes if it has been varnished or\n            stained. I work with unfinished wood only. I do not have the tools to remove the finish and then re-apply\n            it. I am also unable to do portraits of people or work with photos. I will find linearts or sketches to\n            work with so this could limit what I am able to do for you.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>Where do you get your inspiration from?</h3>\n        <div class=\"answer\">\n            I've been a gamer since I was a child and draw a lot of inspiration from the games I've played. I'm also\n            a fan of movies, TV shows, and Anime so I also have a lot of material to pull from here, especially\n            anything Marvel. I also just love anything fantasy related and mythical, especially Dragons! I also like\n            cute things in general so if I find something that I really like, I'll probably try woodburning it! I\n            also like to ask my followers on my\n            <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook page</a>\n            for ideas / things they'd like to see be woodburned.\n        </div>\n\n        <h3 class=\"question\"><mat-icon>help</mat-icon>I'm just getting into woodburning, got any tips?</h3>\n        <div class=\"answer\">\n            That's awesome! I'm glad you asked! I'm going to be writing a blog series going through all the steps\n            in my process and the good to knows! Check it out! You're also more than welcome to reach out to me at any\n            of my social sites listed on my <a target=\"_blank\" routerLink=\"/contact\">Contact</a> page and I'd be\n            happy to give you some\n            help/advice that way! If you are in Saskatoon, SK, then I might be able to give you some 1 on 1 teaching or\n            invite you to join an upcoming workshop that I run nearly monthly with\n            <a target=\"_blank\" href=\"http://www.leevalley.com/en/home/SeminarList.aspx?c=1&rs=65\">Lee Valley</a>.\n        </div>\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -328,7 +328,7 @@ module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-card {\n  border-radius: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2Fib3V0LW1lL2Fib3V0LW1lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hYm91dC1tZS9hYm91dC1tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJkIHtcbiAgYm9yZGVyLXJhZGl1czogMDtcbn0iXX0= */"
+module.exports = "mat-card {\n  border-radius: 0; }\n\na {\n  color: #FFA500 !important; }\n\na:hover {\n  color: #FF7900 !important; }\n\n.question {\n  padding-top: 5px;\n  padding-bottom: 5px; }\n\n.answer {\n  padding-top: 5px;\n  padding-bottom: 10px; }\n\nmat-icon {\n  height: 24px;\n  vertical-align: bottom; }\n\nh3 mat-icon {\n  height: 30px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2Fib3V0LW1lL2Fib3V0LW1lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCLEVBQUE7O0FBR2xCO0VBQ0UseUJBQXlCLEVBQUE7O0FBRzNCO0VBQ0UseUJBQXlCLEVBQUE7O0FBRzNCO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQixFQUFBOztBQUdyQjtFQUNFLGdCQUFnQjtFQUNoQixvQkFBb0IsRUFBQTs7QUFHdEI7RUFDRSxZQUFZO0VBQ1osc0JBQXNCLEVBQUE7O0FBR3hCO0VBQ0UsWUFBWSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYWJvdXQtbWUvYWJvdXQtbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG5cbmEge1xuICBjb2xvcjogI0ZGQTUwMCAhaW1wb3J0YW50O1xufVxuXG5hOmhvdmVyIHtcbiAgY29sb3I6ICNGRjc5MDAgIWltcG9ydGFudDtcbn1cblxuLnF1ZXN0aW9uIHtcbiAgcGFkZGluZy10b3A6IDVweDtcbiAgcGFkZGluZy1ib3R0b206IDVweDtcbn1cblxuLmFuc3dlciB7XG4gIHBhZGRpbmctdG9wOiA1cHg7XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuXG5tYXQtaWNvbiB7XG4gIGhlaWdodDogMjRweDtcbiAgdmVydGljYWwtYWxpZ246IGJvdHRvbTtcbn1cblxuaDMgbWF0LWljb24ge1xuICBoZWlnaHQ6IDMwcHg7XG59Il19 */"
 
 /***/ }),
 
@@ -587,7 +587,7 @@ module.exports = ".woodburning-table {\n  margin-top: 10px;\n  padding-top: 10px
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminWoodburningsComponent", function() { return AdminWoodburningsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
+/* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../create-woodburning/create-woodburning.component */ "./src/app/admin/create-woodburning/create-woodburning.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -617,6 +617,441 @@ var AdminWoodburningsComponent = (function () {
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
     ], AdminWoodburningsComponent);
     return AdminWoodburningsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/create-woodburning/create-woodburning.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/create-woodburning/create-woodburning.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card-title>Create Woodburning</mat-card-title>\n<mat-dialog-content>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"title\" placeholder=\"Title\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"size\" placeholder=\"Size\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"material\" placeholder=\"Material\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput readonly [matDatepicker]=\"dateFinishedDatePicker\" formControlName=\"dateFinished\"\n                           placeholder=\"Date Finished\" required=\"true\">\n                    <mat-datepicker-toggle matSuffix [for]=\"dateFinishedDatePicker\"></mat-datepicker-toggle>\n                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenMinutes\"\n                           placeholder=\"Total Time Taken (Minutes)\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenHours\" placeholder=\"Total Time Taken (Hours)\"\n                           required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"imageUrl\" placeholder=\"Image Url\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"sharedOnline\">Shared Online?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"isFeatured\">Is Featured?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"framed\">Framed?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"forSale\">For Sale?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"sellingPrice\" placeholder=\"Selling Price\">\n                </mat-form-field>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-slide-toggle formControlName=\"sold\">Sold?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"etsyListing\" placeholder=\"Etsy Listing Url\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"createWoodburning()\">\n                    Create Woodburning\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
+
+/***/ }),
+
+/***/ "./src/app/admin/create-woodburning/create-woodburning.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/create-woodburning/create-woodburning.component.scss ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2NyZWF0ZS13b29kYnVybmluZy9jcmVhdGUtd29vZGJ1cm5pbmcuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/create-woodburning/create-woodburning.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/admin/create-woodburning/create-woodburning.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: CreateWoodburningComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateWoodburningComponent", function() { return CreateWoodburningComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _firestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../firestore.service */ "./src/app/firestore.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CreateWoodburningComponent = (function () {
+    function CreateWoodburningComponent(formBuilder, dialogRef, woodburningStoreService, firestoreService) {
+        this.formBuilder = formBuilder;
+        this.dialogRef = dialogRef;
+        this.woodburningStoreService = woodburningStoreService;
+        this.firestoreService = firestoreService;
+    }
+    CreateWoodburningComponent.prototype.ngOnInit = function () {
+        this.createForm();
+    };
+    CreateWoodburningComponent.prototype.createForm = function () {
+        this.form = this.formBuilder.group({
+            'title': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'size': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'material': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'dateFinished': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'totalTimeTakenMinutes': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'totalTimeTakenHours': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'imageUrl': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            'sharedOnline': [false],
+            'isFeatured': [false],
+            'framed': [false],
+            'forSale': [false],
+            'sellingPrice': [''],
+            'sold': [false],
+            'etsyListing': ['']
+        });
+    };
+    CreateWoodburningComponent.prototype.createWoodburning = function () {
+        if (!this.form.valid) {
+            var message = 'Not all fields were entered. Fill out required.';
+            this.woodburningStoreService.openSnackBar(message, '');
+        }
+        else {
+            var woodburningFormData = {
+                id: this.firestoreService.id,
+                title: this.form.value.title,
+                size: this.form.value.size,
+                material: this.form.value.material,
+                dateFinished: this.form.value.dateFinished,
+                totalTimeTakenMinutes: this.form.value.totalTimeTakenMinutes,
+                totalTimeTakenHours: this.form.value.totalTimeTakenHours,
+                imageUrl: this.form.value.imageUrl,
+                sharedOnline: this.form.value.sharedOnline,
+                isFeatured: this.form.value.isFeatured,
+                framed: this.form.value.framed,
+                forSale: this.form.value.forSale,
+                sellingPrice: this.form.value.sellingPrice,
+                sold: this.form.value.sold,
+                etsyListing: this.form.value.etsyListing
+            };
+            this.woodburningStoreService.add(woodburningFormData);
+            var message = 'Successfully created new woodburning entry.';
+            this.woodburningStoreService.openSnackBar(message, '');
+            this.dialogRef.close();
+        }
+    };
+    CreateWoodburningComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    CreateWoodburningComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./create-woodburning.component.html */ "./src/app/admin/create-woodburning/create-woodburning.component.html"),
+            selector: 'create-woodburning',
+            styles: [__webpack_require__(/*! ./create-woodburning.component.scss */ "./src/app/admin/create-woodburning/create-woodburning.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"],
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__["WoodburningStoreService"],
+            _firestore_service__WEBPACK_IMPORTED_MODULE_4__["FirestoreService"]])
+    ], CreateWoodburningComponent);
+    return CreateWoodburningComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/delete-woodburning/delete-woodburning.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/delete-woodburning/delete-woodburning.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-dialog-content class=\"delete-dialog\">\n    <mat-card-title>Delete Woodburning</mat-card-title>\n    <mat-card-content class=\"delete-dialog-body\">\n        <div>Are you sure you want to delete <strong>{{currentWoodburning.title}}</strong>?</div>\n    </mat-card-content>\n    <mat-card-content>\n        <div class=\"buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"deleteWoodburning()\">\n                Delete Woodburning\n            </button>\n            <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                Cancel\n            </button>\n        </div>\n    </mat-card-content>\n</mat-dialog-content>"
+
+/***/ }),
+
+/***/ "./src/app/admin/delete-woodburning/delete-woodburning.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/delete-woodburning/delete-woodburning.component.scss ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2RlbGV0ZS13b29kYnVybmluZy9kZWxldGUtd29vZGJ1cm5pbmcuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/delete-woodburning/delete-woodburning.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/admin/delete-woodburning/delete-woodburning.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: DeleteWoodburningComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteWoodburningComponent", function() { return DeleteWoodburningComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DeleteWoodburningComponent = (function () {
+    function DeleteWoodburningComponent(dialogRef, woodburningStoreService) {
+        this.dialogRef = dialogRef;
+        this.woodburningStoreService = woodburningStoreService;
+    }
+    DeleteWoodburningComponent.prototype.ngOnInit = function () {
+        this.currentWoodburning = this.woodburning;
+    };
+    DeleteWoodburningComponent.prototype.deleteWoodburning = function () {
+        this.woodburningStoreService.delete(this.currentWoodburning);
+        var message = 'Successfully deleted ' + this.woodburning.title + '.';
+        this.woodburningStoreService.openSnackBar(message, '');
+        this.dialogRef.close();
+    };
+    DeleteWoodburningComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], DeleteWoodburningComponent.prototype, "woodburning", void 0);
+    DeleteWoodburningComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./delete-woodburning.component.html */ "./src/app/admin/delete-woodburning/delete-woodburning.component.html"),
+            selector: 'delete-woodburning',
+            styles: [__webpack_require__(/*! ./delete-woodburning.component.scss */ "./src/app/admin/delete-woodburning/delete-woodburning.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"]])
+    ], DeleteWoodburningComponent);
+    return DeleteWoodburningComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/edit-woodburning/edit-woodburning.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/edit-woodburning/edit-woodburning.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit Woodburning</mat-card-title>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" *ngIf=\"currentWoodburning as w\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"title\" placeholder=\"Title\" required=\"true\" value=\"{{ w.title }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"size\" placeholder=\"Size\" required=\"true\" value=\"{{ w.size }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"material\" placeholder=\"Material\" required=\"true\" value=\"{{ w.material }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput readonly [matDatepicker]=\"dateFinishedDatePicker\" formControlName=\"dateFinished\"\n                           placeholder=\"Date Finished\" required=\"true\">\n                    <mat-datepicker-toggle matSuffix [for]=\"dateFinishedDatePicker\"></mat-datepicker-toggle>\n                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenMinutes\" placeholder=\"totalTimeTakenMinutes\"\n                           required=\"true\" value=\"{{ w.totalTimeTakenMinutes }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenHours\" placeholder=\"totalTimeTakenHours\"\n                           required=\"true\" value=\"{{ w.totalTimeTakenHours }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"imageUrl\" placeholder=\"imageUrl\" required=\"true\" value=\"{{ w.imageUrl }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"sharedOnline\" [checked]=\"w.sharedOnline\">Shared Online?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"isFeatured\" [checked]=\"w.isFeatured\">Is Featured?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"framed\" [checked]=\"w.framed\">Framed?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"forSale\" [checked]=\"w.forSale\">For Sale?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"sellingPrice\" placeholder=\"Selling Price\" value=\"{{ w.sellingPrice }}\">\n                </mat-form-field>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-slide-toggle formControlName=\"sold\" [checked]=\"w.sold\">Sold?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"etsyListing\" placeholder=\"Etsy Listing\" value=\"{{ w.etsyListing }}\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"editWoodburning()\">\n                    Edit Woodburning\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
+
+/***/ }),
+
+/***/ "./src/app/admin/edit-woodburning/edit-woodburning.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/edit-woodburning/edit-woodburning.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2VkaXQtd29vZGJ1cm5pbmcvZWRpdC13b29kYnVybmluZy5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/admin/edit-woodburning/edit-woodburning.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/admin/edit-woodburning/edit-woodburning.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: EditWoodburningComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditWoodburningComponent", function() { return EditWoodburningComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EditWoodburningComponent = (function () {
+    function EditWoodburningComponent(formBuilder, dialogRef, woodburningStoreService) {
+        this.formBuilder = formBuilder;
+        this.dialogRef = dialogRef;
+        this.woodburningStoreService = woodburningStoreService;
+    }
+    EditWoodburningComponent.prototype.ngOnInit = function () {
+        this.currentWoodburning = this.woodburning;
+        this.createForm();
+    };
+    EditWoodburningComponent.prototype.createForm = function () {
+        this.form = this.formBuilder.group({
+            'title': [this.currentWoodburning.title, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'size': [this.currentWoodburning.size, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'material': [this.currentWoodburning.material, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'dateFinished': [this.currentWoodburning.dateFinished.toDate(), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'totalTimeTakenMinutes': [this.currentWoodburning.totalTimeTakenMinutes, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'imageUrl': [this.currentWoodburning.imageUrl, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'sharedOnline': [this.currentWoodburning.sharedOnline, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'isFeatured': [this.currentWoodburning.isFeatured, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'framed': [this.currentWoodburning.framed, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'forSale': [this.currentWoodburning.forSale, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            'sellingPrice': [this.currentWoodburning.sellingPrice],
+            'sold': [this.currentWoodburning.sold],
+            'etsyListing': [this.currentWoodburning.etsyListing]
+        });
+    };
+    EditWoodburningComponent.prototype.editWoodburning = function () {
+        if (!this.form.valid) {
+            var message = 'Not all fields were entered. Fill out required.';
+            this.woodburningStoreService.openSnackBar(message, '');
+        }
+        else {
+            var woodburningFormData = {
+                id: this.currentWoodburning.id,
+                title: this.form.value.title,
+                size: this.form.value.size,
+                material: this.form.value.material,
+                dateFinished: this.form.value.dateFinished,
+                totalTimeTakenMinutes: this.form.value.totalTimeTakenMinutes,
+                totalTimeTakenHours: this.form.value.totalTimeTakenHours,
+                imageUrl: this.form.value.imageUrl,
+                sharedOnline: this.form.value.sharedOnline,
+                isFeatured: this.form.value.isFeatured,
+                framed: this.form.value.framed,
+                forSale: this.form.value.forSale,
+                sellingPrice: this.form.value.sellingPrice,
+                sold: this.form.value.sold,
+                etsyListing: this.form.value.etsyListing
+            };
+            this.woodburningStoreService.update(woodburningFormData);
+            var message = 'Successfully edited ' + woodburningFormData.title + '.';
+            this.woodburningStoreService.openSnackBar(message, '');
+            this.dialogRef.close();
+        }
+    };
+    EditWoodburningComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], EditWoodburningComponent.prototype, "woodburning", void 0);
+    EditWoodburningComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./edit-woodburning.component.html */ "./src/app/admin/edit-woodburning/edit-woodburning.component.html"),
+            selector: 'edit-woodburning',
+            styles: [__webpack_require__(/*! ./edit-woodburning.component.scss */ "./src/app/admin/edit-woodburning/edit-woodburning.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__["WoodburningStoreService"]])
+    ], EditWoodburningComponent);
+    return EditWoodburningComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/list-woodburnings/list-woodburnings.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/app/admin/list-woodburnings/list-woodburnings.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"table-info\" content>\n    <mat-table #table [dataSource]=\"allWoodburnings$\">\n        <ng-container matColumnDef=\"title\">\n            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.title }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"size\">\n            <mat-header-cell *matHeaderCellDef>Size</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.size }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"material\">\n            <mat-header-cell *matHeaderCellDef>Material</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.material }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"dateFinished\">\n            <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenMinutes\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenMinutes }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenHours\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Hours)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenHours }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sharedOnline\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Shared Online?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sharedOnline }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"framed\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Framed?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.framed }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"forSale\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>For Sale?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.forSale }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sellingPrice\">\n            <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">\n                <div *ngIf=\"woodburning.forSale\">\n                    <span *ngIf=\"woodburning.forSale\">$</span>\n                    {{ woodburning.sellingPrice }}\n                </div>\n                <div *ngIf=\"!woodburning.forSale\">\n                    N/A\n                </div>\n            </mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sold\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sold }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"etsyListing\">\n            <mat-header-cell *matHeaderCellDef>Etsy Listing</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">\n                <div *ngIf=\"woodburning.etsyListing\">\n                    <a href=\"{{ woodburning.etsyListing }}\" target=\"_blank\">Etsy Listing</a>\n                </div>\n                <div *ngIf=\"!woodburning.etsyListing\">N/A</div>\n            </mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"isFeatured\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Featured?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.isFeatured }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"menu\">\n            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\" class=\"woodburning-menu\">\n                <button mat-icon-button color=\"white\" [matMenuTriggerFor]=\"actions\">\n                    <mat-icon>more_vert</mat-icon>\n                </button>\n                <mat-menu #actions>\n                    <button mat-menu-item (click)=\"openPreviewDialog(woodburning)\">Preview</button>\n                    <button mat-menu-item (click)=\"openEditWoodburningDialog(woodburning)\">Edit</button>\n                    <button mat-menu-item (click)=\"openDeleteDialog(woodburning)\">Delete</button>\n                </mat-menu>\n            </mat-cell>\n        </ng-container>\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\" matRipple></mat-row>\n    </mat-table>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/list-woodburnings/list-woodburnings.component.scss":
+/*!**************************************************************************!*\
+  !*** ./src/app/admin/list-woodburnings/list-woodburnings.component.scss ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".mat-table {\n  width: 100%; }\n  .mat-table .mat-header-cell {\n    font-size: 14px; }\n  .mat-table .boolean-field {\n    width: 75px; }\n  .mat-table .mat-column-size {\n    flex: 0 0 84px; }\n  .mat-table .mat-column-material {\n    flex: 0 0 100px; }\n  .mat-table .mat-column-dateFinished {\n    flex: 0 0 84px; }\n  .mat-table .mat-column-totalTimeTakenMinutes {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-totalTimeTakenHours {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-sharedOnline {\n    flex: 0 0 64px; }\n  .mat-table .mat-column-framed {\n    flex: 0 0 66px; }\n  .mat-table .mat-column-forSale {\n    flex: 0 0 70px; }\n  .mat-table .mat-column-sellingPrice {\n    flex: 0 0 46px; }\n  .mat-table .mat-column-sold {\n    flex: 0 0 48px; }\n  .mat-table .mat-column-etsyListing {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-isFeatured {\n    flex: 0 0 70px; }\n  .mat-table .mat-column-menu {\n    flex: 0 0 52px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2FkbWluL2xpc3Qtd29vZGJ1cm5pbmdzL2xpc3Qtd29vZGJ1cm5pbmdzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVyxFQUFBO0VBRGI7SUFJSSxlQUFlLEVBQUE7RUFKbkI7SUFRSSxXQUFXLEVBQUE7RUFSZjtJQWdCSSxjQUFjLEVBQUE7RUFoQmxCO0lBb0JJLGVBQWUsRUFBQTtFQXBCbkI7SUF3QkksY0FBYyxFQUFBO0VBeEJsQjtJQTRCSSxjQUFjLEVBQUE7RUE1QmxCO0lBZ0NJLGNBQWMsRUFBQTtFQWhDbEI7SUFvQ0ksY0FBYyxFQUFBO0VBcENsQjtJQXdDSSxjQUFjLEVBQUE7RUF4Q2xCO0lBNENJLGNBQWMsRUFBQTtFQTVDbEI7SUFnREksY0FBYyxFQUFBO0VBaERsQjtJQW9ESSxjQUFjLEVBQUE7RUFwRGxCO0lBd0RJLGNBQWMsRUFBQTtFQXhEbEI7SUE0REksY0FBYyxFQUFBO0VBNURsQjtJQWdFSSxjQUFjLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi9saXN0LXdvb2RidXJuaW5ncy9saXN0LXdvb2RidXJuaW5ncy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdGFibGUge1xuICB3aWR0aDogMTAwJTtcblxuICAubWF0LWhlYWRlci1jZWxsIHtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gIH1cblxuICAuYm9vbGVhbi1maWVsZCB7XG4gICAgd2lkdGg6IDc1cHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi10aXRsZSB7XG5cbiAgfVxuXG4gIC5tYXQtY29sdW1uLXNpemUge1xuICAgIGZsZXg6IDAgMCA4NHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tbWF0ZXJpYWwge1xuICAgIGZsZXg6IDAgMCAxMDBweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLWRhdGVGaW5pc2hlZCB7XG4gICAgZmxleDogMCAwIDg0cHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi10b3RhbFRpbWVUYWtlbk1pbnV0ZXMge1xuICAgIGZsZXg6IDAgMCA3OHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tdG90YWxUaW1lVGFrZW5Ib3VycyB7XG4gICAgZmxleDogMCAwIDc4cHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi1zaGFyZWRPbmxpbmUge1xuICAgIGZsZXg6IDAgMCA2NHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tZnJhbWVkIHtcbiAgICBmbGV4OiAwIDAgNjZweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLWZvclNhbGUge1xuICAgIGZsZXg6IDAgMCA3MHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tc2VsbGluZ1ByaWNlIHtcbiAgICBmbGV4OiAwIDAgNDZweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLXNvbGQge1xuICAgIGZsZXg6IDAgMCA0OHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tZXRzeUxpc3Rpbmcge1xuICAgIGZsZXg6IDAgMCA3OHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4taXNGZWF0dXJlZCB7XG4gICAgZmxleDogMCAwIDcwcHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi1tZW51IHtcbiAgICBmbGV4OiAwIDAgNTJweDtcbiAgfVxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/list-woodburnings/list-woodburnings.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/list-woodburnings/list-woodburnings.component.ts ***!
+  \************************************************************************/
+/*! exports provided: ListWoodburningsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListWoodburningsComponent", function() { return ListWoodburningsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
+/* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../edit-woodburning/edit-woodburning.component */ "./src/app/admin/edit-woodburning/edit-woodburning.component.ts");
+/* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../delete-woodburning/delete-woodburning.component */ "./src/app/admin/delete-woodburning/delete-woodburning.component.ts");
+/* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var ListWoodburningsComponent = (function () {
+    function ListWoodburningsComponent(dialog, woodburningStoreService) {
+        this.dialog = dialog;
+        this.woodburningStoreService = woodburningStoreService;
+        this.displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
+            'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
+            'sold', 'etsyListing', 'isFeatured', 'menu'];
+    }
+    ListWoodburningsComponent.prototype.ngOnInit = function () {
+        this.allWoodburnings$ = this.woodburningStoreService.list();
+    };
+    ListWoodburningsComponent.prototype.openPreviewDialog = function (woodburning) {
+        this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
+        this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
+    };
+    ListWoodburningsComponent.prototype.openEditWoodburningDialog = function (woodburning) {
+        this.editWoodburningDialogRef = this.dialog.open(_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__["EditWoodburningComponent"], { width: '500px' });
+        this.editWoodburningDialogRef.componentInstance.woodburning = woodburning;
+    };
+    ListWoodburningsComponent.prototype.openDeleteDialog = function (woodburning) {
+        this.deleteWoodburningDialogRef = this.dialog.open(_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__["DeleteWoodburningComponent"], { width: '500px' });
+        this.deleteWoodburningDialogRef.componentInstance.woodburning = woodburning;
+    };
+    ListWoodburningsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./list-woodburnings.component.html */ "./src/app/admin/list-woodburnings/list-woodburnings.component.html"),
+            selector: 'list-woodburnings',
+            styles: [__webpack_require__(/*! ./list-woodburnings.component.scss */ "./src/app/admin/list-woodburnings/list-woodburnings.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"],
+            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"]])
+    ], ListWoodburningsComponent);
+    return ListWoodburningsComponent;
 }());
 
 
@@ -822,10 +1257,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _admin_admin_woodburnings_admin_woodburnings_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./admin/admin-woodburnings/admin-woodburnings.component */ "./src/app/admin/admin-woodburnings/admin-woodburnings.component.ts");
-/* harmony import */ var _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./create-woodburning/create-woodburning.component */ "./src/app/create-woodburning/create-woodburning.component.ts");
-/* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
-/* harmony import */ var _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./list-woodburnings/list-woodburnings.component */ "./src/app/list-woodburnings/list-woodburnings.component.ts");
-/* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
+/* harmony import */ var _admin_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./admin/create-woodburning/create-woodburning.component */ "./src/app/admin/create-woodburning/create-woodburning.component.ts");
+/* harmony import */ var _admin_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./admin/edit-woodburning/edit-woodburning.component */ "./src/app/admin/edit-woodburning/edit-woodburning.component.ts");
+/* harmony import */ var _admin_list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin/list-woodburnings/list-woodburnings.component */ "./src/app/admin/list-woodburnings/list-woodburnings.component.ts");
+/* harmony import */ var _admin_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/delete-woodburning/delete-woodburning.component */ "./src/app/admin/delete-woodburning/delete-woodburning.component.ts");
 /* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
 /* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
 /* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./woodburning-store.service */ "./src/app/woodburning-store.service.ts");
@@ -897,10 +1332,10 @@ var AppModule = (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _admin_admin_woodburnings_admin_woodburnings_component__WEBPACK_IMPORTED_MODULE_7__["AdminWoodburningsComponent"],
-                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _admin_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _admin_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _admin_list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _admin_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"],
@@ -950,10 +1385,10 @@ var AppModule = (function () {
                 _user_service__WEBPACK_IMPORTED_MODULE_16__["UserService"]
             ],
             exports: [
-                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _admin_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _admin_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _admin_list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _admin_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"],
@@ -967,10 +1402,10 @@ var AppModule = (function () {
                 _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_33__["AdminMaterialsComponent"],
             ],
             entryComponents: [
-                _create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
-                _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
-                _list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
-                _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
+                _admin_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
+                _admin_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_9__["EditWoodburningComponent"],
+                _admin_list_woodburnings_list_woodburnings_component__WEBPACK_IMPORTED_MODULE_10__["ListWoodburningsComponent"],
+                _admin_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_11__["DeleteWoodburningComponent"],
                 _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_12__["PreviewWoodburningComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_13__["UserProfileComponent"],
@@ -999,7 +1434,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Blog</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        Interested in learning more about woodburning? Here's some reading for you!\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Blog</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        Interested in learning more about woodburning? Stay tuned for some blogs on my process!\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -1060,7 +1495,7 @@ var BlogComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Contact Prairie Pyro Designs</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        Interested in a custom order? Want to learn more about Woodburning?\n        <br/><br/>\n\n        You can reach me via one of the following ways:\n        <br/>\n        My Facebook Page: <a href=\"https://www.facebook.com/PrairiePyroDesigns\">Prairie Pyro Designs</a>\n        <br/>\n        My Etsy Store: <a href=\"https://www.etsy.com/ca/shop/PrairiePyroDesigns\">Prairie Pyro Designs Shop</a>\n        <br/>\n        My Twitter: <a href=\"https://twitter.com/prairiepyro\">Prairie Pyro</a>\n        <br/>\n        My Instagram: <a href=\"https://www.instagram.com/prairiepyrodesigns/\">Prairie Pyro</a>\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Contact Prairie Pyro Designs</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        Want to learn more about woodburning? Head over to my <a routerLink=\"/about-me\">About</a> page or shoot me a\n        message at one of the sites below.\n        <br/><br/>\n        Interested in a custom order? Reach out to me at one of the following!\n        <br/><br/>\n\n        You can reach me via one of the following ways:\n        <br/>\n        <a target=\"_blank\" href=\"https://www.facebook.com/PrairiePyroDesigns\">Facebook</a>\n        <br/>\n        <a target=\"_blank\" href=\"https://twitter.com/prairiepyro\">Twitter</a>\n        <br/>\n        <a target=\"_blank\" href=\"https://www.instagram.com/prairiepyrodesigns/\">Instagram</a>\n        <br/>\n        <a target=\"_blank\" href=\"https://www.etsy.com/ca/shop/PrairiePyroDesigns\">Etsy</a>\n        <br/>\n        <a target=\"_blank\" href=\"https://www.deviantart.com/stepher17\">DeviantArt</a>\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -1301,345 +1736,6 @@ var CoreModule = (function () {
 
 /***/ }),
 
-/***/ "./src/app/create-woodburning/create-woodburning.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/create-woodburning/create-woodburning.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-card-title>Create Woodburning</mat-card-title>\n<mat-dialog-content>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"title\" placeholder=\"Title\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"size\" placeholder=\"Size\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"material\" placeholder=\"Material\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput readonly [matDatepicker]=\"dateFinishedDatePicker\" formControlName=\"dateFinished\"\n                           placeholder=\"Date Finished\" required=\"true\">\n                    <mat-datepicker-toggle matSuffix [for]=\"dateFinishedDatePicker\"></mat-datepicker-toggle>\n                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenMinutes\"\n                           placeholder=\"Total Time Taken (Minutes)\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenHours\" placeholder=\"Total Time Taken (Hours)\"\n                           required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"imageUrl\" placeholder=\"Image Url\" required=\"true\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"sharedOnline\">Shared Online?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"framed\">Framed?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"forSale\">For Sale?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"sellingPrice\" placeholder=\"Selling Price\">\n                </mat-form-field>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-slide-toggle formControlName=\"sold\">Sold?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"etsyListing\" placeholder=\"Etsy Listing Url\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"createWoodburning()\">\n                    Create Woodburning\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
-
-/***/ }),
-
-/***/ "./src/app/create-woodburning/create-woodburning.component.scss":
-/*!**********************************************************************!*\
-  !*** ./src/app/create-woodburning/create-woodburning.component.scss ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NyZWF0ZS13b29kYnVybmluZy9jcmVhdGUtd29vZGJ1cm5pbmcuY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/create-woodburning/create-woodburning.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/create-woodburning/create-woodburning.component.ts ***!
-  \********************************************************************/
-/*! exports provided: CreateWoodburningComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateWoodburningComponent", function() { return CreateWoodburningComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _firestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../firestore.service */ "./src/app/firestore.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var CreateWoodburningComponent = (function () {
-    function CreateWoodburningComponent(formBuilder, dialogRef, woodburningStoreService, firestoreService) {
-        this.formBuilder = formBuilder;
-        this.dialogRef = dialogRef;
-        this.woodburningStoreService = woodburningStoreService;
-        this.firestoreService = firestoreService;
-    }
-    CreateWoodburningComponent.prototype.ngOnInit = function () {
-        this.createForm();
-    };
-    CreateWoodburningComponent.prototype.createForm = function () {
-        this.form = this.formBuilder.group({
-            'title': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'size': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'material': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'dateFinished': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'totalTimeTakenMinutes': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'totalTimeTakenHours': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'imageUrl': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            'sharedOnline': [false],
-            'framed': [false],
-            'forSale': [false],
-            'sellingPrice': [''],
-            'sold': [false],
-            'etsyListing': ['']
-        });
-    };
-    CreateWoodburningComponent.prototype.createWoodburning = function () {
-        if (!this.form.valid) {
-            var message = 'Not all fields were entered. Fill out required.';
-            this.woodburningStoreService.openSnackBar(message, '');
-        }
-        else {
-            var woodburningFormData = {
-                id: this.firestoreService.id,
-                title: this.form.value.title,
-                size: this.form.value.size,
-                material: this.form.value.material,
-                dateFinished: this.form.value.dateFinished,
-                totalTimeTakenMinutes: this.form.value.totalTimeTakenMinutes,
-                totalTimeTakenHours: this.form.value.totalTimeTakenHours,
-                imageUrl: this.form.value.imageUrl,
-                sharedOnline: this.form.value.sharedOnline,
-                framed: this.form.value.framed,
-                forSale: this.form.value.forSale,
-                sellingPrice: this.form.value.sellingPrice,
-                sold: this.form.value.sold,
-                etsyListing: this.form.value.etsyListing
-            };
-            this.woodburningStoreService.add(woodburningFormData);
-            var message = 'Successfully created new woodburning entry.';
-            this.woodburningStoreService.openSnackBar(message, '');
-            this.dialogRef.close();
-        }
-    };
-    CreateWoodburningComponent.prototype.close = function () {
-        this.dialogRef.close();
-    };
-    CreateWoodburningComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./create-woodburning.component.html */ "./src/app/create-woodburning/create-woodburning.component.html"),
-            selector: 'create-woodburning',
-            styles: [__webpack_require__(/*! ./create-woodburning.component.scss */ "./src/app/create-woodburning/create-woodburning.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"],
-            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__["WoodburningStoreService"],
-            _firestore_service__WEBPACK_IMPORTED_MODULE_4__["FirestoreService"]])
-    ], CreateWoodburningComponent);
-    return CreateWoodburningComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/delete-woodburning/delete-woodburning.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/delete-woodburning/delete-woodburning.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-dialog-content class=\"delete-dialog\">\n    <mat-card-title>Delete Woodburning</mat-card-title>\n    <mat-card-content class=\"delete-dialog-body\">\n        <div>Are you sure you want to delete <strong>{{currentWoodburning.title}}</strong>?</div>\n    </mat-card-content>\n    <mat-card-content>\n        <div class=\"buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"deleteWoodburning()\">\n                Delete Woodburning\n            </button>\n            <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                Cancel\n            </button>\n        </div>\n    </mat-card-content>\n</mat-dialog-content>"
-
-/***/ }),
-
-/***/ "./src/app/delete-woodburning/delete-woodburning.component.scss":
-/*!**********************************************************************!*\
-  !*** ./src/app/delete-woodburning/delete-woodburning.component.scss ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RlbGV0ZS13b29kYnVybmluZy9kZWxldGUtd29vZGJ1cm5pbmcuY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/delete-woodburning/delete-woodburning.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/delete-woodburning/delete-woodburning.component.ts ***!
-  \********************************************************************/
-/*! exports provided: DeleteWoodburningComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteWoodburningComponent", function() { return DeleteWoodburningComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var DeleteWoodburningComponent = (function () {
-    function DeleteWoodburningComponent(dialogRef, woodburningStoreService) {
-        this.dialogRef = dialogRef;
-        this.woodburningStoreService = woodburningStoreService;
-    }
-    DeleteWoodburningComponent.prototype.ngOnInit = function () {
-        this.currentWoodburning = this.woodburning;
-    };
-    DeleteWoodburningComponent.prototype.deleteWoodburning = function () {
-        this.woodburningStoreService.delete(this.currentWoodburning);
-        var message = 'Successfully deleted ' + this.woodburning.title + '.';
-        this.woodburningStoreService.openSnackBar(message, '');
-        this.dialogRef.close();
-    };
-    DeleteWoodburningComponent.prototype.close = function () {
-        this.dialogRef.close();
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], DeleteWoodburningComponent.prototype, "woodburning", void 0);
-    DeleteWoodburningComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./delete-woodburning.component.html */ "./src/app/delete-woodburning/delete-woodburning.component.html"),
-            selector: 'delete-woodburning',
-            styles: [__webpack_require__(/*! ./delete-woodburning.component.scss */ "./src/app/delete-woodburning/delete-woodburning.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
-            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"]])
-    ], DeleteWoodburningComponent);
-    return DeleteWoodburningComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/edit-woodburning/edit-woodburning.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/edit-woodburning/edit-woodburning.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit Woodburning</mat-card-title>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" *ngIf=\"currentWoodburning as w\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"title\" placeholder=\"Title\" required=\"true\" value=\"{{ w.title }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"size\" placeholder=\"Size\" required=\"true\" value=\"{{ w.size }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"material\" placeholder=\"Material\" required=\"true\" value=\"{{ w.material }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput readonly [matDatepicker]=\"dateFinishedDatePicker\" formControlName=\"dateFinished\"\n                           placeholder=\"Date Finished\" required=\"true\">\n                    <mat-datepicker-toggle matSuffix [for]=\"dateFinishedDatePicker\"></mat-datepicker-toggle>\n                    <mat-datepicker #dateFinishedDatePicker></mat-datepicker>\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenMinutes\" placeholder=\"totalTimeTakenMinutes\"\n                           required=\"true\" value=\"{{ w.totalTimeTakenMinutes }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"totalTimeTakenHours\" placeholder=\"totalTimeTakenHours\"\n                           required=\"true\" value=\"{{ w.totalTimeTakenHours }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"imageUrl\" placeholder=\"imageUrl\" required=\"true\" value=\"{{ w.imageUrl }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"sharedOnline\" [checked]=\"w.sharedOnline\">Shared Online?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"framed\" [checked]=\"w.framed\">Framed?</mat-slide-toggle>\n            </div>\n            <div class=\"row\">\n                <mat-slide-toggle formControlName=\"forSale\" [checked]=\"w.forSale\">For Sale?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"sellingPrice\" placeholder=\"Selling Price\" value=\"{{ w.sellingPrice }}\">\n                </mat-form-field>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-slide-toggle formControlName=\"sold\" [checked]=\"w.sold\">Sold?</mat-slide-toggle>\n            </div>\n            <div class=\"row\" *ngIf=\"form.controls.forSale.value == true\">\n                <mat-form-field>\n                    <input matInput formControlName=\"etsyListing\" placeholder=\"Etsy Listing\" value=\"{{ w.etsyListing }}\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"editWoodburning()\">\n                    Edit Woodburning\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
-
-/***/ }),
-
-/***/ "./src/app/edit-woodburning/edit-woodburning.component.scss":
-/*!******************************************************************!*\
-  !*** ./src/app/edit-woodburning/edit-woodburning.component.scss ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VkaXQtd29vZGJ1cm5pbmcvZWRpdC13b29kYnVybmluZy5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/edit-woodburning/edit-woodburning.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/edit-woodburning/edit-woodburning.component.ts ***!
-  \****************************************************************/
-/*! exports provided: EditWoodburningComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditWoodburningComponent", function() { return EditWoodburningComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var EditWoodburningComponent = (function () {
-    function EditWoodburningComponent(formBuilder, dialogRef, woodburningStoreService) {
-        this.formBuilder = formBuilder;
-        this.dialogRef = dialogRef;
-        this.woodburningStoreService = woodburningStoreService;
-    }
-    EditWoodburningComponent.prototype.ngOnInit = function () {
-        this.currentWoodburning = this.woodburning;
-        this.createForm();
-    };
-    EditWoodburningComponent.prototype.createForm = function () {
-        this.form = this.formBuilder.group({
-            'title': [this.currentWoodburning.title, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'size': [this.currentWoodburning.size, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'material': [this.currentWoodburning.material, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'dateFinished': [this.currentWoodburning.dateFinished.toDate(), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'totalTimeTakenMinutes': [this.currentWoodburning.totalTimeTakenMinutes, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'imageUrl': [this.currentWoodburning.imageUrl, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'sharedOnline': [this.currentWoodburning.sharedOnline, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'framed': [this.currentWoodburning.framed, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'forSale': [this.currentWoodburning.forSale, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'sellingPrice': [this.currentWoodburning.sellingPrice],
-            'sold': [this.currentWoodburning.sold, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            'etsyListing': [this.currentWoodburning.etsyListing]
-        });
-    };
-    EditWoodburningComponent.prototype.editWoodburning = function () {
-        if (!this.form.valid) {
-            var message = 'Not all fields were entered. Fill out required.';
-            this.woodburningStoreService.openSnackBar(message, '');
-        }
-        else {
-            var woodburningFormData = {
-                id: this.currentWoodburning.id,
-                title: this.form.value.title,
-                size: this.form.value.size,
-                material: this.form.value.material,
-                dateFinished: this.form.value.dateFinished,
-                totalTimeTakenMinutes: this.form.value.totalTimeTakenMinutes,
-                totalTimeTakenHours: this.form.value.totalTimeTakenHours,
-                imageUrl: this.form.value.imageUrl,
-                sharedOnline: this.form.value.sharedOnline,
-                framed: this.form.value.framed,
-                forSale: this.form.value.forSale,
-                sellingPrice: this.form.value.sellingPrice,
-                sold: this.form.value.sold,
-                etsyListing: this.form.value.etsyListing
-            };
-            this.woodburningStoreService.update(woodburningFormData);
-            var message = 'Successfully edited ' + woodburningFormData.title + '.';
-            this.woodburningStoreService.openSnackBar(message, '');
-            this.dialogRef.close();
-        }
-    };
-    EditWoodburningComponent.prototype.close = function () {
-        this.dialogRef.close();
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object)
-    ], EditWoodburningComponent.prototype, "woodburning", void 0);
-    EditWoodburningComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./edit-woodburning.component.html */ "./src/app/edit-woodburning/edit-woodburning.component.html"),
-            selector: 'edit-woodburning',
-            styles: [__webpack_require__(/*! ./edit-woodburning.component.scss */ "./src/app/edit-woodburning/edit-woodburning.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
-            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__["WoodburningStoreService"]])
-    ], EditWoodburningComponent);
-    return EditWoodburningComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/firestore.service.ts":
 /*!**************************************!*\
   !*** ./src/app/firestore.service.ts ***!
@@ -1768,7 +1864,7 @@ var FirestoreService = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Woodburnings for Sale</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        <div>\n            Want to own some beautiful and unique art for yourself? Or for a friend or family member? You've\n            come to the right place! Any of the following are for sale in my Etsy store! Clicking on the picture will\n            bring you to the listing!\n        </div>\n        <br/>\n        <div>\n            If you live in Saskatoon, SK, please reach out to me to save on shipping!\n        </div>\n        <br/>\n        <br/>\n        <mat-grid-list cols=\"4\" rowHeight=\"400px\" gutterSize=\"5px\">\n          <mat-grid-tile *ngFor=\"let woodburning of forSaleWoodburnings$ | async\">\n              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n              <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                  <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n              </a>\n              <mat-grid-tile-footer *ngIf=\"woodburning.sold\">Sold</mat-grid-tile-footer>\n              <mat-grid-tile-footer *ngIf=\"!woodburning.sold\">\n                  <span *ngIf=\"woodburning.forSale\">$</span>{{woodburning.sellingPrice}} CAD\n              </mat-grid-tile-footer>\n          </mat-grid-tile>\n        </mat-grid-list>\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Woodburnings for Sale</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        <div>\n            Want to own some beautiful and unique art for yourself? Or for a friend or family member? You've\n            come to the right place! Any of the following are for sale in my\n            <a target=\"_blank\" href=\"https://www.etsy.com/ca/shop/PrairiePyroDesigns\">Etsy store</a>!\n            Clicking on the woodburning picture will bring you to the listing!\n        </div>\n        <br/>\n        <div>\n            If you live in Saskatoon, SK, please reach out to me to save on shipping!\n        </div>\n        <br/>\n        <br/>\n        <mat-grid-list cols=\"4\" rowHeight=\"400px\" gutterSize=\"5px\">\n          <mat-grid-tile *ngFor=\"let woodburning of forSaleWoodburnings$ | async\">\n              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n              <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                  <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n              </a>\n              <mat-grid-tile-footer>\n                  ${{woodburning.sellingPrice}} CAD\n              </mat-grid-tile-footer>\n          </mat-grid-tile>\n        </mat-grid-list>\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -1835,7 +1931,7 @@ var ForSaleComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs Portfolio</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        These are all the woodburnings I've completed during my life time. Sorted by latest made. Click on\n        the woodburning to learn more information about it! This does include the ones I have for sale as\n        well!\n        <br/>\n        <br/>\n        <mat-grid-list cols=\"4\" rowHeight=\"400px\" gutterSize=\"5px\">\n          <mat-grid-tile *ngFor=\"let woodburning of allWoodburnings$ | async\">\n              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n              <div *ngIf=\"woodburning.etsyListing\">\n                  <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                      <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n                  </a>\n              </div>\n              <div *ngIf=\"!woodburning.etsyListing\">\n                  <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\"\n                       (click)=\"openPreviewDialog(woodburning)\">\n              </div>\n              <mat-grid-tile-footer *ngIf=\"woodburning.forSale && woodburning.sold\">Sold</mat-grid-tile-footer>\n              <mat-grid-tile-footer *ngIf=\"woodburning.forSale && !woodburning.sold\">\n                  <span *ngIf=\"woodburning.forSale\">$</span>{{woodburning.sellingPrice}} CAD\n              </mat-grid-tile-footer>\n              <mat-grid-tile-footer *ngIf=\"!woodburning.forSale\">Not For Sale</mat-grid-tile-footer>\n          </mat-grid-tile>\n        </mat-grid-list>\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs Portfolio</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        These are all the woodburnings I've completed during my life time. Click on the woodburning to learn more\n        information about it! This does include the ones I have for sale as well! These are currently sorted\n        alphabetically by title.\n        <br/>\n        <br/>\n        <mat-grid-list cols=\"4\" rowHeight=\"400px\" gutterSize=\"5px\">\n          <mat-grid-tile *ngFor=\"let woodburning of allWoodburnings$ | async\">\n              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n              <div *ngIf=\"woodburning.etsyListing\">\n                  <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                      <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n                  </a>\n              </div>\n              <div *ngIf=\"!woodburning.etsyListing\">\n                  <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\"\n                       (click)=\"openPreviewDialog(woodburning)\">\n              </div>\n              <mat-grid-tile-footer *ngIf=\"woodburning.forSale && woodburning.sold\">Sold</mat-grid-tile-footer>\n              <mat-grid-tile-footer *ngIf=\"woodburning.forSale && !woodburning.sold\">\n                  <span *ngIf=\"woodburning.forSale\">$</span>{{woodburning.sellingPrice}} CAD\n              </mat-grid-tile-footer>\n              <mat-grid-tile-footer *ngIf=\"!woodburning.forSale\">Not For Sale</mat-grid-tile-footer>\n          </mat-grid-tile>\n        </mat-grid-list>\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -1912,7 +2008,7 @@ var GalleryComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Welcome to Prairie Pyro Designs!</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        <div>\n            I hope you enjoy what you find here!\n        </div>\n        <br />\n        <div>\n            The art style that I practice is called Pyrography but it's\n            also called Woodburning. You will be able to see all the pieces that I've done, what's for sale\n            and be able to read up on this art style. It's a bit of a lost art that I'm trying to bring back\n            in my own way.\n        </div>\n        <br />\n        <div>\n            I do also do custom orders! So if that's something that\n            interests you, head on over to my Contact page for how you can request a custom woodburning!\n        </div>\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Welcome to Prairie Pyro Designs!</div>\n    </mat-card-header>\n    <mat-card-content class=\"page-content\">\n        <div>\n            The art style that I practice is called Pyrography also known as Woodburning. You will be able to\n            see all the pieces that I've done, what's for sale and be able to read up on this art style. It's a bit\n            of a lost art that I'm trying to bring back in my own way.\n            <br /><br />\n            Interested in seeing which pieces I have for sale? Head on over to the\n            <a target=\"_blank\" routerLink=\"/for-sale\">For Sale</a> tab!\n            <br /><br />\n            Want to see examples of my work? Check out the\n            <a target=\"_blank\" routerLink=\"/gallery\">Gallery</a> tab!\n            <br /><br />\n            Want to learn more about me and woodburning? Check out the\n            <a target=\"_blank\" routerLink=\"/about\">About</a> tab and soon, the\n            <a target=\"_blank\" routerLink=\"/blog\">Blog</a> tab.\n            <br /><br />\n            Want to follow me on the social sites? Or are you interested in a custom Order? Check out the\n            <a target=\"_blank\" routerLink=\"/contact\">Contact</a> page.\n        </div>\n        <br/><br/>\n        <div class=\"featured-and-for-sale\">\n            <div class=\"featured-woodburning\" *ngIf=\"featuredWoodburnings\">\n                <h4>Featured Woodburning:</h4>\n                <mat-grid-list cols=\"1\" rowHeight=\"500px\">\n                    <mat-grid-tile *ngFor=\"let woodburning of featuredWoodburnings\">\n                        <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n                        <div *ngIf=\"woodburning.etsyListing\">\n                            <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                              <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n                            </a>\n                        </div>\n                        <div *ngIf=\"!woodburning.etsyListing\">\n                            <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\"\n                           (click)=\"openPreviewDialog(woodburning)\">\n                        </div>\n                     <mat-grid-tile-footer>\n                         ${{woodburning.sellingPrice}} CAD\n                     </mat-grid-tile-footer>\n                    </mat-grid-tile>\n                </mat-grid-list>\n            </div>\n            <div class=\"latest-for-sale\" *ngIf=\"latestForSaleWoodburnings\">\n                <h4>Latest Woodburning For Sale:</h4>\n                <mat-grid-list cols=\"1\" rowHeight=\"500px\">\n                    <mat-grid-tile *ngFor=\"let woodburning of latestForSaleWoodburnings\">\n                        <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>\n                        <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\">\n                          <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"tile-image\">\n                        </a>\n                     <mat-grid-tile-footer>\n                         ${{woodburning.sellingPrice}} CAD\n                     </mat-grid-tile-footer>\n                    </mat-grid-tile>\n                </mat-grid-list>\n            </div>\n        </div>\n    </mat-card-content>\n</mat-card>\n"
 
 /***/ }),
 
@@ -1923,7 +2019,7 @@ module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-card {\n  border-radius: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2hvbWUtcGFnZS9ob21lLXBhZ2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2hvbWUtcGFnZS9ob21lLXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59Il19 */"
+module.exports = "mat-card {\n  border-radius: 0; }\n\na {\n  color: #FFA500 !important; }\n\na:hover {\n  color: #FF7900 !important; }\n\n.featured-and-for-sale {\n  display: flex;\n  flex-direction: row;\n  justify-content: center; }\n\n.featured-and-for-sale .featured-woodburning {\n    padding-right: 40px;\n    width: 100%; }\n\n.featured-and-for-sale .latest-for-sale {\n    width: 100%; }\n\n.featured-and-for-sale .tile-image {\n    max-height: 500px;\n    max-width: 450px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2hvbWUtcGFnZS9ob21lLXBhZ2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0IsRUFBQTs7QUFHbEI7RUFDRSx5QkFBeUIsRUFBQTs7QUFHM0I7RUFDRSx5QkFBeUIsRUFBQTs7QUFHM0I7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QixFQUFBOztBQUh6QjtJQU1JLG1CQUFtQjtJQUNuQixXQUFXLEVBQUE7O0FBUGY7SUFVSSxXQUFXLEVBQUE7O0FBVmY7SUFjSSxpQkFBaUI7SUFDakIsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9ob21lLXBhZ2UvaG9tZS1wYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWNhcmQge1xuICBib3JkZXItcmFkaXVzOiAwO1xufVxuXG5hIHtcbiAgY29sb3I6ICNGRkE1MDAgIWltcG9ydGFudDtcbn1cblxuYTpob3ZlciB7XG4gIGNvbG9yOiAjRkY3OTAwICFpbXBvcnRhbnQ7XG59XG5cbi5mZWF0dXJlZC1hbmQtZm9yLXNhbGUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblxuICAuZmVhdHVyZWQtd29vZGJ1cm5pbmcge1xuICAgIHBhZGRpbmctcmlnaHQ6IDQwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cbiAgLmxhdGVzdC1mb3Itc2FsZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cblxuICAudGlsZS1pbWFnZSB7XG4gICAgbWF4LWhlaWdodDogNTAwcHg7XG4gICAgbWF4LXdpZHRoOiA0NTBweDtcbiAgfVxufVxuXG4iXX0= */"
 
 /***/ }),
 
@@ -1938,6 +2034,9 @@ module.exports = "mat-card {\n  border-radius: 0; }\n\n/*# sourceMappingURL=data
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
+/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1948,16 +2047,43 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var HomePageComponent = (function () {
-    function HomePageComponent() {
+    function HomePageComponent(woodburningStoreService, dialog) {
+        this.woodburningStoreService = woodburningStoreService;
+        this.dialog = dialog;
+        this.subscriptions = [];
     }
+    HomePageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.latestForSaleWoodburning$ = this.woodburningStoreService.getLatestForSale();
+        this.featuredWoodburning$ = this.woodburningStoreService.getFeatured();
+        this.subscriptions.push(this.latestForSaleWoodburning$.subscribe(function (latestForSale) {
+            return _this.latestForSaleWoodburnings = latestForSale;
+        }));
+        this.subscriptions.push(this.featuredWoodburning$.subscribe(function (featuredWoodburnings) {
+            return _this.featuredWoodburnings = featuredWoodburnings;
+        }));
+    };
+    HomePageComponent.prototype.openPreviewDialog = function (woodburning) {
+        this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_2__["PreviewWoodburningComponent"], { width: '550px' });
+        this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
+    };
+    HomePageComponent.prototype.ngOnDestroy = function () {
+        this.subscriptions.forEach(function (subscription) {
+            subscription.unsubscribe();
+        });
+    };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/home-page/home-page.component.html"),
             selector: 'home-page',
             styles: [__webpack_require__(/*! ./home-page.component.scss */ "./src/app/home-page/home-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_woodburning_store_service__WEBPACK_IMPORTED_MODULE_3__["WoodburningStoreService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], HomePageComponent);
     return HomePageComponent;
 }());
@@ -1981,12 +2107,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _nav_nav_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../nav/nav.module */ "./src/app/nav/nav.module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -2001,6 +2133,7 @@ var HomePageModule = (function () {
                 _home_page_component__WEBPACK_IMPORTED_MODULE_1__["HomePageComponent"]
             ],
             imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
@@ -2016,7 +2149,10 @@ var HomePageModule = (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatMenuModule"],
-                _nav_nav_module__WEBPACK_IMPORTED_MODULE_4__["NavModule"]
+                _nav_nav_module__WEBPACK_IMPORTED_MODULE_4__["NavModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatGridListModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]
             ],
             exports: [
                 _home_page_component__WEBPACK_IMPORTED_MODULE_1__["HomePageComponent"]
@@ -2027,98 +2163,6 @@ var HomePageModule = (function () {
         })
     ], HomePageModule);
     return HomePageModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/list-woodburnings/list-woodburnings.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/list-woodburnings/list-woodburnings.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"table-info\" content>\n    <mat-table #table [dataSource]=\"allWoodburnings$\">\n        <ng-container matColumnDef=\"title\">\n            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.title }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"size\">\n            <mat-header-cell *matHeaderCellDef>Size</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.size }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"material\">\n            <mat-header-cell *matHeaderCellDef>Material</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.material }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"dateFinished\">\n            <mat-header-cell *matHeaderCellDef>Date Finished</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenMinutes\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Mins)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenMinutes }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"totalTimeTakenHours\">\n            <mat-header-cell *matHeaderCellDef>Total Time (Hours)</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.totalTimeTakenHours }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sharedOnline\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Shared Online?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sharedOnline }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"framed\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Framed?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.framed }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"forSale\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>For Sale?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.forSale }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sellingPrice\">\n            <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">\n                <div *ngIf=\"woodburning.forSale\">\n                    <span *ngIf=\"woodburning.forSale\">$</span>\n                    {{ woodburning.sellingPrice }}\n                </div>\n                <div *ngIf=\"!woodburning.forSale\">\n                    N/A\n                </div>\n            </mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"sold\" class=\"boolean-field\">\n            <mat-header-cell *matHeaderCellDef>Sold?</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">{{ woodburning.sold }}</mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"etsyListing\">\n            <mat-header-cell *matHeaderCellDef>Etsy Listing</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\">\n                <div *ngIf=\"woodburning.etsyListing\">\n                    <a href=\"{{ woodburning.etsyListing }}\" target=\"_blank\">Etsy Listing</a>\n                </div>\n                <div *ngIf=\"!woodburning.etsyListing\">N/A</div>\n            </mat-cell>\n        </ng-container>\n        <ng-container matColumnDef=\"menu\">\n            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>\n            <mat-cell *matCellDef=\"let woodburning\" class=\"woodburning-menu\">\n                <button mat-icon-button color=\"white\" [matMenuTriggerFor]=\"actions\">\n                    <mat-icon>more_vert</mat-icon>\n                </button>\n                <mat-menu #actions>\n                    <button mat-menu-item (click)=\"openPreviewDialog(woodburning)\">Preview</button>\n                    <button mat-menu-item (click)=\"openEditWoodburningDialog(woodburning)\">Edit</button>\n                    <button mat-menu-item (click)=\"openDeleteDialog(woodburning)\">Delete</button>\n                </mat-menu>\n            </mat-cell>\n        </ng-container>\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\" matRipple></mat-row>\n    </mat-table>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/list-woodburnings/list-woodburnings.component.scss":
-/*!********************************************************************!*\
-  !*** ./src/app/list-woodburnings/list-woodburnings.component.scss ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".mat-table {\n  width: 100%; }\n  .mat-table .mat-header-cell {\n    font-size: 14px; }\n  .mat-table .boolean-field {\n    width: 75px; }\n  .mat-table .mat-column-size {\n    flex: 0 0 84px; }\n  .mat-table .mat-column-material {\n    flex: 0 0 100px; }\n  .mat-table .mat-column-dateFinished {\n    flex: 0 0 84px; }\n  .mat-table .mat-column-totalTimeTakenMinutes {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-totalTimeTakenHours {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-sharedOnline {\n    flex: 0 0 64px; }\n  .mat-table .mat-column-framed {\n    flex: 0 0 66px; }\n  .mat-table .mat-column-forSale {\n    flex: 0 0 70px; }\n  .mat-table .mat-column-sellingPrice {\n    flex: 0 0 46px; }\n  .mat-table .mat-column-sold {\n    flex: 0 0 48px; }\n  .mat-table .mat-column-etsyListing {\n    flex: 0 0 78px; }\n  .mat-table .mat-column-menu {\n    flex: 0 0 52px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2xpc3Qtd29vZGJ1cm5pbmdzL2xpc3Qtd29vZGJ1cm5pbmdzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVyxFQUFBO0VBRGI7SUFJSSxlQUFlLEVBQUE7RUFKbkI7SUFRSSxXQUFXLEVBQUE7RUFSZjtJQWdCSSxjQUFjLEVBQUE7RUFoQmxCO0lBb0JJLGVBQWUsRUFBQTtFQXBCbkI7SUF3QkksY0FBYyxFQUFBO0VBeEJsQjtJQTRCSSxjQUFjLEVBQUE7RUE1QmxCO0lBZ0NJLGNBQWMsRUFBQTtFQWhDbEI7SUFvQ0ksY0FBYyxFQUFBO0VBcENsQjtJQXdDSSxjQUFjLEVBQUE7RUF4Q2xCO0lBNENJLGNBQWMsRUFBQTtFQTVDbEI7SUFnREksY0FBYyxFQUFBO0VBaERsQjtJQW9ESSxjQUFjLEVBQUE7RUFwRGxCO0lBd0RJLGNBQWMsRUFBQTtFQXhEbEI7SUE0REksY0FBYyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvbGlzdC13b29kYnVybmluZ3MvbGlzdC13b29kYnVybmluZ3MuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgLm1hdC1oZWFkZXItY2VsbCB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICB9XG5cbiAgLmJvb2xlYW4tZmllbGQge1xuICAgIHdpZHRoOiA3NXB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tdGl0bGUge1xuXG4gIH1cblxuICAubWF0LWNvbHVtbi1zaXplIHtcbiAgICBmbGV4OiAwIDAgODRweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLW1hdGVyaWFsIHtcbiAgICBmbGV4OiAwIDAgMTAwcHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi1kYXRlRmluaXNoZWQge1xuICAgIGZsZXg6IDAgMCA4NHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tdG90YWxUaW1lVGFrZW5NaW51dGVzIHtcbiAgICBmbGV4OiAwIDAgNzhweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLXRvdGFsVGltZVRha2VuSG91cnMge1xuICAgIGZsZXg6IDAgMCA3OHB4O1xuICB9XG5cbiAgLm1hdC1jb2x1bW4tc2hhcmVkT25saW5lIHtcbiAgICBmbGV4OiAwIDAgNjRweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLWZyYW1lZCB7XG4gICAgZmxleDogMCAwIDY2cHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi1mb3JTYWxlIHtcbiAgICBmbGV4OiAwIDAgNzBweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLXNlbGxpbmdQcmljZSB7XG4gICAgZmxleDogMCAwIDQ2cHg7XG4gIH1cblxuICAubWF0LWNvbHVtbi1zb2xkIHtcbiAgICBmbGV4OiAwIDAgNDhweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLWV0c3lMaXN0aW5nIHtcbiAgICBmbGV4OiAwIDAgNzhweDtcbiAgfVxuXG4gIC5tYXQtY29sdW1uLW1lbnUge1xuICAgIGZsZXg6IDAgMCA1MnB4O1xuICB9XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/list-woodburnings/list-woodburnings.component.ts":
-/*!******************************************************************!*\
-  !*** ./src/app/list-woodburnings/list-woodburnings.component.ts ***!
-  \******************************************************************/
-/*! exports provided: ListWoodburningsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListWoodburningsComponent", function() { return ListWoodburningsComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../woodburning-store.service */ "./src/app/woodburning-store.service.ts");
-/* harmony import */ var _edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../edit-woodburning/edit-woodburning.component */ "./src/app/edit-woodburning/edit-woodburning.component.ts");
-/* harmony import */ var _delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../delete-woodburning/delete-woodburning.component */ "./src/app/delete-woodburning/delete-woodburning.component.ts");
-/* harmony import */ var _preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../preview-woodburning/preview-woodburning.component */ "./src/app/preview-woodburning/preview-woodburning.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var ListWoodburningsComponent = (function () {
-    function ListWoodburningsComponent(dialog, woodburningStoreService) {
-        this.dialog = dialog;
-        this.woodburningStoreService = woodburningStoreService;
-        this.displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
-            'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
-            'sold', 'etsyListing', 'menu'];
-    }
-    ListWoodburningsComponent.prototype.ngOnInit = function () {
-        this.allWoodburnings$ = this.woodburningStoreService.list();
-    };
-    ListWoodburningsComponent.prototype.openPreviewDialog = function (woodburning) {
-        this.previewWoodburningDialogRef = this.dialog.open(_preview_woodburning_preview_woodburning_component__WEBPACK_IMPORTED_MODULE_5__["PreviewWoodburningComponent"], { width: '550px' });
-        this.previewWoodburningDialogRef.componentInstance.woodburning = woodburning;
-    };
-    ListWoodburningsComponent.prototype.openEditWoodburningDialog = function (woodburning) {
-        this.editWoodburningDialogRef = this.dialog.open(_edit_woodburning_edit_woodburning_component__WEBPACK_IMPORTED_MODULE_3__["EditWoodburningComponent"], { width: '500px' });
-        this.editWoodburningDialogRef.componentInstance.woodburning = woodburning;
-    };
-    ListWoodburningsComponent.prototype.openDeleteDialog = function (woodburning) {
-        this.deleteWoodburningDialogRef = this.dialog.open(_delete_woodburning_delete_woodburning_component__WEBPACK_IMPORTED_MODULE_4__["DeleteWoodburningComponent"], { width: '500px' });
-        this.deleteWoodburningDialogRef.componentInstance.woodburning = woodburning;
-    };
-    ListWoodburningsComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            template: __webpack_require__(/*! ./list-woodburnings.component.html */ "./src/app/list-woodburnings/list-woodburnings.component.html"),
-            selector: 'list-woodburnings',
-            styles: [__webpack_require__(/*! ./list-woodburnings.component.scss */ "./src/app/list-woodburnings/list-woodburnings.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"],
-            _woodburning_store_service__WEBPACK_IMPORTED_MODULE_2__["WoodburningStoreService"]])
-    ], ListWoodburningsComponent);
-    return ListWoodburningsComponent;
 }());
 
 
@@ -2304,7 +2348,7 @@ var LoginComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark red darken-4\" [containerInside]=\"false\">\n    <links>\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"home\">Home</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"for-sale\">For Sale</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"gallery\">Gallery</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"blog\">Blog</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"about-me\" >About</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"contact\">Contact</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"isAdmin$ | async\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>lock</mat-icon> Admin<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-woodburnings\"\n                     [routerLinkActive]=\"['active']\">\n                      <mat-icon>work</mat-icon> Manage Woodburnings\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-map-locations\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>explore</mat-icon> Manage Map Locations\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-blogs\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>assignment</mat-icon> Manage Blogs\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-materials\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>web_asset</mat-icon> Manage Material\n                  </a>\n                </div>\n            </li>\n\n            <li class=\"nav-item\" *ngIf=\"!(isLoggedIn$ | async)\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"openLoginDialog()\">Login</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"(isLoggedIn$ | async)\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>account_circle</mat-icon> Profile<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect\n                     (click)=\"openEditUserProfileDialog()\">\n                      <mat-icon>face</mat-icon> My account\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect (click)=\"logout()\">\n                      <mat-icon>exit_to_app</mat-icon> Log out\n                  </a>\n                </div>\n            </li>\n        </ul>\n    </links>\n</mdb-navbar>\n<ng-content></ng-content>\n<mat-card-footer class=\"footer\">\n    <div>Copyright<mat-icon class=\"copyright-icon\">copyright</mat-icon> 2019 - Prairie Pyro Designs</div>\n</mat-card-footer>"
+module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark red darken-4\" [containerInside]=\"false\">\n    <links>\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"home\">Home</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"for-sale\">For Sale</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"gallery\">Gallery</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"blog\">Blog</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"about-me\" >About</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"contact\">Contact</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"isAdmin$ | async\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>lock</mat-icon> Admin<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-woodburnings\"\n                     [routerLinkActive]=\"['active']\">\n                      <mat-icon>work</mat-icon> Manage Woodburnings\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-map-locations\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>place</mat-icon> Manage Map Locations\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-blogs\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>assignment</mat-icon> Manage Blogs\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-materials\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>web_asset</mat-icon> Manage Material\n                  </a>\n                </div>\n            </li>\n\n            <li class=\"nav-item\" *ngIf=\"!(isLoggedIn$ | async)\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"openLoginDialog()\">Login</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"(isLoggedIn$ | async)\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>account_circle</mat-icon> Profile<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect\n                     (click)=\"openEditUserProfileDialog()\">\n                      <mat-icon>face</mat-icon> My account\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect (click)=\"logout()\">\n                      <mat-icon>exit_to_app</mat-icon> Log out\n                  </a>\n                </div>\n            </li>\n        </ul>\n    </links>\n</mdb-navbar>\n<ng-content></ng-content>\n<mat-card-footer class=\"footer\">\n    <div>Copyright<mat-icon class=\"copyright-icon\">copyright</mat-icon> 2019 - Prairie Pyro Designs</div>\n</mat-card-footer>"
 
 /***/ }),
 
@@ -2483,7 +2527,7 @@ var NavModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-dialog-content class=\"preview-dialog\">\n    <mat-card-title>Previewing <strong>{{woodburning.title}}</strong></mat-card-title>\n    <mat-card-content class=\"preview-dialog-body\">\n        <div>\n            <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"woodburning-image\">\n        </div>\n        <div class=\"woodburning-main-data\">\n            <div><strong>Size</strong>: {{woodburning.size}}</div>\n            <div><strong>Material</strong>: {{woodburning.material}}</div>\n            <div><strong>Date Finished</strong>: {{woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</div>\n            <div><strong>Total Time Taken (Minutes)</strong>: {{woodburning.totalTimeTakenMinutes}}</div>\n            <div><strong>Total Time Taken (Hours)</strong>: {{woodburning.totalTimeTakenHours}}</div>\n        </div>\n        <div class=\"woodburning-additional-data\">\n            <!-- TODO: Since preview is used elsewhere, only show some of these if an Admin? -->\n            <div><strong>Shared Online?</strong> {{woodburning.sharedOnline}}</div>\n            <div><strong>Framed?</strong> {{woodburning.framed}}</div>\n            <div><strong>For Sale?</strong> {{woodburning.forSale}}</div>\n            <div *ngIf=\"woodburning.forSale\">\n                <strong>Selling Price:</strong> ${{woodburning.sellingPrice}}\n            </div>\n            <div *ngIf=\"woodburning.forSale\">\n                <strong>Etsy Listing:</strong>\n                <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\"> {{woodburning.etsyListing}}</a>\n            </div>\n            <div *ngIf=\"woodburning.forSale\"><strong>Sold:</strong> {{woodburning.sold}}</div>\n        </div>\n    </mat-card-content>\n    <mat-card-content>\n        <div class=\"buttons\">\n            <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                Cancel\n            </button>\n        </div>\n    </mat-card-content>\n</mat-dialog-content>"
+module.exports = "<mat-dialog-content class=\"preview-dialog\">\n    <mat-card-title>Previewing <strong>{{woodburning.title}}</strong></mat-card-title>\n    <mat-card-content class=\"preview-dialog-body\">\n        <div>\n            <img src=\"{{woodburning.imageUrl}}\" alt=\"{{woodburning.title}}\" class=\"woodburning-image\">\n        </div>\n        <div class=\"woodburning-main-data\">\n            <div><strong>Size</strong>: {{woodburning.size}}</div>\n            <div><strong>Material</strong>: {{woodburning.material}}</div>\n            <div><strong>Date Finished</strong>: {{woodburning.dateFinished.toDate() | date: 'MM/dd/yyyy'}}</div>\n            <div><strong>Total Time Taken (Minutes)</strong>: {{woodburning.totalTimeTakenMinutes}}</div>\n            <div><strong>Total Time Taken (Hours)</strong>: {{woodburning.totalTimeTakenHours}}</div>\n        </div>\n        <div class=\"woodburning-additional-data\">\n            <!-- TODO: Since preview is used elsewhere, only show some of these if an Admin? -->\n            <div><strong>Shared Online?</strong> {{woodburning.sharedOnline}}</div>\n            <div><strong>Is Featured?</strong> {{woodburning.isFeatured}}</div>\n            <div><strong>Framed?</strong> {{woodburning.framed}}</div>\n            <div><strong>For Sale?</strong> {{woodburning.forSale}}</div>\n            <div *ngIf=\"woodburning.forSale\">\n                <strong>Selling Price:</strong> ${{woodburning.sellingPrice}}\n            </div>\n            <div *ngIf=\"woodburning.forSale\">\n                <strong>Etsy Listing:</strong>\n                <a href=\"{{woodburning.etsyListing}}\" target=\"_blank\"> {{woodburning.etsyListing}}</a>\n            </div>\n            <div *ngIf=\"woodburning.forSale\"><strong>Sold:</strong> {{woodburning.sold}}</div>\n        </div>\n    </mat-card-content>\n    <mat-card-content>\n        <div class=\"buttons\">\n            <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                Cancel\n            </button>\n        </div>\n    </mat-card-content>\n</mat-dialog-content>"
 
 /***/ }),
 
@@ -2604,7 +2648,6 @@ var UserProfileComponent = (function () {
         this.dialogRef = dialogRef;
         this.userService = userService;
         this.woodburningStoreService = woodburningStoreService;
-        this.subscriptions = [];
     }
     UserProfileComponent.prototype.ngOnInit = function () {
         this.createForm();
@@ -2641,11 +2684,6 @@ var UserProfileComponent = (function () {
     };
     UserProfileComponent.prototype.close = function () {
         this.dialogRef.close();
-    };
-    UserProfileComponent.prototype.ngOnDestroy = function () {
-        this.subscriptions.forEach(function (subscription) {
-            subscription.unsubscribe();
-        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -2760,6 +2798,16 @@ var WoodburningStoreService = (function () {
     };
     WoodburningStoreService.prototype.get = function (woodburningId) {
         return this.firestoreService.get("woodburnings/" + woodburningId);
+    };
+    WoodburningStoreService.prototype.getFeatured = function () {
+        return this.firestoreService.list('woodburnings', function (ref) {
+            return ref.where('isFeatured', '==', true).limit(1);
+        });
+    };
+    WoodburningStoreService.prototype.getLatestForSale = function () {
+        return this.firestoreService.list('woodburnings', function (ref) {
+            return ref.where('forSale', '==', true).limit(1).orderBy('createdAt', 'desc');
+        });
     };
     WoodburningStoreService.prototype.add = function (woodburning) {
         return this.firestoreService.add('woodburnings', woodburning);
