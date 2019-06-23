@@ -27,12 +27,21 @@ export class UserProfileComponent implements OnInit {
   }
 
   createForm(): void {
-    this.form = this.formBuilder.group({
-      'firstName': [this.user.firstName, Validators.required],
-      'lastName': [this.user.lastName, Validators.required],
-      'email': [this.user.email, Validators.required],
-      'profileImageUrl': [this.user.profileImageUrl],
-    });
+    if (this.user) {
+      this.form = this.formBuilder.group({
+        'firstName': [this.user.firstName, Validators.required],
+        'lastName': [this.user.lastName, Validators.required],
+        'email': [this.user.email, Validators.required],
+        'profileImageUrl': [this.user.profileImageUrl],
+      });
+    } else {
+      this.form = this.formBuilder.group({
+        'firstName': ['', Validators.required],
+        'lastName': ['', Validators.required],
+        'email': ['', Validators.required],
+        'profileImageUrl': ['']
+      });
+    }
   }
 
   updateUser(): void {

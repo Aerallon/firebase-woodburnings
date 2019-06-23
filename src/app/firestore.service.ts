@@ -22,7 +22,7 @@ export class FirestoreService {
   }
 
   doc<T>(ref: DocPredicate<T>): AngularFirestoreDocument<T> {
-      return typeof ref === 'string' ? this.angularFirestore.doc<T>(ref) : ref;
+    return typeof ref === 'string' ? this.angularFirestore.doc<T>(ref) : ref;
   }
 
   get id(): any {
@@ -33,6 +33,7 @@ export class FirestoreService {
     return firebase.firestore.FieldValue.serverTimestamp();
   }
 
+  // TODO: this needs to listen to the doc and not do a get since it doesn't return the user if it doesn't exist
   get<T>(ref: DocPredicate<T>): Observable<T> {
     const getPromise = this.doc(ref).ref.get().then(doc => doc.data() as T);
     return fromPromise(getPromise);
@@ -93,6 +94,10 @@ export class FirestoreService {
 
   delete<T>(ref: DocPredicate<T>): void {
     this.doc(ref).delete();
+  }
+
+  listen<T>(ref: DocPredicate<T>): Observable<T> {
+    return this.doc<T>(ref).valueChanges();
   }
 
   private doesDocumentExist<T>(ref: DocPredicate<T>): Promise<boolean> {
