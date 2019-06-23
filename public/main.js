@@ -1878,7 +1878,7 @@ module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-card {\n  border-radius: 0; }\n\n.tile-image {\n  max-height: 400px;\n  max-width: 350px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2Zvci1zYWxlL2Zvci1zYWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCLEVBQUE7O0FBR2xCO0VBQ0UsaUJBQWlCO0VBQ2pCLGdCQUFnQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvZm9yLXNhbGUvZm9yLXNhbGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG5cbi50aWxlLWltYWdlIHtcbiAgbWF4LWhlaWdodDogNDAwcHg7XG4gIG1heC13aWR0aDogMzUwcHg7XG59Il19 */"
+module.exports = "mat-card {\n  border-radius: 0; }\n\n.tile-image {\n  max-height: 400px;\n  max-width: 350px; }\n\na {\n  color: #FFA500 !important; }\n\na:hover {\n  color: #FF7900 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2Zvci1zYWxlL2Zvci1zYWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCLEVBQUE7O0FBR2xCO0VBQ0UsaUJBQWlCO0VBQ2pCLGdCQUFnQixFQUFBOztBQUdsQjtFQUNFLHlCQUF5QixFQUFBOztBQUczQjtFQUNFLHlCQUF5QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvZm9yLXNhbGUvZm9yLXNhbGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG5cbi50aWxlLWltYWdlIHtcbiAgbWF4LWhlaWdodDogNDAwcHg7XG4gIG1heC13aWR0aDogMzUwcHg7XG59XG5cbmEge1xuICBjb2xvcjogI0ZGQTUwMCAhaW1wb3J0YW50O1xufVxuXG5hOmhvdmVyIHtcbiAgY29sb3I6ICNGRjc5MDAgIWltcG9ydGFudDtcbn0iXX0= */"
 
 /***/ }),
 
