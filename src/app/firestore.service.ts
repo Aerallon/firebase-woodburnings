@@ -33,7 +33,6 @@ export class FirestoreService {
     return firebase.firestore.FieldValue.serverTimestamp();
   }
 
-  // TODO: this needs to listen to the doc and not do a get since it doesn't return the user if it doesn't exist
   get<T>(ref: DocPredicate<T>): Observable<T> {
     const getPromise = this.doc(ref).ref.get().then(doc => doc.data() as T);
     return fromPromise(getPromise);
