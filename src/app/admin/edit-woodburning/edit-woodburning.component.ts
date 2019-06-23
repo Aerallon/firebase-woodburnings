@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { WoodburningStoreService } from '../woodburning-store.service';
-import { WoodburningDetails } from '../interfaces';
+import { WoodburningStoreService } from '../../woodburning-store.service';
+import { WoodburningDetails } from '../../interfaces';
 
 @Component({
     templateUrl: './edit-woodburning.component.html',

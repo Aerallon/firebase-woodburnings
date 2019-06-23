@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
-import { WoodburningStoreService } from '../woodburning-store.service';
-import { FirestoreService } from '../firestore.service';
+import { WoodburningStoreService } from '../../woodburning-store.service';
+import { FirestoreService } from '../../firestore.service';
 
 @Component({
     templateUrl: './create-woodburning.component.html',

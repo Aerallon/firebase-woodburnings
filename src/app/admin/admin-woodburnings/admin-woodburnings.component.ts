@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CreateWoodburningComponent } from '../../create-woodburning/create-woodburning.component';
+import { CreateWoodburningComponent } from '../create-woodburning/create-woodburning.component';
 import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({

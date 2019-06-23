@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
-import { WoodburningStoreService } from '../woodburning-store.service';
-import { WoodburningDetails } from '../interfaces';
+import { WoodburningStoreService } from '../../woodburning-store.service';
+import { WoodburningDetails } from '../../interfaces';
 import { EditWoodburningComponent } from '../edit-woodburning/edit-woodburning.component';
 import { DeleteWoodburningComponent } from '../delete-woodburning/delete-woodburning.component';
-import { PreviewWoodburningComponent } from '../preview-woodburning/preview-woodburning.component';
+import { PreviewWoodburningComponent } from '../../preview-woodburning/preview-woodburning.component';
 import { Observable } from 'rxjs';
 
 
