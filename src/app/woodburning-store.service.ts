@@ -28,6 +28,19 @@ export class WoodburningStoreService {
     return this.firestoreService.get<WoodburningDetails>(`woodburnings/${woodburningId}`);
   }
 
+  public getFeatured(): Observable<WoodburningDetails[]> {
+    return this.firestoreService.list('woodburnings', ref => {
+      return ref.where('isFeatured', '==', true).limit(1);
+    });
+  }
+
+  public getLatestForSale(): Observable<WoodburningDetails[]> {
+    // TODO: Needs to return the latest created that's for sale
+    return this.firestoreService.list('woodburnings', ref => {
+      return ref.where('forSale', '==', true).limit(1).orderBy('createdAt', 'desc');
+    });
+  }
+
   public add(woodburning: WoodburningDetails): Observable<null> {
     return this.firestoreService.add('woodburnings', woodburning);
   }

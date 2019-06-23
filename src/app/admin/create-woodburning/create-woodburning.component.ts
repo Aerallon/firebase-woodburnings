@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
-import { WoodburningStoreService } from '../woodburning-store.service';
-import { FirestoreService } from '../firestore.service';
+import { WoodburningStoreService } from '../../woodburning-store.service';
+import { FirestoreService } from '../../firestore.service';
 
 @Component({
     templateUrl: './create-woodburning.component.html',
@@ -34,6 +34,7 @@ export class CreateWoodburningComponent implements OnInit {
       'totalTimeTakenHours': ['', Validators.required],
       'imageUrl': ['', Validators.required],
       'sharedOnline': [false],
+      'isFeatured': [false],
       'framed': [false],
       'forSale': [false],
       'sellingPrice': [''], // TODO: Should only be required if for sale is true
@@ -57,6 +58,7 @@ export class CreateWoodburningComponent implements OnInit {
         totalTimeTakenHours: this.form.value.totalTimeTakenHours,
         imageUrl: this.form.value.imageUrl,
         sharedOnline: this.form.value.sharedOnline,
+        isFeatured: this.form.value.isFeatured,
         framed: this.form.value.framed,
         forSale: this.form.value.forSale,
         sellingPrice: this.form.value.sellingPrice,

@@ -6,19 +6,59 @@
     </mat-card-header>
     <mat-card-content class="page-content">
         <div>
-            I hope you enjoy what you find here!
+            The art style that I practice is called Pyrography also known as Woodburning. You will be able to
+            see all the pieces that I've done, what's for sale and be able to read up on this art style. It's a bit
+            of a lost art that I'm trying to bring back in my own way.
+            <br /><br />
+            Interested in seeing which pieces I have for sale? Head on over to the
+            <a target="_blank" routerLink="/for-sale">For Sale</a> tab!
+            <br /><br />
+            Want to see examples of my work? Check out the
+            <a target="_blank" routerLink="/gallery">Gallery</a> tab!
+            <br /><br />
+            Want to learn more about me and woodburning? Check out the
+            <a target="_blank" routerLink="/about">About</a> tab and soon, the
+            <a target="_blank" routerLink="/blog">Blog</a> tab.
+            <br /><br />
+            Want to follow me on the social sites? Or are you interested in a custom Order? Check out the
+            <a target="_blank" routerLink="/contact">Contact</a> page.
         </div>
-        <br />
-        <div>
-            The art style that I practice is called Pyrography but it's
-            also called Woodburning. You will be able to see all the pieces that I've done, what's for sale
-            and be able to read up on this art style. It's a bit of a lost art that I'm trying to bring back
-            in my own way.
-        </div>
-        <br />
-        <div>
-            I do also do custom orders! So if that's something that
-            interests you, head on over to my Contact page for how you can request a custom woodburning!
+        <br/><br/>
+        <div class="featured-and-for-sale">
+            <div class="featured-woodburning" *ngIf="featuredWoodburnings">
+                <h4>Featured Woodburning:</h4>
+                <mat-grid-list cols="1" rowHeight="500px">
+                    <mat-grid-tile *ngFor="let woodburning of featuredWoodburnings">
+                        <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+                        <div *ngIf="woodburning.etsyListing">
+                            <a href="{{woodburning.etsyListing}}" target="_blank">
+                              <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
+                            </a>
+                        </div>
+                        <div *ngIf="!woodburning.etsyListing">
+                            <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image"
+                           (click)="openPreviewDialog(woodburning)">
+                        </div>
+                     <mat-grid-tile-footer>
+                         ${{woodburning.sellingPrice}} CAD
+                     </mat-grid-tile-footer>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+            <div class="latest-for-sale" *ngIf="latestForSaleWoodburnings">
+                <h4>Latest Woodburning For Sale:</h4>
+                <mat-grid-list cols="1" rowHeight="500px">
+                    <mat-grid-tile *ngFor="let woodburning of latestForSaleWoodburnings">
+                        <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+                        <a href="{{woodburning.etsyListing}}" target="_blank">
+                          <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
+                        </a>
+                     <mat-grid-tile-footer>
+                         ${{woodburning.sellingPrice}} CAD
+                     </mat-grid-tile-footer>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
         </div>
     </mat-card-content>
 </mat-card>

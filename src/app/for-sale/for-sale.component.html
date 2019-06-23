@@ -7,8 +7,9 @@
     <mat-card-content class="page-content">
         <div>
             Want to own some beautiful and unique art for yourself? Or for a friend or family member? You've
-            come to the right place! Any of the following are for sale in my Etsy store! Clicking on the picture will
-            bring you to the listing!
+            come to the right place! Any of the following are for sale in my
+            <a target="_blank" href="https://www.etsy.com/ca/shop/PrairiePyroDesigns">Etsy store</a>!
+            Clicking on the woodburning picture will bring you to the listing!
         </div>
         <br/>
         <div>
@@ -22,9 +23,8 @@
               <a href="{{woodburning.etsyListing}}" target="_blank">
                   <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
               </a>
-              <mat-grid-tile-footer *ngIf="woodburning.sold">Sold</mat-grid-tile-footer>
-              <mat-grid-tile-footer *ngIf="!woodburning.sold">
-                  <span *ngIf="woodburning.forSale">$</span>{{woodburning.sellingPrice}} CAD
+              <mat-grid-tile-footer>
+                  ${{woodburning.sellingPrice}} CAD
               </mat-grid-tile-footer>
           </mat-grid-tile>
         </mat-grid-list>

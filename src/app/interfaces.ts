@@ -15,6 +15,7 @@ export interface WoodburningDetails {
     sellingPrice: number;
     sold: boolean;
     etsyListing: string;
+    isFeatured: boolean;
 }
 
 export interface AppUser {
