@@ -39,9 +39,11 @@
                             <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image"
                            (click)="openPreviewDialog(woodburning)">
                         </div>
-                     <mat-grid-tile-footer>
-                         ${{woodburning.sellingPrice}} CAD
-                     </mat-grid-tile-footer>
+                        <mat-grid-tile-footer *ngIf="woodburning.forSale && woodburning.sold">Sold</mat-grid-tile-footer>
+                        <mat-grid-tile-footer *ngIf="woodburning.forSale && !woodburning.sold">
+                            <span *ngIf="woodburning.forSale">$</span>{{woodburning.sellingPrice}} CAD
+                        </mat-grid-tile-footer>
+                        <mat-grid-tile-footer *ngIf="!woodburning.forSale">Not For Sale</mat-grid-tile-footer>
                     </mat-grid-tile>
                 </mat-grid-list>
             </div>
