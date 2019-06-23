@@ -61,6 +61,10 @@
                 <div *ngIf="!woodburning.etsyListing">N/A</div>
             </mat-cell>
         </ng-container>
+        <ng-container matColumnDef="isFeatured" class="boolean-field">
+            <mat-header-cell *matHeaderCellDef>Featured?</mat-header-cell>
+            <mat-cell *matCellDef="let woodburning">{{ woodburning.isFeatured }}</mat-cell>
+        </ng-container>
         <ng-container matColumnDef="menu">
             <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
             <mat-cell *matCellDef="let woodburning" class="woodburning-menu">

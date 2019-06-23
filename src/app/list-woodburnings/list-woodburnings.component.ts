@@ -23,7 +23,7 @@ export class ListWoodburningsComponent implements OnInit {
 
   displayedColumns = ['title', 'size', 'material', 'dateFinished', 'totalTimeTakenMinutes',
     'totalTimeTakenHours', 'sharedOnline', 'framed', 'forSale', 'sellingPrice',
-    'sold', 'etsyListing', 'menu'];
+    'sold', 'etsyListing', 'isFeatured', 'menu'];
 
   constructor(private dialog: MatDialog,
               private woodburningStoreService: WoodburningStoreService) {
