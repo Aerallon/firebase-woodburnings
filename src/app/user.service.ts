@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  constructor( private firestoreService: FirestoreService) {
+  constructor(private firestoreService: FirestoreService) {
   }
 
   public get(userId: string): Observable<AppUser> {
     return this.firestoreService.get<AppUser>(`users/${userId}`);
+  }
+
+  public listen(userId: string): Observable<AppUser> {
+    return this.firestoreService.listen<AppUser>(`users/${userId}`);
   }
 
   public add(appUser: AppUser): Observable<null> {

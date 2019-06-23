@@ -1843,6 +1843,9 @@ var FirestoreService = (function () {
     FirestoreService.prototype.delete = function (ref) {
         this.doc(ref).delete();
     };
+    FirestoreService.prototype.listen = function (ref) {
+        return this.doc(ref).valueChanges();
+    };
     FirestoreService.prototype.doesDocumentExist = function (ref) {
         return this.doc(ref).snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (snapshot) { return snapshot.payload.exists; })).toPromise();
     };
@@ -2415,7 +2418,7 @@ var NavComponent = (function () {
             if (!uid) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
             }
-            return _this.userService.get(uid);
+            return _this.userService.listen(uid);
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["shareReplay"])(1));
         this.isAdmin$ = this.currentUser$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (user) { return user && user.isAdmin; }));
         this.subscriptions.push(this.currentUser$.subscribe(function (user) {
@@ -2598,7 +2601,7 @@ var PreviewWoodburningComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit Profile</mat-card-title>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" *ngIf=\"user\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"firstName\" placeholder=\"First Name\"\n                           required=\"true\" value=\"{{ user.firstName }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"lastName\" placeholder=\"Last Name\"\n                           required=\"true\" value=\"{{ user.lastName }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"email\" placeholder=\"Email\"\n                           required=\"true\" value=\"{{ user.email }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <span><img src=\"{{user.profileImageUrl}}\" width=\"75px\" height=\"75px\"></span>\n                <mat-form-field>\n                    <input matInput formControlName=\"profileImageUrl\" placeholder=\"Profile Image URL\"\n                           value=\"{{ user.profileImageUrl }}\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"updateUser()\">\n                    Update User Details\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
+module.exports = "<mat-dialog-content>\n  <mat-card-title>Edit Profile</mat-card-title>\n  <div *ngIf=\"!user\">\n      Your profile is being created. Please refresh the page and you should see your information!\n  </div>\n  <div *ngIf=\"form\">\n    <form [formGroup]=\"form\" *ngIf=\"user\" class=\"form\">\n        <mat-card-content class=\"form-content\">\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"firstName\" placeholder=\"First Name\"\n                           required=\"true\" value=\"{{ user.firstName }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"lastName\" placeholder=\"Last Name\"\n                           required=\"true\" value=\"{{ user.lastName }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <mat-form-field>\n                    <input matInput formControlName=\"email\" placeholder=\"Email\"\n                           required=\"true\" value=\"{{ user.email }}\">\n                    <mat-error>Required</mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <span><img src=\"{{user.profileImageUrl}}\" width=\"75px\" height=\"75px\"></span>\n                <mat-form-field>\n                    <input matInput formControlName=\"profileImageUrl\" placeholder=\"Profile Image URL\"\n                           value=\"{{ user.profileImageUrl }}\">\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-content>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\" (click)=\"updateUser()\">\n                    Update User Details\n                </button>\n                <button mat-button class=\"cancelButton\" (click)=\"close()\">\n                    Cancel\n                </button>\n            </div>\n        </mat-card-content>\n    </form>\n  </div>\n</mat-dialog-content>"
 
 /***/ }),
 
@@ -2653,12 +2656,22 @@ var UserProfileComponent = (function () {
         this.createForm();
     };
     UserProfileComponent.prototype.createForm = function () {
-        this.form = this.formBuilder.group({
-            'firstName': [this.user.firstName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            'lastName': [this.user.lastName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            'email': [this.user.email, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            'profileImageUrl': [this.user.profileImageUrl],
-        });
+        if (this.user) {
+            this.form = this.formBuilder.group({
+                'firstName': [this.user.firstName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'lastName': [this.user.lastName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'email': [this.user.email, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'profileImageUrl': [this.user.profileImageUrl],
+            });
+        }
+        else {
+            this.form = this.formBuilder.group({
+                'firstName': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'lastName': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'email': ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                'profileImageUrl': ['']
+            });
+        }
     };
     UserProfileComponent.prototype.updateUser = function () {
         if (!this.form.valid) {
@@ -2736,6 +2749,9 @@ var UserService = (function () {
     }
     UserService.prototype.get = function (userId) {
         return this.firestoreService.get("users/" + userId);
+    };
+    UserService.prototype.listen = function (userId) {
+        return this.firestoreService.listen("users/" + userId);
     };
     UserService.prototype.add = function (appUser) {
         return this.firestoreService.add('users', appUser);

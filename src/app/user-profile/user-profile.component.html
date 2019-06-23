@@ -1,5 +1,8 @@
 <mat-dialog-content>
   <mat-card-title>Edit Profile</mat-card-title>
+  <div *ngIf="!user">
+      Your profile is being created. Please refresh the page and you should see your information!
+  </div>
   <div *ngIf="form">
     <form [formGroup]="form" *ngIf="user" class="form">
         <mat-card-content class="form-content">

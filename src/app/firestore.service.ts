@@ -22,7 +22,7 @@ export class FirestoreService {
   }
 
   doc<T>(ref: DocPredicate<T>): AngularFirestoreDocument<T> {
-      return typeof ref === 'string' ? this.angularFirestore.doc<T>(ref) : ref;
+    return typeof ref === 'string' ? this.angularFirestore.doc<T>(ref) : ref;
   }
 
   get id(): any {
@@ -93,6 +93,10 @@ export class FirestoreService {
 
   delete<T>(ref: DocPredicate<T>): void {
     this.doc(ref).delete();
+  }
+
+  listen<T>(ref: DocPredicate<T>): Observable<T> {
+    return this.doc<T>(ref).valueChanges();
   }
 
   private doesDocumentExist<T>(ref: DocPredicate<T>): Promise<boolean> {

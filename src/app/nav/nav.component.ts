@@ -42,7 +42,7 @@ export class NavComponent implements OnInit, OnDestroy {
         if (!uid) {
           return of(null);
         }
-        return this.userService.get(uid);
+        return this.userService.listen(uid);
       }),
       shareReplay(1),
     );
