@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { HomePageComponent } from './home-page.component';
 import {
-  MatButtonModule,
-  MatCardModule, MatDatepickerModule,
-  MatDialogModule, MatDividerModule,
-  MatFormFieldModule, MatIconModule,
-  MatInputModule, MatMenuModule, MatNativeDateModule,
-  MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule
+  MatButtonModule, MatCardModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatFormFieldModule,
+  MatGridListModule, MatIconModule, MatInputModule, MatMenuModule, MatNativeDateModule, MatSliderModule,
+  MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatGridList
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavModule } from '../nav/nav.module';
+import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     HomePageComponent
   ],
   imports: [
+    CommonModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
@@ -31,7 +32,10 @@ import { NavModule } from '../nav/nav.module';
     MatSnackBarModule,
     MatIconModule,
     MatMenuModule,
-    NavModule
+    NavModule,
+    MatGridListModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports: [
     HomePageComponent

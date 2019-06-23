@@ -1,3 +1,31 @@
 mat-card {
   border-radius: 0;
 }
+
+a {
+  color: #FFA500 !important;
+}
+
+a:hover {
+  color: #FF7900 !important;
+}
+
+.featured-and-for-sale {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .featured-woodburning {
+    padding-right: 40px;
+    width: 100%;
+  }
+  .latest-for-sale {
+    width: 100%;
+  }
+
+  .tile-image {
+    max-height: 500px;
+    max-width: 450px;
+  }
+}
+
