@@ -82,9 +82,7 @@ export class FirestoreService {
 
     const docReference = `${this.col(ref).ref.id}/${data.id}`;
     const addPromise = this.doesDocumentExist(docReference).then(doesExist => {
-      if (doesExist) {
-        console.log(`document ${docReference} already exists. Not creating a new one`);
-      } else {
+      if (!doesExist) {
         return this.setDocument(docReference, data);
       }
     });
