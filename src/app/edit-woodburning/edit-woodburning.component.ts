@@ -36,7 +36,7 @@ export class EditWoodburningComponent implements OnInit {
       'totalTimeTakenHours': [this.currentWoodburning.totalTimeTakenHours, Validators.required],
       'imageUrl': [this.currentWoodburning.imageUrl, Validators.required],
       'sharedOnline': [this.currentWoodburning.sharedOnline, Validators.required],
-      'isFeatured': [this.currentWoodburning.isFeatured || false, Validators.required],
+      'isFeatured': [this.currentWoodburning.isFeatured, Validators.required],
       'framed': [this.currentWoodburning.framed, Validators.required],
       'forSale': [this.currentWoodburning.forSale, Validators.required],
       'sellingPrice': [this.currentWoodburning.sellingPrice], // TODO: should only be required if for sale is true
