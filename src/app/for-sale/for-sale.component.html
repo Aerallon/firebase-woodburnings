@@ -17,15 +17,19 @@
         </div>
         <br/>
         <br/>
-        <mat-grid-list cols="4" rowHeight="400px" gutterSize="5px">
+        <mat-grid-list cols="4" rowHeight="400px" gutterSize="15px">
           <mat-grid-tile *ngFor="let woodburning of forSaleWoodburnings$ | async">
-              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+              <a href="{{woodburning.etsyListing}}" target="_blank">
+                  <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+              </a>
               <a href="{{woodburning.etsyListing}}" target="_blank">
                   <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
               </a>
-              <mat-grid-tile-footer>
-                  ${{woodburning.sellingPrice}} CAD
-              </mat-grid-tile-footer>
+              <a href="{{woodburning.etsyListing}}" target="_blank">
+                  <mat-grid-tile-footer>
+                    ${{woodburning.sellingPrice}} CAD - See Etsy Listing
+                  </mat-grid-tile-footer>
+              </a>
           </mat-grid-tile>
         </mat-grid-list>
     </mat-card-content>

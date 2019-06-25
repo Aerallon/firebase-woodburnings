@@ -13,22 +13,22 @@ Login Page:
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 51 53 PM" src="https://user-images.githubusercontent.com/20227727/59810611-5989ec80-92c3-11e9-8e52-755adb6d22c4.png">
 
 Home: 
-<img width="1428" alt="Screen Shot 2019-06-22 at 11 52 13 PM" src="https://user-images.githubusercontent.com/20227727/59972238-d2e64100-9548-11e9-8094-a9d21a2cbcc3.png">
+<img width="1424" alt="Screen Shot 2019-06-24 at 9 32 46 PM" src="https://user-images.githubusercontent.com/20227727/60067411-a147b400-96c7-11e9-8c35-2e9d054ea04b.png">
 
-For sale:
-<img width="1423" alt="Screen Shot 2019-06-21 at 5 27 42 PM" src="https://user-images.githubusercontent.com/20227727/59955868-f1b1de00-9449-11e9-89ea-f3712f8f4842.png">
+For Sale: 
+<img width="1423" alt="Screen Shot 2019-06-24 at 9 24 41 PM" src="https://user-images.githubusercontent.com/20227727/60067284-4c0ba280-96c7-11e9-9dc2-d17322e20d73.png">
 
 Gallery: 
-<img width="1424" alt="Screen Shot 2019-06-21 at 5 28 39 PM" src="https://user-images.githubusercontent.com/20227727/59955899-0a21f880-944a-11e9-8dfd-08372d089dd9.png">
+<img width="1424" alt="Screen Shot 2019-06-24 at 9 25 22 PM" src="https://user-images.githubusercontent.com/20227727/60067299-5463dd80-96c7-11e9-9858-0cc7861eacf1.png">
 
 Blog:
-<img width="1440" alt="Screen Shot 2019-06-19 at 6 42 32 PM" src="https://user-images.githubusercontent.com/20227727/59810339-05323d00-92c2-11e9-8d07-878f6c583f28.png">
+<img width="1439" alt="Screen Shot 2019-06-24 at 9 25 29 PM" src="https://user-images.githubusercontent.com/20227727/60067308-588ffb00-96c7-11e9-971a-55f592464d76.png">
 
 About:
-<img width="1424" alt="Screen Shot 2019-06-22 at 10 17 40 PM" src="https://user-images.githubusercontent.com/20227727/59971572-bf80a900-953b-11e9-982e-2d1a7c4217ec.png">
+<img width="1424" alt="Screen Shot 2019-06-24 at 9 32 14 PM" src="https://user-images.githubusercontent.com/20227727/60067391-8f661100-96c7-11e9-9144-bdc79f179af5.png">
 
 Contact:
-<img width="1440" alt="Screen Shot 2019-06-22 at 10 19 44 PM" src="https://user-images.githubusercontent.com/20227727/59971577-dd4e0e00-953b-11e9-9175-087d98920725.png">
+<img width="1440" alt="Screen Shot 2019-06-24 at 9 25 40 PM" src="https://user-images.githubusercontent.com/20227727/60067314-5c238200-96c7-11e9-902e-167493276f85.png">
 
 Admin:
 Not Logged In and on Admin Home page:
