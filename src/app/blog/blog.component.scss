@@ -1,3 +1,10 @@
 mat-card {
   border-radius: 0;
 }
+
+.in-progress-buddy {
+  flex-direction: row;
+  .img {
+    padding: 5px;
+  }
+}
