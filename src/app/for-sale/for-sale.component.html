@@ -17,7 +17,7 @@
         </div>
         <br/>
         <br/>
-        <mat-grid-list cols="4" rowHeight="400px" gutterSize="5px">
+        <mat-grid-list cols="4" rowHeight="400px" gutterSize="15px">
           <mat-grid-tile *ngFor="let woodburning of forSaleWoodburnings$ | async">
               <a href="{{woodburning.etsyListing}}" target="_blank">
                   <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>

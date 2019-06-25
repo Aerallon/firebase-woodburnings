@@ -10,7 +10,7 @@
         alphabetically by title.
         <br/>
         <br/>
-        <mat-grid-list cols="4" rowHeight="400px" gutterSize="5px">
+        <mat-grid-list cols="4" rowHeight="400px" gutterSize="15px">
           <mat-grid-tile *ngFor="let woodburning of allWoodburnings$ | async">
               <div *ngIf="woodburning.forSale">
                   <div *ngIf="!woodburning.sold">
