@@ -12,21 +12,37 @@
         <br/>
         <mat-grid-list cols="4" rowHeight="400px" gutterSize="5px">
           <mat-grid-tile *ngFor="let woodburning of allWoodburnings$ | async">
-              <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
-              <div *ngIf="woodburning.etsyListing">
-                  <a href="{{woodburning.etsyListing}}" target="_blank">
-                      <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
-                  </a>
+              <div *ngIf="woodburning.forSale">
+                  <div *ngIf="!woodburning.sold">
+                      <a href="{{woodburning.etsyListing}}" target="_blank">
+                        <mat-grid-tile-header>{{woodburning.title}}</mat-grid-tile-header>
+                      </a>
+                      <a href="{{woodburning.etsyListing}}" target="_blank">
+                          <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image">
+                      </a>
+                      <a href="{{woodburning.etsyListing}}" target="_blank">
+                          <mat-grid-tile-footer *ngIf="woodburning.forSale && !woodburning.sold">
+                            <span *ngIf="woodburning.forSale">$</span>{{woodburning.sellingPrice}} CAD - See Etsy Listing
+                          </mat-grid-tile-footer>
+                      </a>
+                  </div>
+                  <div *ngIf="woodburning.sold">
+                      <mat-grid-tile-header (click)="openPreviewDialog(woodburning)">{{woodburning.title}}</mat-grid-tile-header>
+                      <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image"
+                       (click)="openPreviewDialog(woodburning)">
+                      <mat-grid-tile-footer (click)="openPreviewDialog(woodburning)">Sold</mat-grid-tile-footer>
+                  </div>
               </div>
-              <div *ngIf="!woodburning.etsyListing">
+              <div *ngIf="!woodburning.forSale">
+                  <mat-grid-tile-header (click)="openPreviewDialog(woodburning)">
+                      {{woodburning.title}}
+                  </mat-grid-tile-header>
                   <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="tile-image"
                        (click)="openPreviewDialog(woodburning)">
+                  <mat-grid-tile-footer *ngIf="!woodburning.forSale" (click)="openPreviewDialog(woodburning)">
+                      Not For Sale
+                  </mat-grid-tile-footer>
               </div>
-              <mat-grid-tile-footer *ngIf="woodburning.forSale && woodburning.sold">Sold</mat-grid-tile-footer>
-              <mat-grid-tile-footer *ngIf="woodburning.forSale && !woodburning.sold">
-                  <span *ngIf="woodburning.forSale">$</span>{{woodburning.sellingPrice}} CAD
-              </mat-grid-tile-footer>
-              <mat-grid-tile-footer *ngIf="!woodburning.forSale">Not For Sale</mat-grid-tile-footer>
           </mat-grid-tile>
         </mat-grid-list>
     </mat-card-content>
