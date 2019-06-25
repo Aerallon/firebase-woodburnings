@@ -1831,10 +1831,7 @@ var FirestoreService = (function () {
         }
         var docReference = this.col(ref).ref.id + "/" + data.id;
         var addPromise = this.doesDocumentExist(docReference).then(function (doesExist) {
-            if (doesExist) {
-                console.log("document " + docReference + " already exists. Not creating a new one");
-            }
-            else {
+            if (!doesExist) {
                 return _this.setDocument(docReference, data);
             }
         });

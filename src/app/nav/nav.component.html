@@ -24,6 +24,10 @@
                   <mat-icon>lock</mat-icon> Admin<span class="caret"></span>
                 </a>
                 <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="admin-home"
+                     [routerLinkActive]="['active']">
+                      <mat-icon>home</mat-icon> Admin Home
+                  </a>
                   <a class="dropdown-item waves-light" mdbWavesEffect routerLink="admin-woodburnings"
                      [routerLinkActive]="['active']">
                       <mat-icon>work</mat-icon> Manage Woodburnings
@@ -37,26 +41,28 @@
                   <a class="dropdown-item waves-light" mdbWavesEffect routerLink="admin-materials" [routerLinkActive]="['active']">
                       <mat-icon>web_asset</mat-icon> Manage Material
                   </a>
-                </div>
-            </li>
-
-            <li class="nav-item" *ngIf="!(isLoggedIn$ | async)" [routerLinkActive]="['active']">
-                <a class="nav-link waves-light" mdbWavesEffect (click)="openLoginDialog()">Login</a>
-            </li>
-            <li class="nav-item dropdown" dropdown *ngIf="(isLoggedIn$ | async)">
-                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
-                  <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>
-                </a>
-                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-                  <a class="dropdown-item waves-light" mdbWavesEffect
-                     (click)="openEditUserProfileDialog()">
-                      <mat-icon>face</mat-icon> My account
-                  </a>
                   <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">
                       <mat-icon>exit_to_app</mat-icon> Log out
                   </a>
                 </div>
             </li>
+<!--            <li class="nav-item" *ngIf="!(isLoggedIn$ | async)" [routerLinkActive]="['active']">-->
+<!--                <a class="nav-link waves-light" mdbWavesEffect (click)="openLoginDialog()">Login</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown" dropdown *ngIf="(isLoggedIn$ | async)">-->
+<!--                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">-->
+<!--                  <mat-icon>account_circle</mat-icon> Profile<span class="caret"></span>-->
+<!--                </a>-->
+<!--                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">-->
+<!--                  <a class="dropdown-item waves-light" mdbWavesEffect-->
+<!--                     (click)="openEditUserProfileDialog()">-->
+<!--                      <mat-icon>face</mat-icon> My account-->
+<!--                  </a>-->
+<!--                  <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">-->
+<!--                      <mat-icon>exit_to_app</mat-icon> Log out-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--            </li>-->
         </ul>
     </links>
 </mdb-navbar>
