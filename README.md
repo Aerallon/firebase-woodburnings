@@ -31,6 +31,15 @@ Contact:
 <img width="1440" alt="Screen Shot 2019-06-22 at 10 19 44 PM" src="https://user-images.githubusercontent.com/20227727/59971577-dd4e0e00-953b-11e9-9175-087d98920725.png">
 
 Admin:
+Not Logged In and on Admin Home page:
+<img width="1440" alt="Screen Shot 2019-06-24 at 6 36 37 PM" src="https://user-images.githubusercontent.com/20227727/60060715-40ac7d00-96af-11e9-90c8-0c7bcb0f7b29.png">
+
+Logged in and is an Admin and on Admin Home page:
+<img width="1440" alt="Screen Shot 2019-06-24 at 6 36 57 PM" src="https://user-images.githubusercontent.com/20227727/60060898-0becf580-96b0-11e9-82bd-2e7e339573b5.png">
+
+Logged in and not an admin and on Admin Home page:
+<img width="1440" alt="Screen Shot 2019-06-24 at 6 37 29 PM" src="https://user-images.githubusercontent.com/20227727/60060719-41451380-96af-11e9-853f-47e4d348f4f9.png">
+
 Manage Woodburnings:
 <img width="1425" alt="Screen Shot 2019-06-22 at 2 11 50 PM" src="https://user-images.githubusercontent.com/20227727/59968481-bbcb3300-94f7-11e9-8e3c-e512de6da81a.png">
 
@@ -43,6 +52,6 @@ Manage Materials:
 Manage Map Locations:
 <img width="1439" alt="Screen Shot 2019-06-22 at 1 57 56 PM" src="https://user-images.githubusercontent.com/20227727/59968361-eb793b80-94f5-11e9-9fe3-0a5a2b6f3cfb.png">
 
-Profile:
+Profile (not visible atm):
 <img width="1440" alt="Screen Shot 2019-06-19 at 6 43 37 PM" src="https://user-images.githubusercontent.com/20227727/59810377-327eeb00-92c2-11e9-9604-2b9054a69c42.png">
 <img width="527" alt="Screen Shot 2019-06-19 at 6 43 47 PM" src="https://user-images.githubusercontent.com/20227727/59810378-327eeb00-92c2-11e9-888c-c69c41818098.png">
