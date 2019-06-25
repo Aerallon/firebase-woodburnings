@@ -432,6 +432,115 @@ var AdminBlogsComponent = (function () {
 
 /***/ }),
 
+/***/ "./src/app/admin/admin-home/admin-home.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/admin/admin-home/admin-home.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card class=\"page\">\n    <mat-card-header>\n        <div class=\"ppd-logo\"><img src=\"/assets/images/ppd-logo.jpg\" height=\"75\" width=\"75\"\n                                   alt=\"Prairie Pyro Designs\"></div>\n        <div class=\"ppd-title\">Prairie Pyro Designs Admin</div>\n    </mat-card-header>\n\n    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->\n    <mat-card-content class=\"page-content\" *ngIf=\"!isLoggedIn\">\n        <div class=\"not-logged-in\">\n            <div>\n                In order to access the admin portal, you must be logged in and an admin. Please log in to continue.\n            </div>\n            <div class=\"buttons\">\n                <!-- Have a nextUrl be in login so after logging in, I'm brought back to /admin-home, currently\n                updated the handleLogin function in LoginComponent to go back to /admin-home.\n                 -->\n                <button mat-raised-button class=\"submitButton\" (click)=\"openLoginDialog()\">Login</button>\n            </div>\n        </div>\n    </mat-card-content>\n\n    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->\n    <mat-card-content class=\"page-content\" *ngIf=\"!isAdmin && isLoggedIn\">\n        <div class=\"not-logged-in\">\n            <div>\n                Oops! It doesn't appear that you are an admin of this site! If this is a mistake, please reach out to\n                Prairie Pyro Designs.\n            </div>\n            <div class=\"buttons\">\n                <button mat-raised-button class=\"submitButton\">\n                    <a routerLink=\"/contact\" (click)=\"logout()\">Contact Prairie Pyro Designs</a>\n                </button>\n            </div>\n        </div>\n    </mat-card-content>\n\n    <mat-card-content class=\"page-content\" *ngIf=\"isAdmin$ | async\">\n        <div>Welcome back {{currentUser.firstName}}! What would you like to do today?</div>\n        <div class=\"buttons\">\n            <button mat-raised-button class=\"submitButton\">\n                <a routerLink=\"/admin-woodburnings\">Manage Woodburnings</a>\n            </button>\n            <button mat-raised-button class=\"submitButton\">\n                <a routerLink=\"/admin-map-locations\">Manage Map Locations</a>\n            </button>\n            <button mat-raised-button class=\"submitButton\">\n                <a routerLink=\"/admin-materials\">Manage Materials</a>\n            </button>\n            <button mat-raised-button class=\"submitButton\">\n                <a routerLink=\"/admin-blogs\">Manage Blogs</a>\n            </button>\n        </div>\n        <div>-- OR --</div><br/>\n        <div>Are you done for the day?</div>\n        <div class=\"buttons\">\n            <button mat-raised-button class=\"submitButton\" (click)=\"logout()\">Logout</button>\n        </div>\n    </mat-card-content>\n</mat-card>"
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-home/admin-home.component.scss":
+/*!************************************************************!*\
+  !*** ./src/app/admin/admin-home/admin-home.component.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-card-header {\n  flex-direction: column;\n  text-align: center; }\n\n.page-content {\n  text-align: center;\n  flex-direction: row; }\n\na {\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zbWVsbnlrL1BlcnNvbmFsIFByb2plY3RzL2ZpcmViYXNlLXdvb2RidXJuaW5ncy9zcmMvYXBwL2FkbWluL2FkbWluLWhvbWUvYWRtaW4taG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtFQUN0QixrQkFBa0IsRUFBQTs7QUFHcEI7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CLEVBQUE7O0FBR3JCO0VBQ0UsWUFBWSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYWRtaW4vYWRtaW4taG9tZS9hZG1pbi1ob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWNhcmQtaGVhZGVyIHtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ucGFnZS1jb250ZW50IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xufVxuXG5hIHtcbiAgY29sb3I6IHdoaXRlO1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/admin-home/admin-home.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/admin/admin-home/admin-home.component.ts ***!
+  \**********************************************************/
+/*! exports provided: AdminHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminHomeComponent", function() { return AdminHomeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/auth.service */ "./src/app/core/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../user.service */ "./src/app/user.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var AdminHomeComponent = (function () {
+    function AdminHomeComponent(authService, router, dialog, userService) {
+        this.authService = authService;
+        this.router = router;
+        this.dialog = dialog;
+        this.userService = userService;
+        this.subscriptions = [];
+    }
+    AdminHomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.isLoggedIn$ = this.authService.isLoggedIn;
+        this.subscriptions.push(this.isLoggedIn$.subscribe(function (loggedIn) { _this.isLoggedIn = loggedIn; }));
+        this.currentUser$ = this.authService.userId.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (uid) {
+            if (!uid) {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(null);
+            }
+            return _this.userService.listen(uid);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])(1));
+        this.subscriptions.push(this.currentUser$.subscribe(function (user) { _this.currentUser = user; }));
+        this.isAdmin$ = this.currentUser$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (user) { return user && user.isAdmin; }));
+        this.subscriptions.push(this.isAdmin$.subscribe(function (isAdmin) { _this.isAdmin = isAdmin; }));
+    };
+    AdminHomeComponent.prototype.openLoginDialog = function () {
+        this.loginDialogRef = this.dialog.open(_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"], { width: '400px' });
+    };
+    AdminHomeComponent.prototype.logout = function () {
+        this.authService.logout();
+        this.router.navigate(['/home']);
+    };
+    AdminHomeComponent.prototype.ngOnDestroy = function () {
+        this.subscriptions.forEach(function (subscription) {
+            subscription.unsubscribe();
+        });
+    };
+    AdminHomeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./admin-home.component.html */ "./src/app/admin/admin-home/admin-home.component.html"),
+            selector: 'admin-home',
+            styles: [__webpack_require__(/*! ./admin-home.component.scss */ "./src/app/admin/admin-home/admin-home.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_core_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
+            _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]])
+    ], AdminHomeComponent);
+    return AdminHomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/admin-map-locations/admin-map-locations.component.html":
 /*!******************************************************************************!*\
   !*** ./src/app/admin/admin-map-locations/admin-map-locations.component.html ***!
@@ -1082,12 +1191,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_admin_blogs_admin_blogs_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin/admin-blogs/admin-blogs.component */ "./src/app/admin/admin-blogs/admin-blogs.component.ts");
 /* harmony import */ var _admin_admin_map_locations_admin_map_locations_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/admin-map-locations/admin-map-locations.component */ "./src/app/admin/admin-map-locations/admin-map-locations.component.ts");
 /* harmony import */ var _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin/admin-materials/admin-materials.component */ "./src/app/admin/admin-materials/admin-materials.component.ts");
+/* harmony import */ var _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/admin-home/admin-home.component */ "./src/app/admin/admin-home/admin-home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1125,6 +1236,10 @@ var routes = [
     {
         path: 'contact',
         component: _contact_me_contact_me_component__WEBPACK_IMPORTED_MODULE_6__["ContactMeComponent"]
+    },
+    {
+        path: 'admin-home',
+        component: _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_13__["AdminHomeComponent"],
     },
     {
         path: 'admin-woodburnings',
@@ -1283,6 +1398,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_admin_blogs_admin_blogs_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./admin/admin-blogs/admin-blogs.component */ "./src/app/admin/admin-blogs/admin-blogs.component.ts");
 /* harmony import */ var _admin_admin_map_locations_admin_map_locations_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/admin-map-locations/admin-map-locations.component */ "./src/app/admin/admin-map-locations/admin-map-locations.component.ts");
 /* harmony import */ var _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin/admin-materials/admin-materials.component */ "./src/app/admin/admin-materials/admin-materials.component.ts");
+/* harmony import */ var _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/admin-home/admin-home.component */ "./src/app/admin/admin-home/admin-home.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1291,6 +1408,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 var firebaseConfig = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].firebaseConfig;
+
+
 
 
 
@@ -1347,8 +1466,10 @@ var AppModule = (function () {
                 _admin_admin_blogs_admin_blogs_component__WEBPACK_IMPORTED_MODULE_31__["AdminBlogsComponent"],
                 _admin_admin_map_locations_admin_map_locations_component__WEBPACK_IMPORTED_MODULE_32__["AdminMapLocationsComponent"],
                 _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_33__["AdminMaterialsComponent"],
+                _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_34__["AdminHomeComponent"],
             ],
             imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_35__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
                 angularfire2__WEBPACK_IMPORTED_MODULE_1__["AngularFireModule"].initializeApp(firebaseConfig),
                 angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestoreModule"],
@@ -1400,6 +1521,7 @@ var AppModule = (function () {
                 _admin_admin_blogs_admin_blogs_component__WEBPACK_IMPORTED_MODULE_31__["AdminBlogsComponent"],
                 _admin_admin_map_locations_admin_map_locations_component__WEBPACK_IMPORTED_MODULE_32__["AdminMapLocationsComponent"],
                 _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_33__["AdminMaterialsComponent"],
+                _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_34__["AdminHomeComponent"],
             ],
             entryComponents: [
                 _admin_create_woodburning_create_woodburning_component__WEBPACK_IMPORTED_MODULE_8__["CreateWoodburningComponent"],
@@ -1417,6 +1539,7 @@ var AppModule = (function () {
                 _admin_admin_blogs_admin_blogs_component__WEBPACK_IMPORTED_MODULE_31__["AdminBlogsComponent"],
                 _admin_admin_map_locations_admin_map_locations_component__WEBPACK_IMPORTED_MODULE_32__["AdminMapLocationsComponent"],
                 _admin_admin_materials_admin_materials_component__WEBPACK_IMPORTED_MODULE_33__["AdminMaterialsComponent"],
+                _admin_admin_home_admin_home_component__WEBPACK_IMPORTED_MODULE_34__["AdminHomeComponent"],
             ]
         })
     ], AppModule);
@@ -2316,7 +2439,7 @@ var LoginComponent = (function () {
         });
     };
     LoginComponent.prototype.handleLogin = function () {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/admin-home']);
     };
     LoginComponent.prototype.ngOnDestroy = function () {
         this.subscriptions.forEach(function (subscription) {
@@ -2348,7 +2471,7 @@ var LoginComponent = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark red darken-4\" [containerInside]=\"false\">\n    <links>\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"home\">Home</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"for-sale\">For Sale</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"gallery\">Gallery</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"blog\">Blog</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"about-me\" >About</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"contact\">Contact</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"isAdmin$ | async\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>lock</mat-icon> Admin<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-woodburnings\"\n                     [routerLinkActive]=\"['active']\">\n                      <mat-icon>work</mat-icon> Manage Woodburnings\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-map-locations\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>place</mat-icon> Manage Map Locations\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-blogs\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>assignment</mat-icon> Manage Blogs\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-materials\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>web_asset</mat-icon> Manage Material\n                  </a>\n                </div>\n            </li>\n\n            <li class=\"nav-item\" *ngIf=\"!(isLoggedIn$ | async)\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"openLoginDialog()\">Login</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"(isLoggedIn$ | async)\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>account_circle</mat-icon> Profile<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect\n                     (click)=\"openEditUserProfileDialog()\">\n                      <mat-icon>face</mat-icon> My account\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect (click)=\"logout()\">\n                      <mat-icon>exit_to_app</mat-icon> Log out\n                  </a>\n                </div>\n            </li>\n        </ul>\n    </links>\n</mdb-navbar>\n<ng-content></ng-content>\n<mat-card-footer class=\"footer\">\n    <div>Copyright<mat-icon class=\"copyright-icon\">copyright</mat-icon> 2019 - Prairie Pyro Designs</div>\n</mat-card-footer>"
+module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark red darken-4\" [containerInside]=\"false\">\n    <links>\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"home\">Home</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"for-sale\">For Sale</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"gallery\">Gallery</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"blog\">Blog</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"about-me\" >About</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link waves-light\" mdbWavesEffect routerLink=\"contact\">Contact</a>\n            </li>\n            <li class=\"nav-item dropdown\" dropdown *ngIf=\"isAdmin$ | async\">\n                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">\n                  <mat-icon>lock</mat-icon> Admin<span class=\"caret\"></span>\n                </a>\n                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-home\"\n                     [routerLinkActive]=\"['active']\">\n                      <mat-icon>home</mat-icon> Admin Home\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-woodburnings\"\n                     [routerLinkActive]=\"['active']\">\n                      <mat-icon>work</mat-icon> Manage Woodburnings\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-map-locations\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>place</mat-icon> Manage Map Locations\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-blogs\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>assignment</mat-icon> Manage Blogs\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"admin-materials\" [routerLinkActive]=\"['active']\">\n                      <mat-icon>web_asset</mat-icon> Manage Material\n                  </a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect (click)=\"logout()\">\n                      <mat-icon>exit_to_app</mat-icon> Log out\n                  </a>\n                </div>\n            </li>\n<!--            TODO: Bring this back once I have a use for it -->\n<!--            <li class=\"nav-item\" *ngIf=\"!(isLoggedIn$ | async)\" [routerLinkActive]=\"['active']\">-->\n<!--                <a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"openLoginDialog()\">Login</a>-->\n<!--            </li>-->\n<!--            <li class=\"nav-item dropdown\" dropdown *ngIf=\"(isLoggedIn$ | async)\">-->\n<!--                <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\">-->\n<!--                  <mat-icon>account_circle</mat-icon> Profile<span class=\"caret\"></span>-->\n<!--                </a>-->\n<!--                <div *dropdownMenu class=\"dropdown-menu dropdown-menu-right dropdown dropdown-primary\" role=\"menu\">-->\n<!--                  <a class=\"dropdown-item waves-light\" mdbWavesEffect-->\n<!--                     (click)=\"openEditUserProfileDialog()\">-->\n<!--                      <mat-icon>face</mat-icon> My account-->\n<!--                  </a>-->\n<!--                  <a class=\"dropdown-item waves-light\" mdbWavesEffect (click)=\"logout()\">-->\n<!--                      <mat-icon>exit_to_app</mat-icon> Log out-->\n<!--                  </a>-->\n<!--                </div>-->\n<!--            </li>-->\n        </ul>\n    </links>\n</mdb-navbar>\n<ng-content></ng-content>\n<mat-card-footer class=\"footer\">\n    <div>Copyright<mat-icon class=\"copyright-icon\">copyright</mat-icon> 2019 - Prairie Pyro Designs</div>\n</mat-card-footer>"
 
 /***/ }),
 
