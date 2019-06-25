@@ -1,5 +1,5 @@
 <mat-dialog-content class="preview-dialog">
-    <mat-card-title>Previewing <strong>{{woodburning.title}}</strong></mat-card-title>
+    <mat-card-title><strong>{{woodburning.title}}</strong> Details</mat-card-title>
     <mat-card-content class="preview-dialog-body">
         <div>
             <img src="{{woodburning.imageUrl}}" alt="{{woodburning.title}}" class="woodburning-image">
@@ -12,19 +12,27 @@
             <div><strong>Total Time Taken (Hours)</strong>: {{woodburning.totalTimeTakenHours}}</div>
         </div>
         <div class="woodburning-additional-data">
-            <!-- TODO: Since preview is used elsewhere, only show some of these if an Admin? -->
-            <div><strong>Shared Online?</strong> {{woodburning.sharedOnline}}</div>
-            <div><strong>Is Featured?</strong> {{woodburning.isFeatured}}</div>
-            <div><strong>Framed?</strong> {{woodburning.framed}}</div>
-            <div><strong>For Sale?</strong> {{woodburning.forSale}}</div>
-            <div *ngIf="woodburning.forSale">
-                <strong>Selling Price:</strong> ${{woodburning.sellingPrice}}
+            <div *ngIf="woodburning.sharedOnline"><strong>Shared on Social Sites?</strong>
+                Yes</div>
+            <div *ngIf="!woodburning.sharedOnline"><strong>Shared on Social Sites?</strong>
+                No</div>
+
+            <div *ngIf="woodburning.isFeatured"><strong>Featured?</strong> Yes</div>
+            <div *ngIf="woodburning.framed"><strong>Framed?</strong> Yes</div>
+
+            <div *ngIf="woodburning.forSale && !woodburning.sold"><strong>For Sale?</strong> Yes</div>
+            <div *ngIf="woodburning.forSale && woodburning.sold"><strong>For Sale?</strong> It was!</div>
+            <div *ngIf="!woodburning.forSale"><strong>For Sale?</strong> No</div>
+
+            <div *ngIf="woodburning.forSale && woodburning.sold"><strong>Sold?</strong> Yes</div>
+
+            <div *ngIf="woodburning.forSale && !woodburning.sold">
+                <strong>Price:</strong> ${{woodburning.sellingPrice}}
             </div>
             <div *ngIf="woodburning.forSale">
                 <strong>Etsy Listing:</strong>
-                <a href="{{woodburning.etsyListing}}" target="_blank"> {{woodburning.etsyListing}}</a>
+                <a href="{{woodburning.etsyListing}}" target="_blank"> See Etsy Listing</a>
             </div>
-            <div *ngIf="woodburning.forSale"><strong>Sold:</strong> {{woodburning.sold}}</div>
         </div>
     </mat-card-content>
     <mat-card-content>
