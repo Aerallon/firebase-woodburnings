@@ -59,7 +59,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   handleLogin(): void {
-    this.router.navigate(['/home']);
+    // TODO: This will need to take in a next url to know which page to send the user to after logging in
+    this.router.navigate(['/admin-home']);
   }
 
   ngOnDestroy(): void {
