@@ -17,13 +17,11 @@ import { UserService } from '../../user.service';
 export class AdminHomeComponent implements OnInit, OnDestroy {
 
   isLoggedIn$: Observable<boolean>;
-  isLoggedIn: Boolean;
 
   currentUser$: Observable<AppUser>;
   currentUser: AppUser;
 
   isAdmin$: Observable<boolean>;
-  isAdmin: boolean;
 
   loginDialogRef: MatDialogRef<LoginComponent>;
 
@@ -38,7 +36,6 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.isLoggedIn$ = this.authService.isLoggedIn;
-    this.subscriptions.push(this.isLoggedIn$.subscribe(loggedIn => {this.isLoggedIn = loggedIn;}));
 
     this.currentUser$ = this.authService.userId.pipe(
       switchMap(uid => {
@@ -52,7 +49,6 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.currentUser$.subscribe(user => {this.currentUser = user;}));
 
     this.isAdmin$ = this.currentUser$.pipe(map(user => user && user.isAdmin));
-    this.subscriptions.push(this.isAdmin$.subscribe(isAdmin => {this.isAdmin = isAdmin;}));
   }
 
   public openLoginDialog(): void {

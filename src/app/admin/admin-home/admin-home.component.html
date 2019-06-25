@@ -5,8 +5,7 @@
         <div class="ppd-title">Prairie Pyro Designs Admin</div>
     </mat-card-header>
 
-    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->
-    <mat-card-content class="page-content" *ngIf="!isLoggedIn">
+    <mat-card-content class="page-content" *ngIf="!(isLoggedIn$ | async) && !(isAdmin$ | async)">
         <div class="not-logged-in">
             <div>
                 In order to access the admin portal, you must be logged in and an admin. Please log in to continue.
@@ -20,8 +19,7 @@
         </div>
     </mat-card-content>
 
-    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->
-    <mat-card-content class="page-content" *ngIf="!isAdmin && isLoggedIn">
+    <mat-card-content class="page-content" *ngIf="(isLoggedIn$ | async) && !(isAdmin$ | async)">
         <div class="not-logged-in">
             <div>
                 Oops! It doesn't appear that you are an admin of this site! If this is a mistake, please reach out to
