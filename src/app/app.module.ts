@@ -39,6 +39,8 @@ import { BlogComponent } from './blog/blog.component';
 import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
 import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-map-locations.component';
 import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -60,8 +62,10 @@ import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials
     AdminBlogsComponent,
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
+    AdminHomeComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
@@ -113,6 +117,7 @@ import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials
     AdminBlogsComponent,
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
+    AdminHomeComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -130,6 +135,7 @@ import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials
     AdminBlogsComponent,
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
+    AdminHomeComponent,
   ]
 })
 export class AppModule { }

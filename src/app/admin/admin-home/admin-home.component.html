@@ -1,0 +1,60 @@
+<mat-card class="page">
+    <mat-card-header>
+        <div class="ppd-logo"><img src="/assets/images/ppd-logo.jpg" height="75" width="75"
+                                   alt="Prairie Pyro Designs"></div>
+        <div class="ppd-title">Prairie Pyro Designs Admin</div>
+    </mat-card-header>
+
+    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->
+    <mat-card-content class="page-content" *ngIf="!isLoggedIn">
+        <div class="not-logged-in">
+            <div>
+                In order to access the admin portal, you must be logged in and an admin. Please log in to continue.
+            </div>
+            <div class="buttons">
+                <!-- Have a nextUrl be in login so after logging in, I'm brought back to /admin-home, currently
+                updated the handleLogin function in LoginComponent to go back to /admin-home.
+                 -->
+                <button mat-raised-button class="submitButton" (click)="openLoginDialog()">Login</button>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <!-- TODO: Make this be an async call somehow so the screen doesn't flash when logged in -->
+    <mat-card-content class="page-content" *ngIf="!isAdmin && isLoggedIn">
+        <div class="not-logged-in">
+            <div>
+                Oops! It doesn't appear that you are an admin of this site! If this is a mistake, please reach out to
+                Prairie Pyro Designs.
+            </div>
+            <div class="buttons">
+                <button mat-raised-button class="submitButton">
+                    <a routerLink="/contact" (click)="logout()">Contact Prairie Pyro Designs</a>
+                </button>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-content class="page-content" *ngIf="isAdmin$ | async">
+        <div>Welcome back {{currentUser.firstName}}! What would you like to do today?</div>
+        <div class="buttons">
+            <button mat-raised-button class="submitButton">
+                <a routerLink="/admin-woodburnings">Manage Woodburnings</a>
+            </button>
+            <button mat-raised-button class="submitButton">
+                <a routerLink="/admin-map-locations">Manage Map Locations</a>
+            </button>
+            <button mat-raised-button class="submitButton">
+                <a routerLink="/admin-materials">Manage Materials</a>
+            </button>
+            <button mat-raised-button class="submitButton">
+                <a routerLink="/admin-blogs">Manage Blogs</a>
+            </button>
+        </div>
+        <div>-- OR --</div><br/>
+        <div>Are you done for the day?</div>
+        <div class="buttons">
+            <button mat-raised-button class="submitButton" (click)="logout()">Logout</button>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -11,6 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
 import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-map-locations.component';
 import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 export const routes: Routes = [
   {
@@ -36,6 +37,10 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactMeComponent
+  },
+  {
+    path: 'admin-home',
+    component: AdminHomeComponent,
   },
   {
     path: 'admin-woodburnings',
