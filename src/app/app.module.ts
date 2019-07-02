@@ -44,6 +44,7 @@ import { CommonModule } from '@angular/common';
 import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-location/add-map-location.component';
 import { ListMapLocationsComponent } from './admin/admin-map-locations/list-map-locations/list-map-locations.component';
 import { DeleteMapLocationComponent } from './admin/admin-map-locations/delete-map-location/delete-map-location.component';
+import { UpdateMapLocationComponent } from './admin/admin-map-locations/update-map-location/update-map-location.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { DeleteMapLocationComponent } from './admin/admin-map-locations/delete-m
     AddMapLocationsComponent,
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
+    UpdateMapLocationComponent,
   ],
   imports: [
     CommonModule,
@@ -127,6 +129,7 @@ import { DeleteMapLocationComponent } from './admin/admin-map-locations/delete-m
     AddMapLocationsComponent,
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
+    UpdateMapLocationComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -148,6 +151,7 @@ import { DeleteMapLocationComponent } from './admin/admin-map-locations/delete-m
     AddMapLocationsComponent,
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
+    UpdateMapLocationComponent,
   ]
 })
 export class AppModule { }

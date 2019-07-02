@@ -4,6 +4,7 @@ import { MapLocationDetails } from '../../../interfaces';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { MapLocationService } from '../map-location.service';
 import { DeleteMapLocationComponent } from '../delete-map-location/delete-map-location.component';
+import { UpdateMapLocationComponent } from '../update-map-location/update-map-location.component';
 
 @Component({
     templateUrl: './list-map-locations.component.html',
@@ -15,7 +16,7 @@ export class ListMapLocationsComponent implements OnInit {
 
   public allLocations$: Observable<MapLocationDetails[]>;
   deleteMapLocationDialogRef: MatDialogRef<DeleteMapLocationComponent>;
-  // updateMapLocationDialogRef: MatDialogRef<UpdateMapLocationComponent>;
+  updateMapLocationDialogRef: MatDialogRef<UpdateMapLocationComponent>;
 
   displayedColumns = ['city', 'state', 'country', 'menu'];
 
@@ -29,8 +30,8 @@ export class ListMapLocationsComponent implements OnInit {
   }
 
   openUpdateMapLocationDialog(location: MapLocationDetails): void {
-    // this.updateMapLocationDialogRef = this.dialog.open(UpdateMapLocationComponent, { width: '500px' });
-    // this.updateMapLocationDialogRef.componentInstance.location = location;
+    this.updateMapLocationDialogRef = this.dialog.open(UpdateMapLocationComponent, { width: '500px' });
+    this.updateMapLocationDialogRef.componentInstance.location = location;
   }
 
   openDeleteDialog(location: MapLocationDetails): void {
