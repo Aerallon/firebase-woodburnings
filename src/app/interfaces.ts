@@ -28,3 +28,10 @@ export interface AppUser {
   isDeleted: boolean;
   isAdmin: boolean;
 }
+
+export interface MapLocationDetails {
+  id: string;
+  city: string;
+  state: string;
+  country: string;
+}

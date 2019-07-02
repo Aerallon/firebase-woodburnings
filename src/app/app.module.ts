@@ -8,10 +8,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminWoodburningsComponent } from './admin/admin-woodburnings/admin-woodburnings.component';
-import { CreateWoodburningComponent } from './admin/create-woodburning/create-woodburning.component';
-import { EditWoodburningComponent } from './admin/edit-woodburning/edit-woodburning.component';
-import { ListWoodburningsComponent } from './admin/list-woodburnings/list-woodburnings.component';
-import { DeleteWoodburningComponent } from './admin/delete-woodburning/delete-woodburning.component';
+import { CreateWoodburningComponent } from './admin/admin-woodburnings/create-woodburning/create-woodburning.component';
+import { EditWoodburningComponent } from './admin/admin-woodburnings/edit-woodburning/edit-woodburning.component';
+import { ListWoodburningsComponent } from './admin/admin-woodburnings/list-woodburnings/list-woodburnings.component';
+import { DeleteWoodburningComponent } from './admin/admin-woodburnings/delete-woodburning/delete-woodburning.component';
 import { PreviewWoodburningComponent } from './preview-woodburning/preview-woodburning.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { WoodburningStoreService } from './woodburning-store.service';
@@ -41,6 +41,7 @@ import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-ma
 import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { CommonModule } from '@angular/common';
+import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-location/add-map-location.component';
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { CommonModule } from '@angular/common';
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
     AdminHomeComponent,
+    AddMapLocationsComponent,
   ],
   imports: [
     CommonModule,
@@ -118,6 +120,7 @@ import { CommonModule } from '@angular/common';
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
     AdminHomeComponent,
+    AddMapLocationsComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -136,6 +139,7 @@ import { CommonModule } from '@angular/common';
     AdminMapLocationsComponent,
     AdminMaterialsComponent,
     AdminHomeComponent,
+    AddMapLocationsComponent,
   ]
 })
 export class AppModule { }
