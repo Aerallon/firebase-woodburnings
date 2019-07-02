@@ -42,6 +42,7 @@ import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { CommonModule } from '@angular/common';
 import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-location/add-map-location.component';
+import { ListMapLocationsComponent } from './admin/admin-map-locations/list-map-locations/list-map-locations.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-lo
     AdminMaterialsComponent,
     AdminHomeComponent,
     AddMapLocationsComponent,
+    ListMapLocationsComponent,
   ],
   imports: [
     CommonModule,
@@ -121,6 +123,7 @@ import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-lo
     AdminMaterialsComponent,
     AdminHomeComponent,
     AddMapLocationsComponent,
+    ListMapLocationsComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -140,6 +143,7 @@ import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-lo
     AdminMaterialsComponent,
     AdminHomeComponent,
     AddMapLocationsComponent,
+    ListMapLocationsComponent,
   ]
 })
 export class AppModule { }

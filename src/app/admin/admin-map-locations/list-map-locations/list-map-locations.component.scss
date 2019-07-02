@@ -1,0 +1,23 @@
+.mat-table {
+  width: 100%;
+
+  .mat-header-cell {
+    font-size: 14px;
+  }
+
+  .mat-column-city {
+    flex: 0 0 150px;
+  }
+
+  .mat-column-state {
+    flex: 0 0 150px;
+  }
+
+  .mat-column-country {
+    flex: 0 0 150px;
+  }
+
+  .mat-column-menu {
+    flex: 0 0 52px;
+  }
+}
