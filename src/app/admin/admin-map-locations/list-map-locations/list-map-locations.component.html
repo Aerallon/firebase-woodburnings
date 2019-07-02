@@ -1,4 +1,5 @@
 <div class="table-info" content>
+    <!-- TODO: Handle Empty State - what if no locations? -->
     <mat-table #table [dataSource]="allLocations$">
         <ng-container matColumnDef="city">
             <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
