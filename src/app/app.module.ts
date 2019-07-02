@@ -45,6 +45,14 @@ import { AddMapLocationsComponent } from './admin/admin-map-locations/add-map-lo
 import { ListMapLocationsComponent } from './admin/admin-map-locations/list-map-locations/list-map-locations.component';
 import { DeleteMapLocationComponent } from './admin/admin-map-locations/delete-map-location/delete-map-location.component';
 import { UpdateMapLocationComponent } from './admin/admin-map-locations/update-map-location/update-map-location.component';
+import { DeleteMaterialComponent } from './admin/admin-materials/delete-material/delete-material.component';
+import { ListMaterialComponent } from './admin/admin-materials/list-material/list-material.component';
+import { AddMaterialComponent } from './admin/admin-materials/add-material/add-material.component';
+import { UpdateMaterialComponent } from './admin/admin-materials/update-material/update-material.component';
+import { WriteBlogComponent } from './admin/admin-blogs/write-blog/write-blog.component';
+import { ListBlogsComponent } from './admin/admin-blogs/list-blogs/list-blogs.component';
+import { DeleteBlogComponent } from './admin/admin-blogs/delete-blog/delete-blog.component';
+import { UpdateBlogComponent } from './admin/admin-blogs/update-blog/update-blog.component';
 
 
 @NgModule({
@@ -71,6 +79,14 @@ import { UpdateMapLocationComponent } from './admin/admin-map-locations/update-m
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
     UpdateMapLocationComponent,
+    AddMaterialComponent,
+    ListMaterialComponent,
+    DeleteMaterialComponent,
+    UpdateMaterialComponent,
+    WriteBlogComponent,
+    ListBlogsComponent,
+    DeleteBlogComponent,
+    UpdateBlogComponent,
   ],
   imports: [
     CommonModule,
@@ -130,6 +146,14 @@ import { UpdateMapLocationComponent } from './admin/admin-map-locations/update-m
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
     UpdateMapLocationComponent,
+    AddMaterialComponent,
+    ListMaterialComponent,
+    DeleteMaterialComponent,
+    UpdateMaterialComponent,
+    WriteBlogComponent,
+    ListBlogsComponent,
+    DeleteBlogComponent,
+    UpdateBlogComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -152,6 +176,14 @@ import { UpdateMapLocationComponent } from './admin/admin-map-locations/update-m
     ListMapLocationsComponent,
     DeleteMapLocationComponent,
     UpdateMapLocationComponent,
+    AddMaterialComponent,
+    ListMaterialComponent,
+    DeleteMaterialComponent,
+    UpdateMaterialComponent,
+    WriteBlogComponent,
+    ListBlogsComponent,
+    DeleteBlogComponent,
+    UpdateBlogComponent,
   ]
 })
 export class AppModule { }
