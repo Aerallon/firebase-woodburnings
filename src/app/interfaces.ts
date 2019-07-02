@@ -35,3 +35,30 @@ export interface MapLocationDetails {
   state: string;
   country: string;
 }
+
+export interface MaterialDetails {
+  id: string;
+  type: string;
+  height: string;
+  width: string;
+  image: string;
+  purchasePrice: string;
+  purchaseLocation: string;
+  quantity: string;
+}
+
+export interface BlogDetails {
+  id: string;
+  title: string;
+  content: string;
+  writer: string;
+  published: boolean;
+  commentsAllowed: boolean;
+}
+
+export interface BlogCommentDetails {
+  id: string;
+  writer: string;
+  comment: string;
+  edited: boolean; // If update date != created date, the comment was edited.
+}
