@@ -5,7 +5,8 @@
         <mat-card-content class="form-content">
             <div class="row">
                 <mat-form-field>
-                    <input matInput formControlName="title" placeholder="Title" value="{{ blog.title }}">
+                    <input matInput formControlName="title" placeholder="Title" value="{{ blog.title }}" required>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
             <div class="row">
@@ -15,8 +16,10 @@
                             cdkTextareaAutosize
                             #autosize="cdkTextareaAutosize"
                             formControlName="content"
-                            value="{{ blog.content }}">
+                            value="{{ blog.content }}"
+                            required>
                     </textarea>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
             <div class="row">

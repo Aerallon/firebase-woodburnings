@@ -41,7 +41,7 @@ export class WriteBlogComponent implements OnInit {
         id: this.firestoreService.id,
         title: this.form.value.title,
         content: this.form.value.content,
-        writer: '',
+        writer: '', // TODO: Fill this out with the logged in user's first and last name
         published: this.form.value.published,
         commentsAllowed: this.form.value.commentsAllowed
       };

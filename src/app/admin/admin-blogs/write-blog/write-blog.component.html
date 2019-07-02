@@ -5,7 +5,8 @@
         <mat-card-content class="form-content">
             <div class="row">
                 <mat-form-field>
-                    <input matInput formControlName="title" placeholder="Title">
+                    <input matInput formControlName="title" placeholder="Title" required>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
             <!-- TODO: Change to a large text area with a rich text editor -->
@@ -15,8 +16,10 @@
                     <textarea matInput
                             cdkTextareaAutosize
                             #autosize="cdkTextareaAutosize"
-                            formControlName="content">
+                            formControlName="content"
+                            required>
                     </textarea>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
             <div class="row">

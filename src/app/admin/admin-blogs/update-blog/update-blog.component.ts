@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BlogDetails } from '../../../interfaces';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { BlogService } from '../blog.service';
 import { UserService } from '../../../user.service';
@@ -36,8 +36,8 @@ export class UpdateBlogComponent implements OnInit {
 
   createForm(): void {
     this.form = this.formBuilder.group({
-      'title': [this.blog.title],
-      'content': [this.blog.content],
+      'title': [this.blog.title, Validators.required],
+      'content': [this.blog.content, Validators.required],
       'published': [this.blog.published],
       'commentsAllowed': [this.blog.commentsAllowed]
     });
@@ -49,7 +49,7 @@ export class UpdateBlogComponent implements OnInit {
         id: this.blog.id,
         title: this.form.value.title,
         content: this.form.value.content,
-        writer: '',
+        writer: '', // TODO: Fill this out with the logged in user's first and last name
         published: this.form.value.published,
         commentsAllowed: this.form.value.commentsAllowed
       };
