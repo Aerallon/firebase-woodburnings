@@ -1,0 +1,41 @@
+<mat-dialog-content>
+  <mat-card-title>Update Blog</mat-card-title>
+  <div *ngIf="form">
+    <form [formGroup]="form" *ngIf="blog" class="form">
+        <mat-card-content class="form-content">
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="title" placeholder="Title" value="{{ blog.title }}">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Content</mat-label>
+                    <textarea matInput
+                            cdkTextareaAutosize
+                            #autosize="cdkTextareaAutosize"
+                            formControlName="content"
+                            value="{{ blog.content }}">
+                    </textarea>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="published" [checked]="blog.published">Publish?</mat-slide-toggle>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="commentsAllowed" [checked]="blog.commentsAllowed">Comments Allowed?</mat-slide-toggle>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="buttons">
+                <button mat-raised-button class="submitButton" (click)="updateBlog()">
+                    Update Blog
+                </button>
+                <button mat-button class="cancelButton" (click)="close()">
+                    Cancel
+                </button>
+            </div>
+        </mat-card-content>
+    </form>
+  </div>
+</mat-dialog-content>

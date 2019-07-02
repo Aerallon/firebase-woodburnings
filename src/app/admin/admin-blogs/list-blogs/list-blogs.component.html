@@ -1,0 +1,43 @@
+<!--<div *ngIf="!(allBlogs$ | async)">-->
+<!--    There are currently no blogs. Write one!-->
+<!--</div>-->
+
+<!--<div class="table-info" content *ngIf="allBlogs$ | async">-->
+<div class="table-info" content>
+    <mat-table #table [dataSource]="allBlogs$">
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.title }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="content">
+            <mat-header-cell *matHeaderCellDef>Content</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.content }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="writer">
+            <mat-header-cell *matHeaderCellDef>Writer</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.writer }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="published">
+            <mat-header-cell *matHeaderCellDef>Published</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.published }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="commentsAllowed">
+            <mat-header-cell *matHeaderCellDef>Comments Allowed?</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.commentsAllowed }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="menu">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let blog" class="blog-menu">
+                <button mat-icon-button color="white" [matMenuTriggerFor]="actions">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #actions>
+                    <button mat-menu-item (click)="openUpdateBlogDialog(blog)">Edit</button>
+                    <button mat-menu-item (click)="openDeleteDialog(blog)">Delete</button>
+                </mat-menu>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>
+    </mat-table>
+</div>

@@ -53,6 +53,9 @@ import { WriteBlogComponent } from './admin/admin-blogs/write-blog/write-blog.co
 import { ListBlogsComponent } from './admin/admin-blogs/list-blogs/list-blogs.component';
 import { DeleteBlogComponent } from './admin/admin-blogs/delete-blog/delete-blog.component';
 import { UpdateBlogComponent } from './admin/admin-blogs/update-blog/update-blog.component';
+import { BlogService } from './admin/admin-blogs/blog.service';
+import { MaterialService } from './admin/admin-materials/material.service';
+import { MapLocationService } from './admin/admin-map-locations/map-location.service';
 
 
 @NgModule({
@@ -123,7 +126,10 @@ import { UpdateBlogComponent } from './admin/admin-blogs/update-blog/update-blog
     WoodburningStoreService,
     AuthService,
     AuthGuard,
-    UserService
+    UserService,
+    BlogService,
+    MaterialService,
+    MapLocationService
   ],
   exports: [
     CreateWoodburningComponent,

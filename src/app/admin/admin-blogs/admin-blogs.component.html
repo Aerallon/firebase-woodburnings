@@ -9,13 +9,11 @@
     <mat-card-content>
         <div class="buttons">
             <!-- TODO: This should open a new page and not a dialog -->
-            <button mat-raised-button class="submitButton">Write New Blog</button>
+            <button mat-raised-button class="submitButton" (click)="openWriteBlogDialog()">Write New Blog</button>
         </div>
     </mat-card-content>
     <mat-divider></mat-divider>
-    <mat-card-content class="woodburning-table">
-        <!-- TODO: Build this component -->
-        <!-- <list-map-locations></list-map-locations>-->
-        Table of all the blogs goes here
+    <mat-card-content>
+        <list-blogs></list-blogs>
     </mat-card-content>
 </mat-card>
