@@ -29,6 +29,8 @@ export class ListBlogsComponent implements OnInit {
     this.allBlogs$ = this.blogService.list();
   }
 
+  // TODO: Add Preview Dialog as well here
+
   openUpdateBlogDialog(blog: BlogDetails): void {
     this.updateBlogDialogRef = this.dialog.open(UpdateBlogComponent, { width: '500px' });
     this.updateBlogDialogRef.componentInstance.blog = blog;
