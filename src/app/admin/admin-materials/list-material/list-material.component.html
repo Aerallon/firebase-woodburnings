@@ -1,0 +1,60 @@
+<div class="table-info" content>
+    <mat-table #table [dataSource]="allMaterial$">
+        <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.type }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="height">
+            <mat-header-cell *matHeaderCellDef>Height</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.height }}"</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="width">
+            <mat-header-cell *matHeaderCellDef>Width</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.width }}"</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="shape">
+            <mat-header-cell *matHeaderCellDef>Shape</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.shape }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+            <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.quantity }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="bought">
+            <mat-header-cell *matHeaderCellDef>Bought?</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.bought }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="purchasePrice">
+            <mat-header-cell *matHeaderCellDef>Purchase Price</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.purchasePrice }}
+                <span *ngIf="material.bought">$</span>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="purchaseLocation">
+            <mat-header-cell *matHeaderCellDef>Purchase Location</mat-header-cell>
+            <mat-cell *matCellDef="let material">{{ material.purchaseLocation }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="imageUrl">
+            <mat-header-cell *matHeaderCellDef>Image</mat-header-cell>
+            <!-- TODO: Make it open the image in a pop up? Larger? -->
+            <mat-cell *matCellDef="let material">
+                <a href="{{ material.imageUrl }}" target="_blank">See Material</a>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="menu">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let material" class="blog-menu">
+                <button mat-icon-button color="white" [matMenuTriggerFor]="actions">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #actions>
+                    <!-- TODO: Add Preview -->
+                    <button mat-menu-item (click)="openUpdateMaterialDialog(material)">Update</button>
+                    <button mat-menu-item (click)="openDeleteDialog(material)">Delete</button>
+                </mat-menu>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple></mat-row>
+    </mat-table>
+</div>

@@ -39,12 +39,14 @@ export interface MapLocationDetails {
 export interface MaterialDetails {
   id: string;
   type: string;
-  height: string;
-  width: string;
-  image: string;
-  purchasePrice: string;
+  height: number;
+  width: number;
+  shape: string;
+  imageUrl: string;
+  bought: boolean;
+  purchasePrice: number;
   purchaseLocation: string;
-  quantity: string;
+  quantity: number;
 }
 
 export interface BlogDetails {

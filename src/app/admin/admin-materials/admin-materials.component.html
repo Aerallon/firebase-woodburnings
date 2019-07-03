@@ -8,14 +8,11 @@
     <mat-divider></mat-divider>
     <mat-card-content>
         <div class="buttons">
-                <!-- (click)="openAddMaterialDialog()" -->
-            <button mat-raised-button class="submitButton" >Add Material</button>
+            <button mat-raised-button class="submitButton" (click)="openAddMaterialDialog()">Add Material</button>
         </div>
     </mat-card-content>
     <mat-divider></mat-divider>
     <mat-card-content class="woodburning-table">
-        <!-- TODO: Build this component -->
-        <!-- <list-map-locations></list-map-locations>-->
-        Table of all the materials goes here
+         <list-materials></list-materials>
     </mat-card-content>
 </mat-card>
