@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BlogDetails } from '../../../interfaces';
+import { AppUser, BlogDetails } from '../../../interfaces';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { BlogService } from '../blog.service';
 import { UserService } from '../../../user.service';
 import { AuthService } from '../../../core/auth.service';
+import { shareReplay, switchMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 @Component({
     templateUrl: './update-blog.component.html',
@@ -16,7 +18,8 @@ export class UpdateBlogComponent implements OnInit {
 
   @Input() blog: BlogDetails;
   form: FormGroup;
-  userDisplayName: string;
+  user$: Observable<AppUser>;
+  displayName: string;
 
   constructor(private formBuilder: FormBuilder,
               public dialogRef: MatDialogRef<UpdateBlogComponent>,
@@ -26,12 +29,21 @@ export class UpdateBlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.createForm();
-    const user = this.authService.userId.subscribe(userId => {
-      return this.userService.get(userId);
+
+    this.user$ = this.authService.userId.pipe(
+      switchMap(uid => {
+        if (!uid) {
+          return of(null);
+        }
+        return this.userService.listen(uid);
+      }),
+      shareReplay(1),
+    );
+    this.user$.subscribe(user => {
+      this.displayName = user.firstName + ' ' + user.lastName;
     });
-    console.log(user);
-    // this.userDisplayName = user.firstName;
+
+    this.createForm();
   }
 
   createForm(): void {
@@ -49,7 +61,7 @@ export class UpdateBlogComponent implements OnInit {
         id: this.blog.id,
         title: this.form.value.title,
         content: this.form.value.content,
-        writer: '', // TODO: Fill this out with the logged in user's first and last name
+        writer: this.displayName,
         published: this.form.value.published,
         commentsAllowed: this.form.value.commentsAllowed
       };
