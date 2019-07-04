@@ -56,6 +56,8 @@ import { UpdateBlogComponent } from './admin/admin-blogs/update-blog/update-blog
 import { BlogService } from './admin/admin-blogs/blog.service';
 import { MaterialService } from './admin/admin-materials/material.service';
 import { MapLocationService } from './admin/admin-map-locations/map-location.service';
+import { InteractiveMapComponent } from './admin/admin-map-locations/interactive-map/interactive-map.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -90,6 +92,7 @@ import { MapLocationService } from './admin/admin-map-locations/map-location.ser
     ListBlogsComponent,
     DeleteBlogComponent,
     UpdateBlogComponent,
+    InteractiveMapComponent,
   ],
   imports: [
     CommonModule,
@@ -117,7 +120,10 @@ import { MapLocationService } from './admin/admin-map-locations/map-location.ser
     AppRoutingModule,
     NavModule,
     HomePageModule,
-    MatGridListModule
+    MatGridListModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBrr1BM2Cmwm0rO9hSAo7h2lv966P03p2o'
+    })
   ],
   bootstrap: [
     AppComponent
@@ -160,6 +166,7 @@ import { MapLocationService } from './admin/admin-map-locations/map-location.ser
     ListBlogsComponent,
     DeleteBlogComponent,
     UpdateBlogComponent,
+    InteractiveMapComponent,
   ],
   entryComponents: [
     CreateWoodburningComponent,
@@ -190,6 +197,7 @@ import { MapLocationService } from './admin/admin-map-locations/map-location.ser
     ListBlogsComponent,
     DeleteBlogComponent,
     UpdateBlogComponent,
+    InteractiveMapComponent,
   ]
 })
 export class AppModule { }

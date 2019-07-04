@@ -12,6 +12,7 @@ import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
 import { AdminMapLocationsComponent } from './admin/admin-map-locations/admin-map-locations.component';
 import { AdminMaterialsComponent } from './admin/admin-materials/admin-materials.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { InteractiveMapComponent } from './admin/admin-map-locations/interactive-map/interactive-map.component';
 
 export const routes: Routes = [
   {
@@ -50,6 +51,12 @@ export const routes: Routes = [
   {
     path: 'admin-map-locations',
     component: AdminMapLocationsComponent,
+    canActivate: [AuthGuard],
+  },
+  // TODO: Expose this to people once it's up and working and not have it behind a guard
+  {
+    path: 'interactive-map',
+    component: InteractiveMapComponent,
     canActivate: [AuthGuard],
   },
   {
