@@ -18,7 +18,7 @@ export class ListMapLocationsComponent implements OnInit {
   deleteMapLocationDialogRef: MatDialogRef<DeleteMapLocationComponent>;
   updateMapLocationDialogRef: MatDialogRef<UpdateMapLocationComponent>;
 
-  displayedColumns = ['city', 'state', 'country', 'menu'];
+  displayedColumns = ['woodburningName', 'city', 'state', 'country', 'latitude', 'longitude', 'menu'];
 
   constructor(private mapLocationService: MapLocationService,
               private dialog: MatDialog) {

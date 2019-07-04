@@ -31,9 +31,12 @@ export interface AppUser {
 
 export interface MapLocationDetails {
   id: string;
+  woodburningName: string;
   city: string;
   state: string;
   country: string;
+  latitude: number;
+  longitude: number;
 }
 
 export interface MaterialDetails {

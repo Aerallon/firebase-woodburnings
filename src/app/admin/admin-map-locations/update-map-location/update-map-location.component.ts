@@ -26,9 +26,12 @@ export class UpdateMapLocationComponent implements OnInit {
 
   createForm(): void {
     this.form = this.formBuilder.group({
+      'woodburningName': [this.location.woodburningName],
       'city': [this.location.city],
       'state': [this.location.state],
-      'country': [this.location.country]
+      'country': [this.location.country],
+      'latitude': [this.location.latitude],
+      'longitude': [this.location.longitude],
     });
   }
 
@@ -36,9 +39,12 @@ export class UpdateMapLocationComponent implements OnInit {
     if (this.form.valid) {
       const mapLocationFormData = {
         id: this.location.id,
+        woodburningName: this.form.value.woodburningName,
         city: this.form.value.city,
         state: this.form.value.state,
-        country: this.form.value.country
+        country: this.form.value.country,
+        latitude: this.form.value.latitude,
+        longitude: this.form.value.longitude,
       };
       this.mapLocationService.update(mapLocationFormData);
       // TODO: Handle error message if something goes wrong with the update - success will currently always be shown

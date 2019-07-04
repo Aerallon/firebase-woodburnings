@@ -5,19 +5,43 @@
         <mat-card-content class="form-content">
             <div class="row">
                 <mat-form-field>
+                    <input matInput formControlName="woodburningName" placeholder="Woodburning Name at Location"
+                           value="{{ location.woodburningName }}" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
                     <input matInput formControlName="city" placeholder="City" value="{{ location.city }}">
                 </mat-form-field>
             </div>
             <!-- TODO: Change to a dropdown -->
             <div class="row">
                 <mat-form-field>
-                    <input matInput formControlName="state" placeholder="State" value="{{ location.state }}">
+                    <input matInput formControlName="state" placeholder="State" value="{{ location.state }}" required>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
             <!-- TODO: Change to a dropdown -->
             <div class="row">
                 <mat-form-field>
-                    <input matInput formControlName="country" placeholder="Country" value="{{ location.country }}">
+                    <input matInput formControlName="country" placeholder="Country" value="{{ location.country }}"
+                           required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="latitude" placeholder="Latitude" value="{{ location.latitude }}"
+                           required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="longitude" placeholder="Longitude"
+                           value="{{ location.longitude }}" required>
+                    <mat-error>Required</mat-error>
                 </mat-form-field>
             </div>
         </mat-card-content>

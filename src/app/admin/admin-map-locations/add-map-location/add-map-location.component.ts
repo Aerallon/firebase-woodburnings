@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 import { FirestoreService } from '../../../firestore.service';
 import { MapLocationService } from '../map-location.service';
@@ -27,9 +27,12 @@ export class AddMapLocationsComponent implements OnInit {
 
   createForm(): void {
     this.form = this.formBuilder.group({
+      'woodburningName': ['', Validators.required],
       'city': [''],
-      'state': [''],
-      'country': ['']
+      'state': ['', Validators.required],
+      'country': ['', Validators.required],
+      'latitude': ['', Validators.required],
+      'longitude': ['', Validators.required],
     });
   }
 
@@ -37,9 +40,12 @@ export class AddMapLocationsComponent implements OnInit {
     if (this.form.valid) {
       const mapLocationFormData = {
         id: this.firestoreService.id,
+        woodburningName: this.form.value.woodburningName,
         city: this.form.value.city,
         state: this.form.value.state,
-        country: this.form.value.country
+        country: this.form.value.country,
+        latitude: this.form.value.latitude,
+        longitude: this.form.value.longitude,
       };
       this.mapLocationService.add(mapLocationFormData);
       // TODO: Have this or an error message show if the service isn't successful
