@@ -11,7 +11,7 @@ import { MapLocationService } from '../map-location.service';
 
 export class InteractiveMapComponent implements OnInit {
 
-  // Domremy
+  // Domremy as starting location
   lng: number = -105.733333;
   lat: number = 52.783333;
 

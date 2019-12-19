@@ -122,7 +122,7 @@ import { AgmCoreModule } from '@agm/core';
     HomePageModule,
     MatGridListModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBrr1BM2Cmwm0rO9hSAo7h2lv966P03p2o'
+      apiKey: 'AIzaSyCQSAkdg37hx_opO70Dr7I2qfxCs-7YW7U'
     })
   ],
   bootstrap: [
