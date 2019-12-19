@@ -1,0 +1,15 @@
+<mat-card class="page">
+    <mat-card-header>
+        <div class="ppd-logo">
+            <img src="/assets/images/ppd-logo.jpg" height="75" width="75" alt="Prairie Pyro Designs">
+        </div>
+        <div class="ppd-title">All Map Locations</div>
+    </mat-card-header>
+    <mat-card-content>
+    <!-- this creates a google map on the page with the given lat/lng from -->
+    <!-- the component as the initial center of the map: -->
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+    </mat-card-content>
+</mat-card>

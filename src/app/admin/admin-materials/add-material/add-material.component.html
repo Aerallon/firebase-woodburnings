@@ -1,0 +1,68 @@
+<mat-card-title>Add Material</mat-card-title>
+<mat-dialog-content>
+  <div *ngIf="form">
+    <form [formGroup]="form" class="form">
+        <mat-card-content class="form-content">
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="type" placeholder="Type" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="height" placeholder="Height (inches)" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="width" placeholder="Width (inches)" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="shape" placeholder="Shape" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="imageUrl" placeholder="Image Url" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="quantity" placeholder="Quantity" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-slide-toggle formControlName="bought">Bought?</mat-slide-toggle>
+            </div>
+            <div class="row" *ngIf="form.controls.bought.value == true">
+                <mat-form-field>
+                    <input matInput formControlName="purchasePrice" placeholder="Purchase Price ($)">
+                </mat-form-field>
+            </div>
+            <div class="row" *ngIf="form.controls.bought.value == true">
+                <mat-form-field>
+                    <input matInput formControlName="purchaseLocation" placeholder="Purchase Location">
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="buttons">
+                <button mat-raised-button class="submitButton" (click)="addMaterial()">
+                    Add Material
+                </button>
+                <button mat-button class="cancelButton" (click)="close()">
+                    Cancel
+                </button>
+            </div>
+        </mat-card-content>
+    </form>
+  </div>
+</mat-dialog-content>

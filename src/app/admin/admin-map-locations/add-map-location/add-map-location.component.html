@@ -1,0 +1,57 @@
+<mat-card-title>Add Map Location</mat-card-title>
+<mat-dialog-content>
+  <div *ngIf="form">
+    <form [formGroup]="form" class="form">
+        <mat-card-content class="form-content">
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="woodburningName" placeholder="Woodburning Name at Location"
+                           required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="city" placeholder="City">
+                </mat-form-field>
+            </div>
+            <!-- TODO: Change to a dropdown -->
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="state" placeholder="State" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <!-- TODO: Change to a dropdown -->
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="country" placeholder="Country" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="latitude" placeholder="Latitude" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <input matInput formControlName="longitude" placeholder="Longitude" required>
+                    <mat-error>Required</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="buttons">
+                <button mat-raised-button class="submitButton" (click)="addMapLocation()">
+                    Add Location
+                </button>
+                <button mat-button class="cancelButton" (click)="close()">
+                    Cancel
+                </button>
+            </div>
+        </mat-card-content>
+    </form>
+  </div>
+</mat-dialog-content>

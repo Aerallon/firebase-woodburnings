@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { WriteBlogComponent } from './write-blog/write-blog.component';
 
 @Component({
     templateUrl: './admin-blogs.component.html',
@@ -8,7 +10,12 @@ import { Component } from '@angular/core';
 
 export class AdminBlogsComponent {
 
-  constructor() {
-    //
+  writeBlogDialogRef: MatDialogRef<WriteBlogComponent>;
+
+  constructor(private dialog: MatDialog) {
+  }
+
+  openWriteBlogDialog(): void {
+    this.writeBlogDialogRef = this.dialog.open(WriteBlogComponent, { width: '500px' });
   }
 }

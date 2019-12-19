@@ -1,6 +1,6 @@
 export const environment = {
   firebaseConfig: {
-    apiKey: 'AIzaSyDSROWgmB9vVLzfDygZen2dAzjZHtklzaM',
+    apiKey: 'AIzaSyAMfngFuyToIE4daJZ9F4p7qBu2ZxvsBOc',
     authDomain: 'my-woodburnings.firebaseapp.com',
     databaseURL: 'https://my-woodburnings.firebaseio.com',
     projectId: 'my-woodburnings',
